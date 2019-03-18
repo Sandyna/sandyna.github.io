@@ -1,0 +1,13 @@
+- name: What is new
+  link: /news.html
+- name: About us
+  link: /about.html
+- name: Chocolate and Tea
+  link: /choco_tea.html
+- name: Menu
+  link: /menu.html
+- name: Location
+  link: /location.html
+- name: Contact
+  link: /contact.html
+

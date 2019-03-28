@@ -3,10 +3,53 @@
 	text-decoration: underline;
 }
 
-body {color: #000000; background-color: black; margin: 0px}
+.current_language {
+	color:  #f0b27a;
+	text-decoration: underline !important;
+}
 
+body {color: #000000; background-color: black; background-image: url("../../background.jpg"); background-size: cover;}
+
+div.header {
+	display: flex;
+	justify-content: flex-start;   /* adjustment */
+	position: relative;            /* new */
+	height: 150px;
+}
+div.image {
+	flex: 0 1 auto;
+	position: absolute;
+	height: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+}
+div.image img {
+	width: 100%;
+	height: 100%;
+}
+div.language {
+	flex: 0 1 auto;
+	margin-left: auto;              /* new */
+}
+div.language ul {
+	list-style-type: none;
+	display: flex;
+	padding: 0px;
+}
+div.language li {
+	margin: 5px;
+	color: #f0b27a;
+}
+div.language a {
+	color: #f0b27a;
+	text-decoration: none;
+	font-size: 20px;
+	text-transform: uppercase;
+	font-family: "Lato", Arial, sans-serif;
+	font-weight: bold;
+}
 div.section {
-	background-color: #800F00;
+	background-color: #6b200d66;
 	color:  #f0b27a;
 	margin: 40px 500px 2px 500px;
 	padding: 65px;
@@ -14,25 +57,53 @@ div.section {
 	text-align: justify;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
+	min-height: 350px;
 	/*float: left;*/
 	vertical-align: middle;
 	font-family: "Lato", Arial, sans-serif;
+	font-size: 20px;
+}
+div.section p {
+	margin-left: 25px;
 }
 div.section h1 {
 	margin: 0px;
-	font-size: 20px;
+	font-size: 22px;
 	text-transform: uppercase;
+}
+
+div.section h2 {
+	margin: 10px;
+	font-size: 20px;
+	text-decoration: underline;
+}
+
+div.section h3 {
+	font-size: 18px;
+	margin: 0px;
+	margin-left: 10px;
+}
+
+.centered_image {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	padding-top: 30px;
 }
 
 nav {
 	background-color: none;
+	margin: 0px 500px 0px 500px;
 }
 
 nav ul{
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 	list-style-type: none;
 	padding: 5px 0px 5px 0px;
-	margin: 150px 0px 0px 0px;
-	background-color: #800F00;
+	margin: 0px 0px 0px 0px;
+	background-color: #6b200d;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;

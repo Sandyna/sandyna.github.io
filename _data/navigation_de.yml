@@ -1,0 +1,13 @@
+- name: Aktuelle
+  link: /news_de.html
+- name: Uber uns
+  link: /about_de.html
+- name: Schokolade und Tee
+  link: /choco_tea_de.html
+- name: Menu
+  link: /menu_de.html
+- name: Ort
+  link: /location_de.html
+- name: Kontakt
+  link: /contact_de.html
+

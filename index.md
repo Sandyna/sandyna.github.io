@@ -5,4 +5,5 @@ title: The Alchemist
 # Welcome to The Alchemist
 This is a world of delightful hot chocolate, calming teas, wonder and relaxation. 
 
-![hot choco index](/assets/images/hot_choco_index.jpg){:height="50%" width="50%" class="centered_image"}
+
+<div><img src="/assets/images/hot_choco_index.jpg" alt="hot choco index" height="50%" width="50%" class="centered_image"></div>

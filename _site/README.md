@@ -1,1 +1,0 @@
-# sandyna.github.io

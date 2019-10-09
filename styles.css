@@ -1,0 +1,32 @@
+html {
+	background-image:url("./background.jpg");
+	background-size:cover;
+	background-color:black;
+}
+section.hero.is-primary{
+	background-color:#6b200d;
+}
+section.hero.is-primary .title{
+	color:#ff914d;
+}
+section.hero.is-primary .subtitle{
+	color:#f0b27a;
+}
+
+figure.image.is-128x128 {
+	margin-left: 0;
+  margin-right: auto;
+}
+div.align-right h1{
+	text-align:right;
+}
+div.align-right h2{
+	text-align:right;
+}
+div.horizontally-centered{
+	padding-top:18px;
+	padding-bottom:24px;
+}
+div.text-background{
+	background-color:#6b200d66'
+}

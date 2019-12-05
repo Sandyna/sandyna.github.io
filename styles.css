@@ -13,6 +13,12 @@ section.hero.is-primary .subtitle{
 	color:#f2d48aff;
 }
 
+section.hero.is-primary a {
+	color:#f2d48aff !important;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
 figure.image.is-128x128 {
 	margin-left: 0;
   margin-right: auto;

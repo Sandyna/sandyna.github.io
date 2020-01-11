@@ -2,6 +2,7 @@ html {
 	background-image:url("./background.jpg");
 	background-size:cover;
 	background-color:black;
+	background-attachment: fixed;
 }
 section.hero.is-primary{
 	background-color:#6b200d;
@@ -23,6 +24,69 @@ figure.image.is-128x128 {
 	margin-left: 0;
   margin-right: auto;
 }
+
+.navbar-menu {
+	background-color:#eec766ff;
+	border-radius: 0px 0px 20px 20px;
+}
+
+.navbar {
+	background-color:transparent !important;
+	border-radius: 0px 0px 20px 20px;
+}
+
+.navbar-menu {
+	background-color:#eec766ff !important;
+}
+
+.navbar-brand {
+	background-color:transparent;
+}
+.navbar-burger {
+	background-color:#eec766ff;
+	padding: 12px;
+	margin-right: 36px;
+	border-radius: 0px 0px 20px 20px;
+}
+
+.navbar-menu .navbar-item{
+	font-weight:bold;
+	color:#6b200d;
+	font-size: 1.25rem;
+	margin-left: 24px;
+	padding: 12px;
+}
+
+.navbar-menu .navbar-item:hover{
+	background-color:transparent;
+	font-weight:bold;
+	color:#6b200d;
+	text-decoration:underline;
+	margin-left: 24px;
+	padding: 12px;
+}
+
+.button.navbar_button {
+	background-color:transparent;
+	color:#6b200d;
+	font-weight:bold;
+	border: none;
+	font-size: 1.25rem;
+	padding: 0px;
+}
+
+.button.navbar_button:hover{
+	background-color:transparent;
+	font-weight:bold;
+	color:#6b200d;
+	border: none;
+	font-size: 1.25rem;
+}
+
+.section h2{
+	color:#f2d48aff;
+}
+
 div.align-right h1{
 	text-align:right;
 }
@@ -35,4 +99,16 @@ div.horizontally-centered{
 }
 div.text-background{
 	background-color:#6b200d66'
+}
+
+div.product_grid {
+	display:flex;
+	align-items: center;
+	text-align: center;
+}
+
+div.product_grid img{
+	padding-right:12px;
+	border-radius: 20px;
+
 }

@@ -22,7 +22,7 @@
 							</figure>
 							<div class="horizontally-centered">
 								<h1 class="title">The Alchemist</h1>
-								<h2 class="subtitle">Delicious hot chocolate </br>Artisan coffee</h2>
+								<h2 class="subtitle">Köstliche heiße Schokolade</br>Handwerklicher Kaffee</h2>
 							</div>
 						</div>
 					</div>
@@ -31,13 +31,13 @@
 				</div>
 				<div class="column is-half">
 					<div class="container align-right">
-						<h1 class="title">Contact:</h1>
+						<h1 class="title">Kontakt:</h1>
 						<h2 class="subtitle">
 					 		Michaela Šandalová<br/>
 							<a href="tel:0041767583055">
 							+41 76 758 30 55</a><br/>
 							<a href="https://www.facebook.com/alchemistchocolate">
-							The Alchemist on Facebook</a><br/>
+							The Alchemist auf Facebook</a><br/>
 							<a href="mailto:sandalovamicha@gmail.com?subject=Hot%20chocolate">
 							sandalovamicha@gmail.com</a><br/>
 			 			</h2>
@@ -61,28 +61,30 @@
 
 			<div id="navbarBasicExample" class="navbar-menu">
 				<div class="navbar-start">
-					<a class="navbar-item" href="./index.html">
-					  About us
+					<a class="navbar-item" href="./index_de.html">
+					  Über uns
 					</a>
 
-					<a class="navbar-item" href="./products.html">
-					  Products
+					<a class="navbar-item" href="./products_de.html">
+					  Produkte
 					</a>
-					<a class="navbar-item" href="./shop.html">
+					<a class="navbar-item" href="./shop_de.html">
 						Shop
 					</a>
 			</div>
 			<div class="navbar-end">
 			  <div class="navbar-item">
 			    <div class="buttons">
-							
-							
+							{% assign url = page.url | remove: ".html" | remove: "_de" %}
+							{% if url == '/' %}
+							{% assign url = '/index' %}
+							{% endif %}
 
-							
-							
+							{% assign url_html = url | append: ".html" %}
+							{% assign url_de_html = url | append: "_de.html" %}
 
 							<ul>
-								<li><a class="button navbar_button" href= "/index_de.html" > DE </a></li>
+								<li><a class="button navbar_button" href="{{url_html}}" {% if page.url == url_html or page.url == '/' %}class="current_language"{% endif %}> EN </a></li>
 							</ul>
 			    </div>
 			  </div>
@@ -92,28 +94,7 @@
 	<div class="column is-one-quarter"></div>
 </div>	
 	
-	<div class="columns">
-	<div class="column is-one-quarter"></div>
-	<div class="column">
-		<section class="section">
-				<h2 class="subtitle">
-					The Alchemist is a Zürich-based provider of hot chocolate, coffee and other beverages. Our goal is to bring a relaxing, enjoyable experience to all coffee and chocolate lovers. <br/>
-					<br/>
-					If you are interested in getting hot chocolate for your event, please let me know!
-				</h2>
-				<br/>
-				<img src="./chocolate_red_cup.jpg" style="width: 500px; border-radius: 20px;">
-				</br>
-				</br>
-				<h2 class="subtitle">
-					If you would like to help with this project, please fill out a <a style="color:#eec766ff;text-decoration: underline;font-weight: bold;"href="https://forms.gle/eY5phD2UD4vgDMok7">survey</a> about hot chocolate. </br>
-					Thank you!
-				</h2>
-		</section>
-	</div>
-	<div class="column is-one-quarter"></div>
-</div>
-
+	{{ content }}
 	
 	</body>
 </html>

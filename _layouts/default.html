@@ -36,10 +36,10 @@
 					 		Michaela Šandalová<br/>
 							<a href="tel:0041767583055">
 							+41 76 758 30 55</a><br/>
+							<a href="https://www.facebook.com/alchemistchocolate">
+							The Alchemist on Facebook</a><br/>
 							<a href="mailto:sandalovamicha@gmail.com?subject=Hot%20chocolate">
 							sandalovamicha@gmail.com</a><br/>
-							<a href="https://www.facebook.com/alchemistchocolate">
-							facebook.com/alchemistchocolate</a><br/>
 			 			</h2>
 		 			</div>
 				</div>
@@ -59,6 +59,40 @@
 					</a>
 				</div>
 
+			<div id="navbarBasicExample" class="navbar-menu">
+				<div class="navbar-start">
+					<a class="navbar-item" href="./index.html">
+					  About us
+					</a>
+
+					<a class="navbar-item" href="./products.html">
+					  Products
+					</a>
+					<a class="navbar-item" href="./shop.html">
+						Shop
+					</a>
+			</div>
+			<div class="navbar-end">
+			  <div class="navbar-item">
+			    <div class="buttons">
+							{% assign url = page.url | remove: ".html" | remove: "_de" %}
+							{% if url == '/' %}
+							{% assign url = '/index' %}
+							{% endif %}
+
+							{% assign url_html = url | append: ".html" %}
+							{% assign url_de_html = url | append: "_de.html" %}
+
+							<ul>
+								<li><a class="button navbar_button" href= "{{url_de_html}}" {% if page.url == url_de_html %}class="current_language"{% endif %}> DE </a></li>
+							</ul>
+			    </div>
+			  </div>
+			</div>
+		</nav>
+	</div>
+	<div class="column is-one-quarter"></div>
+</div>	
 	
 	{{ content }}
 	

@@ -6,16 +6,18 @@ html {
 }
 section.hero.is-primary{
 	background-color:#6b200d;
+	background-image:url("./hero_background.png");
+	background-size:cover;
 }
 section.hero.is-primary .title{
-	color:#eec766ff;
+	color:#f2d48aff;
 }
 section.hero.is-primary .subtitle{
-	color:#f2d48aff;
+	color:#f7e6ba;
 }
 
 section.hero.is-primary a {
-	color:#f2d48aff !important;
+	color:#f7e6ba !important;
 	text-decoration: underline;
 	font-weight: bold;
 }
@@ -61,7 +63,6 @@ figure.image.is-128x128 {
 	background-color:transparent;
 	font-weight:bold;
 	color:#6b200d;
-	text-decoration:underline;
 	margin-left: 24px;
 	padding: 12px;
 }

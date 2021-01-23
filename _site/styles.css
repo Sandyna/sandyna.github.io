@@ -1,13 +1,15 @@
 html {
-	background-image:url("./background.jpg");
-	background-size:cover;
-	background-color:black;
-	background-attachment: fixed;
+/*	background-image:url("./background.jpg");*/
+	background-size:100%;
+	background-color:#442a19 !important;
+	background-repeat:no-repeat;
+  background-attachment: fixed;
 }
+
 section.hero.is-primary{
-	background-color:#6b200d;
-	background-image:url("./hero_background.png");
-	background-size:cover;
+	background-color:#26180e;
+/*	background-image:url("./hero_background.png");
+	background-size:cover;*/
 }
 section.hero.is-primary .title{
 	color:#f2d48aff;
@@ -22,33 +24,46 @@ section.hero.is-primary a {
 	font-weight: bold;
 }
 
-figure.image.is-128x128 {
+figure.image {
+	width:256px;
 	margin-left: 0;
   margin-right: auto;
 }
 
+.columns.nav-header {
+	background-color:#e6b475;
+}
+.column.is-one-quarter.nav-header-left {
+	padding-top:0px;
+	padding-bottom:0px;
+}
+.column.nav-header-mid {
+	padding:0px;
+	padding-bottom:0px;
+}
 .navbar-menu {
-	background-color:#eec766ff;
-	border-radius: 0px 0px 20px 20px;
+	background-color:#e6b475;
+/*	border-radius: 0px 0px 20px 20px;*/
 }
 
 .navbar {
 	background-color:transparent !important;
-	border-radius: 0px 0px 20px 20px;
+/*	border-radius: 0px 0px 20px 20px;*/
 }
 
 .navbar-menu {
-	background-color:#eec766ff !important;
+	background-color:#e6b475 !important;
+	box-shadow:none !important;
 }
 
 .navbar-brand {
 	background-color:transparent;
 }
 .navbar-burger {
-	background-color:#eec766ff;
+	background-color:#e6b475;
 	padding: 12px;
 	margin-right: 36px;
-	border-radius: 0px 0px 20px 20px;
+	/*border-radius: 0px 0px 20px 20px;*/
 }
 
 .navbar-menu .navbar-item{
@@ -57,6 +72,10 @@ figure.image.is-128x128 {
 	font-size: 1.25rem;
 	margin-left: 24px;
 	padding: 12px;
+}
+
+.navbar-end {
+	margin-right: 24px;
 }
 
 .navbar-menu .navbar-item:hover{
@@ -84,12 +103,21 @@ figure.image.is-128x128 {
 	font-size: 1.25rem;
 }
 
+.middle_content {
+	background-image:url("./background.jpg");
+	background-size: 100%;
+	background-color:#442a19;
+	background-repeat:no-repeat;
+	min-height: 100vh;
+	background-attachment: scroll;
+}
+
 .section h2{
 	color:#f2d48aff;
 }
 
 .section.section {
-	background-color:#6b200d66;
+	background-color:#26180e;
 	border-radius: 20px 20px 20px 20px;
 }
 

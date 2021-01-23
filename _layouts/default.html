@@ -17,12 +17,12 @@
 				<div class="column is-third">
 					<div class="level">
 						<div class="level-left">
-							<figure class="level-item image is-128x128">
-								<img style="padding-right:12px;" class="is-rounded" src="./chocolate.jpg">
+							<figure class="level-item image">
+								<img style="padding-right:12px;" src="./chocolate.svg">
 							</figure>
 							<div class="horizontally-centered">
-								<h1 class="title">The Alchemist</h1>
-								<h2 class="subtitle">Delicious hot chocolate </br>Artisan coffee</h2>
+<!--						<h1 class="title">The Alchemist</h1>
+								<h2 class="subtitle">Delicious hot chocolate </br>Artisan coffee</h2>-->
 							</div>
 						</div>
 					</div>
@@ -30,26 +30,28 @@
 				<div class="column">
 				</div>
 				<div class="column is-half">
-					<div class="container align-right">
-						<h1 class="title">Contact:</h1>
-						<h2 class="subtitle">
-					 		Michaela Šandalová<br/>
-							<a href="tel:0041767583055">
-							+41 76 758 30 55</a><br/>
-							<a href="https://www.facebook.com/alchemistchocolate">
-							The Alchemist on Facebook</a><br/>
-							<a href="mailto:sandalovamicha@gmail.com?subject=Hot%20chocolate">
-							sandalovamicha@gmail.com</a><br/>
-			 			</h2>
+					<div class="vertically-centered">
+						<div class="container align-right">
+							<h1 class="title">Contact:</h1>
+							<h2 class="subtitle">
+						 		Michaela Šandalová<br/>
+								<a href="tel:0041767583055">
+								+41 76 758 30 55</a><br/>
+								<a href="https://www.facebook.com/alchemistchocolate">
+								The Alchemist on Facebook</a><br/>
+								<a href="mailto:sandalovamicha@gmail.com?subject=Hot%20chocolate">
+								sandalovamicha@gmail.com</a><br/>
+				 			</h2>
+				 		</div>
 		 			</div>
 				</div>
 			</div>
 		</div>
 	</section>
 	
-	<div class="columns">
-		<div class="column is-one-quarter" style="padding-top:0; padding-bottom:0px;"></div>
-		<div class="column" style="padding:12px;">
+	<div class="columns nav-header"">
+		<div class="column is-one-quarter nav-header-left"></div>
+		<div class="column nav-header-mid">
 			<nav class="navbar" role="navigation" aria-label="main navigation">
 				<div class="navbar-brand">
 					<a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
@@ -64,7 +66,6 @@
 					<a class="navbar-item" href="./index.html">
 					  About us
 					</a>
-
 					<a class="navbar-item" href="./products.html">
 					  Products
 					</a>
@@ -93,8 +94,9 @@
 	</div>
 	<div class="column is-one-quarter"></div>
 </div>	
-	
+	<div class="middle_content">
 	{{ content }}
+	</div>
 	
 	</body>
 </html>

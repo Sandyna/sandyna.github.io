@@ -1,5 +1,9 @@
+@font-face { font-family: roboto-regular; 
+			 src: url('./fonts/Roboto/Roboto-Regular.ttf');
+			 src: url{'./fonts/RobotoSlab-VariableFont_wght.ttf'}
+}
 html {
-/*	background-image:url("./background.jpg");*/
+/*	background-image:url("./images/background.jpg");*/
 	background-size:100%;
 	background-color:#442a19 !important;
 	background-repeat:no-repeat;
@@ -8,20 +12,27 @@ html {
 
 section.hero.is-primary{
 	background-color:#26180e;
-/*	background-image:url("./hero_background.png");
+/*	background-image:url("./images/hero_background.png");
 	background-size:cover;*/
 }
 section.hero.is-primary .title{
 	color:#f2d48aff;
+	font-family: RobotoSlab-ExtraLight;
 }
 section.hero.is-primary .subtitle{
 	color:#f7e6ba;
+	font-family: RobotoSlab-ExtraLight;
+	font-size: 1.20rem;
+}
+.vertically-centered {
+	margin-top:24px;
 }
 
 section.hero.is-primary a {
 	color:#f7e6ba !important;
 	text-decoration: underline;
 	font-weight: bold;
+	font-family: RobotoSlab-ExtraLight;
 }
 
 figure.image {
@@ -70,7 +81,24 @@ figure.image {
 	font-weight:bold;
 	color:#6b200d;
 	font-size: 1.25rem;
-	margin-left: 24px;
+	margin-left: 12px;
+	padding: 12px;
+	font-family: RobotoSlab-ExtraLight;
+}
+
+figure.image.navbar_symbol{
+	height:100%;
+	width:auto;
+	padding-left:12px;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-right:6px;
+	margin-right:0px;
+}
+.navbar-menu .navbar-item .symbol_and_text{
+	display:flex;
+	flex-direction: row;
+	justify-content: flex-start;
 	padding: 12px;
 }
 
@@ -82,8 +110,9 @@ figure.image {
 	background-color:transparent;
 	font-weight:bold;
 	color:#6b200d;
-	margin-left: 24px;
+	margin-left: 12px;
 	padding: 12px;
+	font-family: RobotoSlab-ExtraLight;
 }
 
 .button.navbar_button {
@@ -93,6 +122,7 @@ figure.image {
 	border: none;
 	font-size: 1.25rem;
 	padding: 0px;
+	font-family: RobotoSlab-ExtraLight;
 }
 
 .button.navbar_button:hover{
@@ -101,10 +131,11 @@ figure.image {
 	color:#6b200d;
 	border: none;
 	font-size: 1.25rem;
+	font-family: RobotoSlab-ExtraLight;
 }
 
 .middle_content {
-	background-image:url("./background.jpg");
+	background-image:url("./images/background.jpg");
 	background-size: 100%;
 	background-color:#442a19;
 	background-repeat:no-repeat;
@@ -123,16 +154,35 @@ figure.image {
 
 .section.section h2.subtitle{
 	color:#f2d48aff;
+	font-family: Roboto-Regular;
+}
+
+.section.section h2.subtitle.index {
+	font-family: RobotoSlab-ExtraLight;
+  font-style: italic;
+	font-size: 1.5rem;
+	line-height: 1.8em;
+	text-align: center;
+  text-transform: capitalize;
+}
+.section.section h1{
+	color:#f2d48aff;
+	text-align: center;
+	font-family: Roboto-Regular;
+	font-size: 1.25rem;
 }
 
 .section.section h2.subtitle.descriptions{
 	margin-left:-12px;
+	font-family: Roboto-Regular;
 }
 
 div.align-right h1{
 	text-align:right;
+	font-family: Roboto-Regular;
 }
 div.align-right h2{
+	font-family: RobotoSlab-ExtraLight;
 	text-align:right;
 }
 div.horizontally-centered{

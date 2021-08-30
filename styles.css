@@ -17,6 +17,7 @@ section.hero.is-primary{
 }
 section.hero.is-primary .title{
 	color:#f2d48aff;
+    font-size: 1.30rem;
 	font-family: RobotoSlab-ExtraLight;
 }
 section.hero.is-primary .subtitle{

@@ -1,0 +1,15 @@
+Name
+time
+servings
+source
+tag1, tag2, tag3
+
+1 ingredients
+go
+3 here
+
+and all
+the
+instructions
+go
+here

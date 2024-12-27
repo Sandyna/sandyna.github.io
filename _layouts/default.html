@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Cook Book</title>
+		<link rel="stylesheet" href="/~sandyna/cookbook/assets/css/styles.css">
+		<link rel="stylesheet" href="/~sandyna/cookbook/assets/css/bulma.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+	<section class="hero">
+	  <div class="hero-body">
+		<div class="container" style="margin-left: 8.3%">
+		  <h1 class="title" style="margin:50px auto 50px 0px; color:#4D5440;">
+			Cook Book 3003
+		  </h1>
+		</div>
+	  </div>
+	</section>
+
+
+		<section class="columns">
+
+			<div class="column is-one-fifth  is-offset-1 ">
+				<div class="container">			
+					<div class="navi">
+						<h1>Menu</h1>
+						<ul>
+							<li><a href="/~sandyna/cookbook/index.html">Recipe list</a></li>
+							<li><a href="/~sandyna/cookbook/new_recipe.html">Add new recipe</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-two-fifths">
+				<div class="content">
+					{{ content }}
+				</div>
+			</div>
+			
+				<div class="column is-one-fifth ">
+				<div class="container">			
+					<div class="navi">
+						<h1>Browse by category</h1>
+						<ul>
+						<!--TODO: get this into a separate file-->
+						{% capture tag_list %}
+							{% for page in site.pages %}
+								{% for tag in page.tags %}
+									{{tag}}
+							    {% if forloop.last == false %}::{% endif%}
+								{% endfor %}
+						    {% if forloop.last == false %}::{% endif%}
+							{% endfor %}
+						{% endcapture %}
+
+						{% assign tags = tag_list | downcase | downcase | url_escape | strip |strip_newlines |strip_html| split: '::' %}
+						{% assign stripped_tags = '' | split: '' %}
+						{%for tag in tags%}
+							{% assign stripped_tag = tag | downcase | downcase | url_escape | strip |strip_newlines |strip_html| %}
+							{% assign stripped_tags = stripped_tags | push: stripped_tag %}
+						{%endfor%}
+						{% assign stripped_tags = stripped_tags | uniq %}
+						{%for tag in stripped_tags%}
+							{%if tag != ''%}
+							{% assign tag_url = "sandyna/cookbook/" | append:tag |append:".html" %}
+							<li><a href={{tag_url}}>{{tag | capitalize}}</a></li>
+							{%endif%}
+						{%endfor%}
+					</div>
+				</div>
+			</div>
+			
+		</section>
+		
+		<div class="footer">
+			<em>Designed by Michaela Sandalova 2019. I stole the pictures from the Internet. Sorry about the retard units, didn't have time to fix them yet. </em>
+		</div>
+	
+	</body>
+</html>

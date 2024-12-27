@@ -1,0 +1,24 @@
+---
+title: Oatmeal cake with strawberries
+layout: recipe
+time: 
+servings: 
+source: http://www.sweet-family.sk/nase-recepty/pecenie/spaldovo-ovseny-kolac-plneny-jahodami.html?page_id=1143
+image: ./image.jpg
+---
+
+## Ingredients
+* 280g jemne mletých ovsených vločiek
+* 150g celozrnnej hladkej špaldovej múky
+* 130g trstinového cukru
+* 230g masla izbovej teploty
+* 1 lyžička kypriaceho prášku
+* 600g čerstvých jahôd alebo aj zavárané ovocie
+* nastrúhaná kôra z 1 citróna - ak použijeme zavárané
+* 2 lyžice kukuričného škrobu - ak použijeme zavárané
+
+## Instructions
+Ak použijeme zavárané ovocie, tak si najprv pripravíme plnku. Šťavu zo zaváraného ovocia nalejeme do hrnca, pridáme nastrúhanú citrónovú kôru, cukor podľa chuti (1-2 lyžice) a kukuričný škrob a na strednom ohni varíme za stáleho miešania, až kým nezhustne. Potom pridáme aj zvyšok ovocia, premiešame a odstavíme.<br/>
+Ak použijeme čerstvé ovocie, tak ho nakrájame na menšie kúsky. Rúru zapneme na 180 stupňov.<br/>
+Na cesto si vyšľaháme maslo s cukrom a primiešame aj ovsené vločky, špaldovú múku a kypriaci prášok. Zmiešame - vareškou alebo rukou. Cesto by malo byť také trocha mrveničkové.<br/>
+Polovicu cesta natlačíme na dno vymastenej formy - 24 cm, na to nanesieme plnku (alebo naukladáme nahusto čerstvé jahody) a navrch nasypeme nahusto mrveničku zo zvyšku cesta. Dáme piecť do predhriatej rúry na cca 20-25 minút. Vyberieme a necháme vychladnúť.<br/>

@@ -1,0 +1,33 @@
+---
+title: Dreischicht-Schokoladentarte
+layout: recipe
+time: 
+servings: Für runde Tarteform 28 cm (oder Springform)
+source: https://www.stilpalast.ch/savoir-vivre/genuss/dreischicht-schokoladentarte-709#sthash.NYYnnCOA.mZtKSOXC.dpbs
+image: ./image.jpg
+---
+
+## Ingredients
+
+### Für den Teig
+* 100 g kalte Butterstücke
+* 60 g Puderzucker
+* 1 Prise Zimt
+* 1 Prise Salz
+* 1 Ei
+* 180 g Mehl
+* 2 EL Kakao
+* 3 EL gemahlene Mandeln
+
+### Schokoschichten
+* 300 g  weisse Schokolade
+* 250 g Vollmilchschokolade
+* 200 g dunkle Schokolade (70%)
+* 2 EL Butter
+* 425 ml Halbrahm
+
+## Instructions
+Für den Boden einen Schokoladenmürbeteig herstellen. Hierzu Mehl, Puderzucker, Zimt, Salz, Mandeln und Kakao in eine Schüssel geben und vermischen. Das Ei und die kalte Butter hineingeben und alles miteinander verreiben, gut zu einem festen Teig kneten. Den Teig in die eingefettete und mit Mehl bestreute Form geben und 30 Minuten kalt stellen, danach bei 170 Grad auf der zweituntersten Rille 18 Minuten blind backen (Backfolie mit getrockneten Hülsenfrüchten oder Alu-Kügelchen belegen).<br/>
+Für die erste Tarteschicht die weisse Schokolade in kleine Stücke hacken und in eine Schüssel geben. 150 ml Halbrahm in einer Pfanne aufkochen und sofort über die Schokostückchen giessen. Rühren, bis die ganze Schokolade geschmolzen ist. Die Schokomischung auf dem Tarteboden verteilen und im Kühlschrank mindestens eine Stunde lang fest werden lassen.<br/>
+Die zweite Tarteschicht mit Milchschokolade analog zubereiten (auch mit 150 ml Halbrahm). Geschmolzene Schokolade auf der festen, weissen Schicht verteilen und wieder mindestens 1 Stunde im Kühlschrank fest werden lassen.<br/>
+Für die letzte Schicht die dunkle Schokolade ebenfalls in kleine Stücke hacken und in eine Schüssel geben. In einer Pfanne 125 ml Halbrahm zusammen mit den 2 EL Butter aufkochen und sofort über die Schokostücke giessen und umrühren, bis die Schokolade geschmolzen ist. Schokomasse auf der Tarte verteilen und mindestens wieder 1 Stunde im Kühlschrank fest werden lassen. Nach Belieben verzieren und in kleinen Stücken servieren.<br/>

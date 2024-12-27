@@ -1,0 +1,24 @@
+---
+title: Chocolate couscous cake
+layout: recipe
+time:  
+servings:  
+source: http://angiebakes.com/2017/04/06/cokoladovy-kuskus-kolac
+image: ./image.jpg
+---
+
+## Ingredients
+* 150 g maslových sušienok
+* cca 70 g masla
+* 300 g kuskusu
+* 450 ml mlieka
+* 80 g kryštálového cukru
+* 50 g masla
+* 150 g horkej čokolády 70%
+* 2 lyžice kakaa
+* 4 žĺtka
+* 2 bielka
+* 100 g mletých orechov
+
+## Instructions
+Najprv si necháme zovrieť mlieko s cukrom, potom odstavíme a pridáme kuskus. Necháme napučať. Medzitým si vo vodnom kúpeli rozpustíme čokoládu. Keď už kuskus vsiakne všetko mlieko, pridáme maslo a premiešame. Po jednom zamiešame aj žĺtka. Bielka vyšľaháme so štipkou soli dotuha. Do kuskus zmesi primiešame rozpustenú čokoládu, kakao, dobre premiešame a nakoniec aj tuhý sneh z bielkov a mleté orechy. Rúru zapneme na 180 stupnov. Keksíky pomelieme najemno, zmiešame s rozpusteným maslom a túto mrveničku natlačíme na dno koláčovej formy (22 cm). Korpus dáme piecť na 5 minút, potom nalejeme kuskus krém na korpus (no skôr lyžicujeme) a uhladíme. Dáme piecť na 30 minút. Po upečení necháme vychladnúť a nakrájame. Môžete posypať aj kakaom.<br/>

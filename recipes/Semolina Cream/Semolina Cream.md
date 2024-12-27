@@ -1,0 +1,20 @@
+---
+title: Krupicový krém do dezertov
+layout: recipe
+time: 
+servings: 
+source: https://tojenapad.dobrenoviny.sk/krupicovy-krem-do-pecenych-aj-nepecenych-dezertov/?utm_medium=social
+image: ./image.jpg
+---
+
+## Ingredients
+* 2 šálky mlieka
+* 4 lyžice krupice
+* 2 a ½ lyžice kryštálového cukru
+* 100 g masla
+* 1 bal vanilkového cukru
+* 1 žĺtok
+
+## Instructions
+V troche mlieka si rozmiešame krupicu s 1 lyžičkou cukru. Zvyšné mlieko spolu s vanlkovým cukrom preložíme na plameň. Keď zovrie, vmiešame doň krupicu a za stáleho miešania uvaríme hustú kašu.<br/>
+Žĺtok preložíme do misky spolu so zvyšným cukrom a nad parou miešame, kým zmes nezhustne. Necháme mierne  vychladnúť a všľaháme maslo. Do tejto zmesi vmiešavame po lyžičkách vychladnutú krupicu tak, aby sme získali nadýchanú konzistenciu krému.<br/>

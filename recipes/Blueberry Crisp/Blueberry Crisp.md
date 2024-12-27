@@ -1,0 +1,21 @@
+---
+title: Blueberry Crisp
+layout: recipe
+time: 40min
+servings: 9
+source: https://www.allrecipes.com/recipe/74967/blueberry-crisp-ii/
+image: ./image.jpg
+---
+
+## Ingredients
+* 4 cups fresh blueberries
+* 1 cup all-purpose flour
+* 3/4 cup white sugar
+* 1/2 teaspoon ground cinnamon
+* 1/2 cup mayonnaise
+
+## Instructions
+Preheat the oven to 350 degrees F (175 degrees C).<br/>
+Place the blueberries into an 8 inch square baking dish. In a medium bowl, stir together the flour, sugar, and cinnamon. Stir in the mayonnaise until the mixture resembles coarse crumbs. Sprinkle over the top of the berries.<br/>
+Bake for 35 to 40 minutes in the preheated oven, until the top is lightly browned.<br/>
+<br/>

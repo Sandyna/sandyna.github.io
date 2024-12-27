@@ -1,0 +1,23 @@
+---
+title: Rhubarb cake Swarowski
+layout: recipe
+time:  
+servings:  
+source: http://moje-jedlo.sk/rebarborovy-kolac-swarovski/
+image: ./image.jpg
+---
+
+## Ingredients
+* 6 vajec
+* 250 ml mlieka
+* 1/2 kocky droždia
+* 7 lyžíc práškového cukru
+* 1 vanilkový cukor
+* cca 4 stonky rebarbory
+* 250 g polohrubej múky
+* 120 g masla
+
+## Instructions
+Vajcia rozdelíme na žĺtky a bielky. Do misy k žĺtkom dáme zmäknuté maslo a rozmiešame. V šálke si urobíme kvások – do vlažného mlieka dáme lyžicu cukru a polovicu droždia. Počkáme, kým nakysne a potom ho pridáme k vajíčkovo maslovej zmesi. Pridáme múku a dobre zamiešame, konzistencia by mala byť tekutá asi ako pri bublanine. Viac cukru do korpusu nejde.<br/>
+Zmes nalejeme na vymastený a múkou vysypaný plech (alebo vystelieme papierom na pečenie) a rozotrieme ju do všetkých kútov, použila som klasický veľký plech. Na zmes potom poukladáme očistenú a nadrobno nakrájanú rebarboru. Posypeme vanilkovým cukrom a necháme 15 minút podkysnúť.<br/>
+Potom koláč dáme piecť do rúry z oboch strán na 180 stupňov. Kým sa koláč pečie, vyšľaháme bielky a keď su tuhé, pridáme po lyžiciach zvyšný cukor (6 lyžíc). Koláč po 10 – 15 minútach, keď už sa mierne zapiekol, vyberieme z rúry a natrieme naň hustý sneh. Rovnomerne rozotrieme a dáme dopekať už iba so spodným ohrevom. Pečieme podľa potreby ešte aspoň 10 – 15 minút.<br/>

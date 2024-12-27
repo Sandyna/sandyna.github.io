@@ -1,0 +1,18 @@
+---
+title: Maple & Blueberry Jelly Recipe
+layout: recipe
+time: 
+servings: 4
+source: http://www.thesugarhit.com/2013/08/elegant-maple-blueberry-jelly.html
+image: ./image.jpg
+---
+
+## Ingredients
+* 250g blueberries (fresh or frozen)
+* 200ml water
+* 50 – 150ml maple syrup
+* 5 leaves gelatin
+* More blueberries, maple syrup and creme fraiche to serve
+
+## Instructions
+Place the blueberries and water in a small saucepan and simmer with the lid on over a medium heat, until the blueberries collapse. Meanwhile, use a flavourless oil (almond oil works well) to grease four small cups of at least 125ml capacity. Once the blueberries have collapsed, strain the liquid into a measuring jug, tapping the strainer to ensure all the liquid comes through. Don’t press any of the pulp through the strainer, as this will cloud your jelly. Using a pair of scissors, cut the gelatine leaves into a small heatproof bowl and add around 1/3 cup of the blueberry liquid. Place the bowl over a pan of simmering water, and stir gently until the gelatine leaves are completely dissolved. Pour the gelatine mixture into the measuring jug, and add around 50ml of maple syrup. Taste the mixture to check it’s intensity, and add more, up to 150ml to reach your desired sweetness. Top the mixture up with water to reach 500ml of jelly, and then stir it well. Pour the jelly into the four greased cups, and refrigerate for at least 4 hours, or until the jelly is set. Serve with more blueberries, a drizzle of syrup and a dollop of creme fraiche or ice-cream.<br/>

@@ -1,0 +1,27 @@
+---
+title: No-Bake Cheesecake
+layout: recipe
+time: 25 mins (total 3h 30min)
+servings: 22 cm cake
+source: https://www.marthastewart.com/858246/no-bake-cheesecake
+image: ./image.jpg
+---
+
+## Ingredients
+* 2 packages (20 sheets) graham crackers
+* 11 tablespoons (1 3/8 sticks) unsalted butter, melted
+* 2 tablespoons sugar
+* $1.78 for 1 item thru 11/12
+* 2 8-ounce packages cream cheese, room temperature
+* 1 14-ounce can (1 1/4 cups) sweetened condensed milk
+* 1/4 cup fresh lemon juice
+* 1 teaspoon vanilla extract
+
+## Instructions
+1. Put graham crackers in a large resealable plastic bag, and crush them with a rolling pin until very fine crumbs form.<br/>
+2. Pour crumbs into a medium bowl; stir in sugar. Add butter, and stir until well combined.<br/>
+3. Press the crumb mixture into a 9-inch springform pan, spreading it 1 1/2 to 2 inches up the side; press flat. Chill crust in freezer at least 10 minutes.<br/>
+4. Meanwhile, make the filling: Using an electric mixer set at medium-high speed, beat the cream cheese in a large bowl until smooth. Beat in the condensed milk a little at a time, scraping the sides of the bowl, as necessary. Beat in the lemon juice and vanilla.<br/>
+5. Pour the filling into the crust; smooth the top with a rubber spatula. Cover with plastic wrap, and refrigerate until firm, 2 1/2 to 3 hours.<br/>
+6. Unclasp sides of pan, and remove cheesecake.<br/>
+<br/>

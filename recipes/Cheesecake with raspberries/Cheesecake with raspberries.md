@@ -1,0 +1,31 @@
+---
+title: Cheesecake with raspberries
+layout: recipe
+time:  
+servings:  
+source: http://www.sweet-family.sk/nase-recepty/pecenie/tvarohovy-kolac-s-malinami.html?page_id=1141
+image: ./image.jpg
+---
+
+## Ingredients
+
+### Cake Base
+* 250g butter biscuits
+* 90g butter
+* 3 tablespoons brown sugar
+* Filling
+* 500g curd cheese, soft
+* 120g sugar
+* 150g yoghurt, plain
+* 2 eggs
+* 1 yolk
+* 3 tablespoons all-purpose flour
+* 3 tablespoons lime juice
+* lime zest from 1 lime
+* 250g raspberries
+
+## Instructions
+Rúru zapneme na 180 stupňov. Najprv si pomelieme keksíky na jemno, zmiešame s cukrom a pridáme roztopené maslo. Spracujeme rukou a natlačíme na dno a boky obdĺžnikovej formy (alebo okrúhlej 24 cm).<br/>
+Dáme piecť na 10 minút.<br/>
+Zatiaľ si vyšľaháme tvaroh s jogurtom, cukrom, limetkovou šťavou a kôrou a múkou a po jedno primiešame aj vajíčka a žĺtko. Nalejeme na predpečený korpus a na vrch naukladáme maliny. Teplotu stiahneme na 160 stupňov, vložíme a pečieme cca 40-45 minút.<br/>
+Vypneme rúru, necháme vychladnúť a pred podávaním posypeme zbytkom malín a práškovým cukrom. Skladujeme v chladničke.<br/>

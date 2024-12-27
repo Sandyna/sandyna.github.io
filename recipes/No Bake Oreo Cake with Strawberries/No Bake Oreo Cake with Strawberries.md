@@ -1,0 +1,20 @@
+---
+title: No Bake Oreo Cake with Strawberries
+layout: recipe
+time:  
+servings:  
+source: http://angiebakes.com/2015/05/06/nepeceny-coko-oreo-kolac-s-jahodami
+image: ./image.jpg
+---
+
+## Ingredients
+* 330 g oreo keksíkov
+* 100 g rozpusteného masla
+* 200 g smotany na šľahanie
+* 200 g horkej čokolády
+* 100 g mliečnej čokolády
+* jahody
+* mleté pistácie alebo mandle
+
+## Instructions
+Oreo keksíky si pomelieme na jemno, pridáme rozpustené maslo a spolu premiešame. Natlačíme na dno formy a uložíme do mrazničky, kým si pripravíme plnku. Čokoládu nalámeme do misky, smotanu na šľahanie necháme zohriať (nie vrieť) a keď už je horúca, zalejeme ňou čokoládu. Počkáme chvíľku a potom metličkou vymiešame do hladka. Korpus vyberieme z mrazničky, nalejeme naň krém a poukladáme jahôdky. Uložíme na noc do chladničky, aby pekne stuhol. Potom posypeme pistáciami alebo mandľami.<br/>

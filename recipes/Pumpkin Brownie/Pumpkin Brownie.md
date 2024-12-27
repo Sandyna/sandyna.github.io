@@ -1,0 +1,29 @@
+---
+title: Tekvicové brownie
+layout: recipe
+time: 
+servings: 
+source: http://angiebakes.com/2016/11/07/tekvicove-brownie/
+image: ./image.jpg
+---
+
+## Ingredients
+
+### Tekvicová vrstva
+* 125 g philadelphia syra
+* 135 g tekvicového pyré
+* 1 vajíčko
+* 35 g SweetFamily kryštálového cukru
+* 1 lyžička perníkového korenia
+
+### Brownie vrstva
+* 330 g horkej čokolády
+* 120 g masla
+* 170 g SweetFamily kryštálového cukru
+* 3 vajíčka
+* 115 g hladkej múky
+* 20 g kakaa
+* kvapka vanilkového extraktu
+
+## Instructions
+Najprv si pripravíme brownie vrstvu. Horkú čokoládu rozpustíme spolu s maslom vo vodnom kúpeli, odstavíme a necháme chladnúť. Celé vajíčka vyšľaháme s cukrom do peny, prilejeme rozpustenú čokoládu, pridáme vanilkový extrakt a nakoniec prisypeme múku zmiešanú s kakaom. Cesto nalejeme do 25 x 30 cm obdĺžnikovej formy. Rúru zapneme na 180°C. Na tekvicovú vrstvu si vyšľaháme spolu všetky ingrediencie a nalejeme na vrch brownie cesta. Uhladíme a dáme piecť na cca 35-40 min.<br/>

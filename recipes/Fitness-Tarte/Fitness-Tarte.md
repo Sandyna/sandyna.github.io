@@ -1,0 +1,41 @@
+---
+title: Fitness-Tarte
+layout: recipe
+time: 
+servings: Tarte- oder Springform mit ca. 28 cm Durchmesser
+source: https://www.stilpalast.ch/savoir-vivre/genuss/k%C3%B6stliche-fitness-tarte-6145#sthash.ivG2r0M1.dpbs
+image: ./image.jpg
+---
+
+## Ingredients
+
+### Für den Teig
+* 1 Bio-Ei
+* 100 g feiner Zucker
+* 50 g gemahlene Mandeln
+* 1/2 TL Vanillepulver
+* 100 ml Leinöl
+* 230 g Mehl
+* 1 Prise Salz
+
+### Für die Füllung und den Belag
+* 500 g Magerquark
+* 140 g Zucker
+* 25 ml Leinöl
+* 1/2 Bio-Zitrone (Saft und abgeriebene Schale)
+* 1 dl Halbrahm (Sahne)
+* 2 TL Kurkumapulver
+* 1 TL Zimtpulver
+* 1/4 TL Safranpulver
+* 1/4 TL Vanillepulver
+* 1/4 TL gemahlener, schwarzer Pfeffer
+* 1 Prise Salz
+* 2 Bio-Eier
+* ca. 150 g Heidelbeeren, gewaschen
+* 3 halbe Zitronenscheiben
+
+## Instructions
+Für den Teig das Ei mit 100 g Zucker in einer Schüssel verrühren. Die gemahlenen Mandeln und 1/2 TL Vanillezucker hinzufügen und zusammen mit 100 ml Leinöl verrühren. Das Mehl mit dem Salz über den Teig sieben und alles zu einem festen Teig kneten. Diesen für mindestens 2 Stunden in den Kühlschrank stellen.<br/>
+Den Backofen auf 200 °C vorheizen. Eine Tarte- oder Springform mit Butter einfetten und mit Mehl bestäuben. Die Kuchen- bzw. Tarteform mit dem Teig auskleiden (Rand ca. 2 cm hoch). Im Backofen in der Ofenmitte 13 Minuten blindbacken (hierfür Alufolie-Kügelchen oder rohe Hülsenfrüchte auf den Teig geben oder mit einer Gabel den Teig vor dem Backen und einmal während des Backens, wenn Blasen entstehen, einstechen). Herausnehmen und abkühlen lassen. Die Backofentemperatur auf 175 °C absenken.<br/>
+Den abgetropften Magerquark in eine grosse Schüssel geben und mit dem Zitronensaft und der Zitronenschale, 140 g Zucker, Halbrahm, Leinöl (25 ml), Kurkuma, Zimt, Safran, Vanille, Pfeffer und Salz gut vermischen. Zum Schluss die Eier hinzufügen und alles zu einer glatten Masse verrühren. Diese auf den Tarteboden geben und die Tarte in der Ofenmitte ca. 25 Minuten backen. Herausnehmen und abkühlen lassen.<br/>
+Die Tarte mit den Heidelbeeren und den Zitronenscheiben dekorieren und servieren. Unbedingt kühl aufbewahren. Die Tarte kann im Kühlschrank bis zu 3 Tage aufbewahrt werden.<br/>

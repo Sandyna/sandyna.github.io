@@ -1,0 +1,22 @@
+---
+layout: default
+
+---
+
+<h1> {{ page.title }} </h1>
+
+<div class="recipe_body">
+	Time: {{ page.time }} <br/>
+	Servings: {{ page.servings }} <br/>
+	<a href={{ page.source }}> Source </a> <br/>
+	Tags: {% for tag in page.tags %} {{ tag}}{% if forloop.last == false %},{% endif%}	{% endfor %} <br/>
+	
+	{{ content }}
+
+	<img src={{ page.image }}></img>
+	
+	{% for category in page.categories %}
+		{{ category }}
+	{% endfor %}
+</div>
+

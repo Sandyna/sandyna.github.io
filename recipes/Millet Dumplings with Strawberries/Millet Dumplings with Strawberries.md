@@ -1,0 +1,19 @@
+---
+title: Pšenové guličky s makom plnené jahodami
+layout: recipe
+time: 
+servings: 
+source: http://angiebakes.com/2017/07/08/psenove-gulicky-s-makom-plnene-jahodami/
+image: ./image.jpg
+---
+
+## Ingredients
+* 100 g pšena
+* 300 ml mlieka
+* 1 lyžica brezového cukru (alebo iné sladidlo)
+* 1 lyžica mletého maku
+* 150-200 g jahôd
+* bezlepková strúhanka
+
+## Instructions
+Pšeno umyjeme a nasypeme do mlieka a dáme variť pri miernej teplote, až kým úplne nenasiakne všetko mlieko. Potom pridáme sladidlo a mak, premiešame a necháme vychladnúť. Cca 7 menších jahôdok odložíme bokom a zbytok vymiešame tyčovým mixérom na pyré. Strúhanku opražíme do zlatista na troške oleja. Z vychladnutého pšena si navlhčenými rukami odoberáme po troške, spľasneme v ruke a do stredu uložíme malú jahôdku a vytvarujeme guličku. Opakujeme aj zo zbytkom pšena. Vyvaľkáme v strúhanke a podávame s jahodovým pyré. Vyjde približne 7 guličiek, závisí od veľkosti.<br/>

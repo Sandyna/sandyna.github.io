@@ -1,0 +1,28 @@
+---
+title: Pizza
+layout: recipe
+time: 1-2 hours preparation time, 10 to 30 mins cooking time
+servings: 6 x 20cm pizza bases
+source: https://www.bbc.co.uk/food/recipes/pizzadoughbase_70980
+image: ./image.jpg
+---
+
+## Ingredients
+* 650g 00 flour (or strong white flour)
+* 7g sachet easy-blend yeast
+* 2 tsp salt
+* 25ml olive oil
+* 50ml warm milk
+* 325ml warm water
+* pizza toppings
+
+## Instructions
+Make the dough:<br/>
+mix the flour, yeast and salt together in a large mixing bowl and stir in the olive oil and milk. Gradually add the water, mixing well to form a soft dough.<br/>
+Turn the dough out on to a floured work surface and knead for about five minutes, until smooth and elastic. Transfer to a clean bowl, cover with a damp tea towel and leave to rise for about 1½ hours, until doubled in size.<br/>
+When the dough has risen, knock it back, then knead again until smooth, roll into a ball and set aside for 30 minutes to 1 hour until risen again.<br/>
+Prepare the pizzas:<br/>
+Preheat the oven to its highest setting.<br/>
+Divide the dough into six balls and roll each out onto a lightly floured work surface until 20cm in diameter. (You can also make one big pizza.)<br/>
+Spread a little passata (or homemade tomato sauce) over each pizza base and top with your favourite toppings.<br/>
+Bake the pizzas in the oven for 10-12 minutes until the bases are crisp and golden-brown around the edges and any cheese on the topping has melted.<br/>

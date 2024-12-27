@@ -1,0 +1,23 @@
+---
+title: Čokoládové suflé
+layout: recipe
+time: 
+servings: 2-3 ks
+source: https://www.sweet-family.sk/recepty/cokoladove-sufle
+image: ./image.jpg
+---
+
+## Ingredients
+* 100 g min. 70% horkej čokolády
+* 30 g masla
+* 10 g hladkej múky
+* 2 PL kryštálového cukru
+* 2 vajíčka
+* štipka soli
+* maliny na ozdobenie
+* práškový cukor na posypanie
+
+## Instructions
+Rúru si zapneme na 240°C. Plech vystelieme papierom na pečenie. Dva kruhy o priemere 8 cm a výšky 4-5 cm vymažeme zvnútra maslom a vysypeme kakaom a uložíme na plech (ak také nemáme, môžeme ich pripraviť aj v keramických miskách alebo v plechu na muffiny).<br/>
+Najprv si vo vodnom kúpeli rozpustíme čokoládu s maslom. Odstavíme a necháme trocha vychladnúť. Vajíčka rozdelíme, bielka vyšľaháme so štipkou soli a postupne pridávame cukor do hustého snehu. Žĺtka primiešame do rozpustenej čokolády. Tuhý sneh opatrne lopatkou primiešame k čokoláde a nakoniec pridáme aj múku. Toto cesto nalejeme do pripravených kruhov uložených na plechu (do keramických misiek alebo do plechu na muffiny).<br/>
+Dáme piecť na cca 5 minút, vyberieme, necháme 2 minúty odstáť a potom opatrne s nožom prejdeme zvnútra kruhu a dáme ho dole. Každé suflé jemne podberieme zospodku lopatkou a prenesieme na tanier. Ozdobíme malinami a posypeme práškovým cukrom. Z tejto dávky vyjdú 2 kusy (v prípade keramickej formy 3).<br/>

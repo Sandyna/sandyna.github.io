@@ -1,0 +1,38 @@
+---
+title: Strawberry Lemonade Cake
+layout: recipe
+time: 
+servings: 8-10
+source: https://www.buzzfeed.com/kianomoju/do-summer-right-with-this-strawberry-lemonade-cake?utm_term=.sbRpW9DKn#
+image: ./image.jpg
+---
+
+## Ingredients
+* Cooking spray
+* 4 large eggs, at room temperature
+* 1½ cups granulated sugar
+* 1 cup olive oil
+* 1 teaspoon vanilla extract
+* ½ cup lemon juice, (about 2 lemons freshly squeezed)
+* 1 tablespoon lemon zest
+* 1 cup whole milk
+* 2¼ cups all purpose flour
+* 1 teaspoon baking powder
+* 1 teaspoon baking soda
+* 1 teaspoon kosher salt
+* 2 cups heavy whipping cream
+* ½ cup strawberry jam
+* 2 cups strawberries, sliced
+
+## Instructions
+1. Preheat your oven to 350°F (180°C).<br/>
+2. Grease three 8-inch tins with butter of cooking spray, then sprinkle with flour to cover all sides, shaking off any excess. Cut out three rounds of parchment paper to fit in the bottom of each tin.<br/>
+3. In a large mixing bowl combine the eggs and sugar and use a hand mixer to beat until it has tripled in volume and is pale yellow and thick.<br/>
+4. Continue blending and gradually add the olive oil. Add the vanilla extract, lemon zest, lemon juice, and milk, and mix until smooth.<br/>
+5. Sift in the flour, baking powder, baking soda and salt. Using a rubber spatula or wooden spoon, gently incorporate into the liquid batter until just combined. Be careful not to overmix.<br/>
+6. Evenly divide the batter into the three baking tins.<br/>
+7. Bake for 20-25 minutes, until cakes are lightly golden and fork comes out clean from the center.<br/>
+8. Allow cakes to cool into the pan for 10 minutes before transferring to a baking rack to cool completely.<br/>
+9. Using a hand mixer, whisk the heavy whipping cream until soft peaks form. Add in the strawberry jam whisking together until fully incorporated and peaks are stiff. Keep in the fridge until ready to use.<br/>
+10. To assemble, start with a bottom layer of cake. Cover top with a generous amount of icing, followed by an even layer of sliced strawberries. Repeat with the remaining layers.<br/>
+11. Finish the cake by icing the top and sides with icing, and garnishing the top with remaining strawberries. Store in the fridge until ready to serve. Enjoy!<br/>

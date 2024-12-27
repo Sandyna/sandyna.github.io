@@ -1,0 +1,25 @@
+---
+title: Tiramisu
+layout: recipe
+time: 8h/1h
+servings: 10
+source: https://www.allrecipes.com/recipe/21412/tiramisu-ii/
+image: ./image.jpg
+---
+
+## Ingredients
+* 6 egg yolks
+* 100 g white sugar (150g orig, american recipe)
+* 150 ml milk
+* ~300 ml heavy cream (or 500)
+* 1/2 teaspoon vanilla extract
+* 450 g mascarpone cheese
+* strong brewed coffee, room temperature (~5x kompresso coffee, ~160-200ml)
+* 2 tablespoons rum/amaretto
+* 3 packages ladyfinger cookies
+* unsweetened cocoa powder
+
+## Instructions
+In a medium saucepan, whisk together egg yolks and sugar until well blended. Whisk in milk and cook over medium heat, stirring constantly, until mixture boils. Boil gently for 1 minute, remove from heat and allow to cool slightly. Cover tightly and chill in refrigerator 1 hour.<br/>
+In a medium bowl, beat cream with vanilla until stiff peaks form. Whisk mascarpone into yolk mixture until smooth. In a small bowl, combine coffee and rum. Split ladyfingers in half lengthwise and drizzle with coffee mixture.<br/>
+Arrange half of soaked ladyfingers in bottom of a 7x11 inch dish. Spread half of mascarpone mixture over ladyfingers, then half of whipped cream over that. Repeat layers and sprinkle with cocoa. Cover and refrigerate 4 to 6 hours, until set.<br/>

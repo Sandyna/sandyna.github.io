@@ -1,0 +1,22 @@
+---
+title: Banánovo-ríbezľové muffinky
+layout: recipe
+time: 
+servings: 
+source: http://angiebakes.com/2017/07/20/bananovo-ribezlove-muffinky/
+image: ./image.jpg
+---
+
+## Ingredients
+* 250 g hladkej múky
+* 1 zrelý banán
+* 1 vajíčko
+* 150 g kryštálového cukru
+* 150 g ríbezlí
+* 1 balík kypriaceho prášku
+* 125 g bieleho jogurtu
+* 100 ml oleja
+* 50 ml mlieka
+
+## Instructions
+Rúru si zapneme na 180 stupňov. Plech na muffiny vystelieme papierovými košíkmi. Banán roztlačíme vidličkou, primiešame vajíčko, cukor a prešľaháme. Pridáme olej a jogurt. Nakoniec primiešame aj múku zmiešanú s kypriacim práškom a mlieko. Pridáme ríbezle a lopatkou jemne vmiešame. Papierové košíky naplníme do 3/4 cestom a dáme piecť na cca 20 minút. Po upečení vyberieme a necháme vychladnúť. Jemne posypeme práškovým cukrom.<br/>

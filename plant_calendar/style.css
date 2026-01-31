@@ -19,7 +19,7 @@ body {
 }
 
 .calendar-month {
-  width: 23%;  /* Each month takes up about 1/4 of the container width */
+  width: 8%;  /* Each month takes up about 1/4 of the container width */
   margin: 10px;
   border: 1px solid #ccc;
   padding: 10px;
@@ -90,3 +90,4 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+

@@ -28,7 +28,7 @@ body {
 .calendar-header {
   text-align: center;
   font-size: 1.2em;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
 }
 
 .calendar-grid {
@@ -38,7 +38,6 @@ body {
 .calendar-day {
   padding: 3px;
   background-color: white;
-  border: 1px solid #ccc;
   text-align: left;
   cursor: pointer;
   min-height: 30px;  /* Default height for each day */
@@ -65,6 +64,25 @@ body {
   height: 20px;
   margin-left: 5px;  /* Space between icons */
   margin-bottom: 5px;  /* Vertical gap if wrapping */
+}
+
+.calendar-icon,
+.calendar-placeholder {
+  display: inline-block;  /* Ensure the icon and placeholder are inline */
+  width: auto;  /* Don't take up full width */
+  height: 20px;  /* Set the height for the icons */
+  margin-left: 5px;  /* Space between icons */
+  margin-bottom: 5px;  /* Vertical gap if wrapping */
+  border: 1px solid #ccc;  /* Border around the icon placeholder */
+  padding: 3px 5px;  /* Padding to give space around the text */
+  text-align: center;  /* Center the text */
+  font-size: 14px;  /* Set font size for the placeholder text */
+  line-height: 20px;  /* Vertically center the text inside the placeholder */
+}
+
+.calendar-placeholder {
+  width: auto;
+  font-weight: bold;  /* Make the text stand out */
 }
 
 .calendar-day:hover {
@@ -110,4 +128,5 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 

@@ -11,7 +11,7 @@ body {
 
 #calendar-container {
   width: 80%;
-  max-width: 1200px;
+/*  max-width: 1200px;*/
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;  /* Allow months to wrap into rows */
@@ -29,7 +29,7 @@ body {
 
 .calendar-header {
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.2em;
   margin-bottom: 10px;
 }
 
@@ -90,6 +90,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

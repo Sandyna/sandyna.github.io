@@ -15,12 +15,12 @@ body {
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;  /* Allow months to wrap into rows */
-  justify-content: space-between;
+  justify-content: left;
 }
 
 .calendar-month {
-  width: 8%;  /* Each month takes up about 1/4 of the container width */
-  margin: 10px;
+  width: 8.3%;  /* Each month takes up about 1/12 of the container width */
+/*  margin: 10px; */
   border: 1px solid #ccc;
   padding: 10px;
   background-color: #fff;
@@ -90,5 +90,6 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 

@@ -6,7 +6,7 @@ body {
   background-color: #f4f4f9;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 
 #calendar-container {
@@ -38,12 +38,12 @@ body {
 }
 
 .calendar-day {
-  padding: 10px;
+  padding: 3px;
   background-color: white;
   border: 1px solid #ccc;
-  text-align: center;
+  text-align: left;
   cursor: pointer;
-  min-height: 40px;
+  min-height: 30px;
   margin-bottom: 5px;  /* Space between days */
 }
 
@@ -90,4 +90,5 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 

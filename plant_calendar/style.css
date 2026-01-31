@@ -38,12 +38,11 @@ body {
 .calendar-day {
   padding: 3px;
   background-color: white;
+  border: 1px solid #ccc;
   text-align: left;
   cursor: pointer;
   min-height: 30px;  /* Default height for each day */
-  display: flex;
-  flex-direction: column;  /* Stack the content vertically */
-  justify-content: flex-start;  /* Align content to the top */
+  display: block;
   position: relative;  /* Necessary for positioning plant icons */
 }
 
@@ -127,6 +126,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

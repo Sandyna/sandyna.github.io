@@ -2,25 +2,25 @@ async function loadPlantData() {
   try {
     const response = await fetch('plants.json');
     const plantData = await response.json();
-    generateYearCalendar(2026, plantData);  // Pass the plant data to the calendar generation
+    generateYearCalendar(2026, plantData, new Date("2026-03-15"));  // Pass the plant data and frost date to the calendar generation
   } catch (error) {
     console.error('Error loading plant data:', error);
   }
 }
 
 // Function to generate the full year calendar (12 months)
-function generateYearCalendar(year, plantData) {
+function generateYearCalendar(year, plantData, frostDate) {
   const calendarContainer = document.getElementById('calendar-container');
   calendarContainer.innerHTML = '';  // Clear any existing content
 
   // Loop through all 12 months
   for (let month = 1; month <= 12; month++) {
-    generateCalendar(month, year, plantData);
+    generateCalendar(month, year, plantData, frostDate);
   }
 }
 
 // Function to generate each month's calendar
-function generateCalendar(month, year, plantData) {
+function generateCalendar(month, year, plantData, frostDate) {
   const daysInMonth = new Date(year, month, 0).getDate();
   const monthName = new Date(year, month - 1).toLocaleString('default', { month: 'long' });
 
@@ -49,9 +49,7 @@ function generateCalendar(month, year, plantData) {
 
     // Add plant icons based on sowing/transplanting dates
     plantData.forEach(plant => {
-      const sowIndoorsDate = new Date(frostDate);
-      sowIndoorsDate.setDate(sowIndoorsDate.getDate() + plant.sow_indoor);
-
+      const sowIndoorsDate = calculateSowingIndoorsDate(frostDate, plant.sow_indoor);
       const sowOutdoorsDate = new Date(frostDate);
       sowOutdoorsDate.setDate(sowOutdoorsDate.getDate() + plant.sow_outdoor);
 
@@ -66,6 +64,13 @@ function generateCalendar(month, year, plantData) {
 
   // Append the month calendar to the year container
   document.getElementById('calendar-container').appendChild(monthDiv);
+}
+
+// Function to calculate sowing indoors date
+function calculateSowingIndoorsDate(frostDate, weeksBefore) {
+  const sowIndoorsDate = new Date(frostDate);
+  sowIndoorsDate.setDate(sowIndoorsDate.getDate() + weeksBefore * 7);  // Subtract weeks from frost date
+  return sowIndoorsDate;
 }
 
 function placeIcon(dayDiv, color, icon, action, plantName) {
@@ -88,9 +93,6 @@ function placeIcon(dayDiv, color, icon, action, plantName) {
     dayDiv.appendChild(iconElement);
   };
 }
-
-// Frost date example (can be dynamically set)
-const frostDate = new Date("2026-03-15");
 
 // Load the plant data and generate the full year calendar
 loadPlantData();

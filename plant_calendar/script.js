@@ -1,36 +1,44 @@
-// script.js
-
-// Function to fetch plant data (same as before)
 async function loadPlantData() {
   try {
     const response = await fetch('plants.json');
     const plantData = await response.json();
-    generateCalendar(3, 2026, plantData);  // Pass the plant data to the calendar function
+    generateYearCalendar(2026, plantData);  // Pass the plant data to the calendar generation
   } catch (error) {
     console.error('Error loading plant data:', error);
   }
 }
 
-// Function to generate the calendar grid
+// Function to generate the full year calendar (12 months)
+function generateYearCalendar(year, plantData) {
+  const calendarContainer = document.getElementById('calendar-container');
+  calendarContainer.innerHTML = '';  // Clear any existing content
+
+  // Loop through all 12 months
+  for (let month = 1; month <= 12; month++) {
+    generateCalendar(month, year, plantData);
+  }
+}
+
+// Function to generate each month's calendar
 function generateCalendar(month, year, plantData) {
   const daysInMonth = new Date(year, month, 0).getDate();
   const monthName = new Date(year, month - 1).toLocaleString('default', { month: 'long' });
 
-  const calendarContainer = document.getElementById('calendar-container');
-  calendarContainer.innerHTML = '';  // Clear previous content
+  const monthDiv = document.createElement('div');
+  monthDiv.classList.add('calendar-month');
 
-  // Add header with month name
+  // Add month header (e.g., "January", "February", etc.)
   const header = document.createElement('div');
   header.classList.add('calendar-header');
-  header.textContent = `${monthName} ${year}`;
-  calendarContainer.appendChild(header);
+  header.textContent = monthName;
+  monthDiv.appendChild(header);
 
-  // Add the calendar grid
+  // Create the grid for the calendar
   const grid = document.createElement('div');
   grid.classList.add('calendar-grid');
-  calendarContainer.appendChild(grid);
+  monthDiv.appendChild(grid);
 
-  // Loop through the days of the month
+  // Loop through each day in the month
   for (let day = 1; day <= daysInMonth; day++) {
     const dayDiv = document.createElement('div');
     dayDiv.classList.add('calendar-day');
@@ -50,15 +58,16 @@ function generateCalendar(month, year, plantData) {
       const transplantDate = new Date(frostDate);
       transplantDate.setDate(transplantDate.getDate() + plant.transplant);
 
-      // Place icons if the day matches any plant date
       if (sowIndoorsDate.getDate() === day) placeIcon(dayDiv, 'blue', plant.icon, 'Sow Indoors', plant.name);
       if (sowOutdoorsDate.getDate() === day) placeIcon(dayDiv, 'brown', plant.icon, 'Sow Outdoors', plant.name);
       if (transplantDate.getDate() === day) placeIcon(dayDiv, 'green', plant.icon, 'Transplant', plant.name);
     });
   }
+
+  // Append the month calendar to the year container
+  document.getElementById('calendar-container').appendChild(monthDiv);
 }
 
-// Helper function to add icons to calendar days
 function placeIcon(dayDiv, color, icon, action, plantName) {
   const iconElement = document.createElement('span');
   
@@ -83,5 +92,5 @@ function placeIcon(dayDiv, color, icon, action, plantName) {
 // Frost date example (can be dynamically set)
 const frostDate = new Date("2026-03-15");
 
-// Load the plant data and generate the calendar
+// Load the plant data and generate the full year calendar
 loadPlantData();

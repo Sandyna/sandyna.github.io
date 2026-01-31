@@ -48,28 +48,41 @@ function generateCalendar(month, year, plantData, frostDate) {
     grid.appendChild(dayDiv);
 
     // Add plant icons based on sowing/transplanting dates
-    if (sowIndoorsDate.getDate() === day && sowIndoorsDate.getMonth() === month - 1) {
-      placeIcon(dayDiv, 'blue', plant.icon, 'Sow Indoors', plant.name);
-    }
+    plantData.forEach(plant => {
+      // Calculate sowing indoors date relative to the frost date
+      const sowIndoorsDate = calculateSowingIndoorsDate(frostDate, plant.sow_indoor, month);
 
-    // Check if sowing outdoors date matches both the day and the month
-    if (sowOutdoorsDate.getDate() === day && sowOutdoorsDate.getMonth() === month - 1) {
-      placeIcon(dayDiv, 'brown', plant.icon, 'Sow Outdoors', plant.name);
-    }
+      // Calculate sowing outdoors date relative to the frost date
+      const sowOutdoorsDate = new Date(frostDate);
+      sowOutdoorsDate.setDate(sowOutdoorsDate.getDate() + plant.sow_outdoor);
 
-    // Check if transplanting date matches both the day and the month
-    if (transplantDate.getDate() === day && transplantDate.getMonth() === month - 1) {
-      placeIcon(dayDiv, 'green', plant.icon, 'Transplant', plant.name);
-    }
-  });
+      // Calculate transplant date relative to the frost date
+      const transplantDate = new Date(frostDate);
+      transplantDate.setDate(transplantDate.getDate() + plant.transplant);
+
+      // Check if sowing indoors date matches both the day and the month
+      if (sowIndoorsDate.getDate() === day && sowIndoorsDate.getMonth() === month - 1) {
+        placeIcon(dayDiv, 'blue', plant.icon, 'Sow Indoors', plant.name);
+      }
+
+      // Check if sowing outdoors date matches both the day and the month
+      if (sowOutdoorsDate.getDate() === day && sowOutdoorsDate.getMonth() === month - 1) {
+        placeIcon(dayDiv, 'brown', plant.icon, 'Sow Outdoors', plant.name);
+      }
+
+      // Check if transplant date matches both the day and the month
+      if (transplantDate.getDate() === day && transplantDate.getMonth() === month - 1) {
+        placeIcon(dayDiv, 'green', plant.icon, 'Transplant', plant.name);
+      }
+    });
   }
 
   // Append the month calendar to the year container
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
 
-// Function to calculate sowing indoors date
-function calculateSowingIndoorsDate(frostDate, weeksBefore) {
+// Function to calculate sowing indoors date relative to frost date
+function calculateSowingIndoorsDate(frostDate, weeksBefore, month) {
   const sowIndoorsDate = new Date(frostDate);
   sowIndoorsDate.setDate(sowIndoorsDate.getDate() + weeksBefore * 7);  // Subtract weeks from frost date
   return sowIndoorsDate;
@@ -98,4 +111,3 @@ function placeIcon(dayDiv, color, icon, action, plantName) {
 
 // Load the plant data and generate the full year calendar
 loadPlantData();
-

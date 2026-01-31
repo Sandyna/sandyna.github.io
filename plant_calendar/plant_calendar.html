@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plant Calendar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div id="calendar-container">
+    <!-- Calendar will be dynamically generated here -->
+  </div>
+  
+  <form id="custom-plant-form">
+    <h2>Add Custom Plant</h2>
+    <label for="plant-name">Plant Name:</label>
+    <input type="text" id="plant-name" required>
+
+    <label for="sun-needs">Sun Needs:</label>
+    <input type="text" id="sun-needs">
+
+    <label for="water-needs">Water Needs:</label>
+    <input type="text" id="water-needs">
+
+    <label for="sow-indoor">Sow Indoors (days before frost):</label>
+    <input type="number" id="sow-indoor">
+
+    <label for="sow-outdoor">Sow Outdoors (days after frost):</label>
+    <input type="number" id="sow-outdoor">
+
+    <label for="transplant">Transplant (days after frost):</label>
+    <input type="number" id="transplant">
+
+    <label for="harvest">Harvest (weeks after frost):</label>
+    <input type="number" id="harvest">
+
+    <button type="submit">Add Plant</button>
+  </form>
+
+  <button id="clear-session-btn">Clear Session</button>
+</body>
+</html>

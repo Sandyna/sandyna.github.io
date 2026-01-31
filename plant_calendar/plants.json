@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Tomato",
+    "sow_indoor": -42,
+    "sow_outdoor": 14,
+    "transplant": 21,
+    "harvest": 90,
+    "sun_needs": "Full Sun",
+    "water_needs": "Medium",
+    "icon": "tom",
+    "tooltip": "Tomatoes need a long growing season, and should be started indoors early. Transplant 2-3 weeks after the last frost."
+  },
+  {
+    "name": "Carrot",
+    "sow_indoor": null,
+    "sow_outdoor": 14,
+    "transplant": null,
+    "harvest": 70,
+    "sun_needs": "Full Sun",
+    "water_needs": "Low",
+    "icon": "car",
+    "tooltip": "Carrots are best sown directly into the soil once it has warmed up. Keep the soil moist but not soggy."
+  },
+  {
+    "name": "Lettuce",
+    "sow_indoor": -28,
+    "sow_outdoor": 14,
+    "transplant": 21,
+    "harvest": 60,
+    "sun_needs": "Partial Sun",
+    "water_needs": "Medium",
+    "icon": "let",
+    "tooltip": "Lettuce can tolerate cooler weather. Start indoors and transplant after the danger of frost has passed."
+  },
+  {
+    "name": "Basil",
+    "sow_indoor": -30,
+    "sow_outdoor": 10,
+    "transplant": 14,
+    "harvest": 70,
+    "sun_needs": "Full Sun",
+    "water_needs": "Medium",
+    "icon": "bas",
+    "tooltip": "Basil loves the sun and warm weather. Start indoors and transplant when the soil is warm."
+  },
+  {
+    "name": "Peas",
+    "sow_indoor": null,
+    "sow_outdoor": 7,
+    "transplant": null,
+    "harvest": 60,
+    "sun_needs": "Full Sun",
+    "water_needs": "Medium",
+    "icon": "pea",
+    "tooltip": "Peas thrive in cool weather and are best sown directly into the ground. Keep them well-watered."
+  }
+]

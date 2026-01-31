@@ -48,18 +48,20 @@ function generateCalendar(month, year, plantData, frostDate) {
     grid.appendChild(dayDiv);
 
     // Add plant icons based on sowing/transplanting dates
-    plantData.forEach(plant => {
-      const sowIndoorsDate = calculateSowingIndoorsDate(frostDate, plant.sow_indoor);
-      const sowOutdoorsDate = new Date(frostDate);
-      sowOutdoorsDate.setDate(sowOutdoorsDate.getDate() + plant.sow_outdoor);
+    if (sowIndoorsDate.getDate() === day && sowIndoorsDate.getMonth() === month - 1) {
+      placeIcon(dayDiv, 'blue', plant.icon, 'Sow Indoors', plant.name);
+    }
 
-      const transplantDate = new Date(frostDate);
-      transplantDate.setDate(transplantDate.getDate() + plant.transplant);
+    // Check if sowing outdoors date matches both the day and the month
+    if (sowOutdoorsDate.getDate() === day && sowOutdoorsDate.getMonth() === month - 1) {
+      placeIcon(dayDiv, 'brown', plant.icon, 'Sow Outdoors', plant.name);
+    }
 
-      if (sowIndoorsDate.getDate() === day) placeIcon(dayDiv, 'blue', plant.icon, 'Sow Indoors', plant.name);
-      if (sowOutdoorsDate.getDate() === day) placeIcon(dayDiv, 'brown', plant.icon, 'Sow Outdoors', plant.name);
-      if (transplantDate.getDate() === day) placeIcon(dayDiv, 'green', plant.icon, 'Transplant', plant.name);
-    });
+    // Check if transplanting date matches both the day and the month
+    if (transplantDate.getDate() === day && transplantDate.getMonth() === month - 1) {
+      placeIcon(dayDiv, 'green', plant.icon, 'Transplant', plant.name);
+    }
+  });
   }
 
   // Append the month calendar to the year container
@@ -96,3 +98,4 @@ function placeIcon(dayDiv, color, icon, action, plantName) {
 
 // Load the plant data and generate the full year calendar
 loadPlantData();
+

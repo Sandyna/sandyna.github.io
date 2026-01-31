@@ -1,4 +1,4 @@
-/* style.css */
+/* Updated CSS for vertical day stacking */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -9,17 +9,17 @@ body {
   align-items: center;
 }
 
-#/* Updated to allow multiple months to show in a grid */
 #calendar-container {
-  width: 90%;
+  width: 80%;
+  max-width: 1200px;
   margin-top: 30px;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  /* Allow months to wrap into rows */
   justify-content: space-between;
 }
 
 .calendar-month {
-  width: 23%;  /* Adjust as needed for layout */
+  width: 23%;  /* Each month takes up about 1/4 of the container width */
   margin: 10px;
   border: 1px solid #ccc;
   padding: 10px;
@@ -27,17 +27,14 @@ body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-
 .calendar-header {
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1.5em;
   margin-bottom: 10px;
 }
 
 .calendar-grid {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  display: block;  /* Change from grid to block layout for stacking */
 }
 
 .calendar-day {
@@ -46,7 +43,8 @@ body {
   border: 1px solid #ccc;
   text-align: center;
   cursor: pointer;
-  min-height: 50px;
+  min-height: 40px;
+  margin-bottom: 5px;  /* Space between days */
 }
 
 .calendar-day:hover {
@@ -92,4 +90,3 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
-

@@ -26,6 +26,7 @@ body {
 }
 
 .calendar-header {
+  border: 2px solid #131313;
   text-align: center;
   font-size: 1.2em;
   padding-bottom: 10px;
@@ -126,6 +127,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

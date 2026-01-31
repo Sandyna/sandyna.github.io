@@ -75,7 +75,7 @@ body {
 
 /* .calendar-placeholder specific styles */
 .calendar-placeholder {
-  width: auto;  /* Don't take up full width */
+  max-width: 25%;
   height: 20px;  /* Fixed height for the placeholder */
   padding: 3px 5px;  /* Padding for spacing around text */
   border: 1px solid #ccc;  /* Border around the placeholder */
@@ -127,6 +127,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

@@ -1,4 +1,4 @@
-/* Updated CSS for vertical day stacking and proper icon alignment */
+/* Updated CSS for vertical day stacking */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -10,17 +10,20 @@ body {
 }
 
 #calendar-container {
-  width: 100%;  /* Take up full width of the screen */
+  width: 80%;
+/*  max-width: 1200px;*/
   margin-top: 30px;
   margin-left: 30px;
   display: flex;
   flex-wrap: wrap;  /* Allow months to wrap into rows */
-  justify-content: flex-start;  /* Align months to the start */
+  justify-content: left;
 }
 
 .calendar-month {
-  width: 100%;  /* Make each month take up full width */
-  margin-bottom: 20px;  /* Add space between months */
+  width: 8.3%;  /* Each month takes up about 1/12 of the container width */
+/*  margin: 10px; */
+/*  border: 1px solid #ccc;*/
+/*  padding: 10px;*/
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -32,38 +35,17 @@ body {
 }
 
 .calendar-grid {
-  display: block;  /* Change from grid to block layout for stacking days vertically */
+  display: block;  /* Change from grid to block layout for stacking */
 }
 
 .calendar-day {
-  padding: 10px;
+  padding: 3px;
   background-color: white;
   border: 1px solid #ccc;
   text-align: left;
   cursor: pointer;
-  min-height: 30px;  /* Height of each day box */
-  margin-bottom: 5px;  /* Vertical space between days */
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;  /* Align day number and icons properly */
-}
-
-.calendar-day-number {
-  font-size: 1.2em;
-  margin-bottom: 5px;  /* Space between the day number and icons */
-}
-
-.calendar-icons {
-  display: flex;
-  flex-wrap: wrap;  /* Allow icons to wrap if there are too many */
-  justify-content: flex-end;  /* Align icons to the right */
-}
-
-.calendar-icon {
-  width: 20px;  /* Set a fixed size for icons */
-  height: 20px;
-  margin-left: 5px;  /* Space between icons */
-  margin-bottom: 5px;  /* Vertical gap if wrapping */
+  min-height: 30px;
+  /* margin-bottom: 5px;  Space between days */
 }
 
 .calendar-day:hover {
@@ -109,3 +91,9 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
+
+
+
+
+

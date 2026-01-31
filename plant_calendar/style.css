@@ -59,30 +59,29 @@ body {
   margin-top: 5px;  /* Space between day number and icons */
 }
 
+.calendar-icon, .calendar-placeholder {
+  display: inline-block;  /* Ensure both icons and placeholders take up only the space they need */
+  margin-left: 5px;  /* Space between items */
+  margin-bottom: 5px;  /* Vertical space between wrapped items */
+}
+
+/* .calendar-icon specific styles */
 .calendar-icon {
-  width: 20px;  /* Fixed size for icons */
-  height: 20px;
-  margin-left: 5px;  /* Space between icons */
-  margin-bottom: 5px;  /* Vertical gap if wrapping */
+  width: 20px;  /* Fixed width for icons */
+  height: 20px;  /* Fixed height for icons */
+  margin-bottom: 0;  /* Remove margin below icons to avoid excess spacing */
+  text-align: center;  /* Align icon image in the center */
 }
 
-.calendar-icon,
+/* .calendar-placeholder specific styles */
 .calendar-placeholder {
-  display: inline-block;  /* Ensure the icon and placeholder are inline */
   width: auto;  /* Don't take up full width */
-  height: 20px;  /* Set the height for the icons */
-  margin-left: 5px;  /* Space between icons */
-  margin-bottom: 5px;  /* Vertical gap if wrapping */
-  border: 1px solid #ccc;  /* Border around the icon placeholder */
-  padding: 3px 5px;  /* Padding to give space around the text */
-  text-align: center;  /* Center the text */
-  font-size: 14px;  /* Set font size for the placeholder text */
+  height: 20px;  /* Fixed height for the placeholder */
+  padding: 3px 5px;  /* Padding for spacing around text */
+  border: 1px solid #ccc;  /* Border around the placeholder */
+  text-align: center;  /* Center the text inside the placeholder */
+  font-size: 14px;  /* Font size for the placeholder text */
   line-height: 20px;  /* Vertically center the text inside the placeholder */
-}
-
-.calendar-placeholder {
-  width: auto;
-  font-weight: bold;  /* Make the text stand out */
 }
 
 .calendar-day:hover {
@@ -128,5 +127,6 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 

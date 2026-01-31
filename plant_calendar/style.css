@@ -1,3 +1,4 @@
+
 /* Updated CSS for vertical day stacking */
 body {
   font-family: Arial, sans-serif;
@@ -11,7 +12,6 @@ body {
 
 #calendar-container {
   width: 80%;
-/*  max-width: 1200px;*/
   margin-top: 30px;
   margin-left: 30px;
   display: flex;
@@ -21,9 +21,6 @@ body {
 
 .calendar-month {
   width: 8.3%;  /* Each month takes up about 1/12 of the container width */
-/*  margin: 10px; */
-/*  border: 1px solid #ccc;*/
-/*  padding: 10px;*/
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
@@ -35,7 +32,7 @@ body {
 }
 
 .calendar-grid {
-  display: block;  /* Change from grid to block layout for stacking */
+  display: block;  /* Change from grid to block layout for stacking days vertically */
 }
 
 .calendar-day {
@@ -44,8 +41,30 @@ body {
   border: 1px solid #ccc;
   text-align: left;
   cursor: pointer;
-  min-height: 30px;
-  /* margin-bottom: 5px;  Space between days */
+  min-height: 30px;  /* Default height for each day */
+  display: flex;
+  flex-direction: column;  /* Stack the content vertically */
+  justify-content: flex-start;  /* Align content to the top */
+  position: relative;  /* Necessary for positioning plant icons */
+}
+
+.calendar-day-number {
+  font-size: 1.2em;
+  margin-bottom: 5px;  /* Space between the day number and icons */
+}
+
+.calendar-icons {
+  display: flex;
+  flex-wrap: wrap;  /* Allow icons to wrap if there are too many */
+  justify-content: flex-end;  /* Align icons to the right */
+  margin-top: 5px;  /* Space between day number and icons */
+}
+
+.calendar-icon {
+  width: 20px;  /* Fixed size for icons */
+  height: 20px;
+  margin-left: 5px;  /* Space between icons */
+  margin-bottom: 5px;  /* Vertical gap if wrapping */
 }
 
 .calendar-day:hover {
@@ -91,9 +110,3 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
-
-
-
-
-
-

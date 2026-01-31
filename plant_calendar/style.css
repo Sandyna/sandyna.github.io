@@ -9,23 +9,24 @@ body {
   align-items: center;
 }
 
+#/* Updated to allow multiple months to show in a grid */
 #calendar-container {
-  width: 80%;
-  max-width: 1200px;  /* Allow wider container for multi-month layout */
+  width: 90%;
   margin-top: 30px;
   display: flex;
-  flex-wrap: wrap;  /* Allow multiple months to wrap in rows */
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 .calendar-month {
-  width: 23%;  /* Each month will take up 1/4 of the width, adjusted for margins */
+  width: 23%;  /* Adjust as needed for layout */
   margin: 10px;
   border: 1px solid #ccc;
   padding: 10px;
   background-color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 
 .calendar-header {
   text-align: center;
@@ -91,3 +92,4 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+

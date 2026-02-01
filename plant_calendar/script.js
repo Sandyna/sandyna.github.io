@@ -14,7 +14,7 @@ async function loadPlantData() {
     plantData = await response.json();
 
     loadFrostDate();
-    renderCalendar();
+    generateYearCalendar();
   } catch (error) {
     console.error('Error loading plant data:', error);
   }
@@ -102,3 +102,4 @@ function renderMonth(month, year, plantData, frostDate) {
 
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
+

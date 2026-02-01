@@ -8,7 +8,7 @@
     "sun_needs": "Full Sun",
     "water_needs": "Medium",
     "icon": "tom",
-    "alternate_text": "1F345",
+    "alternate_text": "\u{1F345}",
     "tooltip": "Tomatoes need a long growing season, and should be started indoors early. Transplant 2-3 weeks after the last frost."
   },
   {
@@ -20,7 +20,7 @@
     "sun_needs": "Full Sun",
     "water_needs": "Low",
     "icon": "car",
-    "alternate_text": "1F955",
+    "alternate_text": "\u{1F955}",
     "tooltip": "Carrots are best sown directly into the soil once it has warmed up. Keep the soil moist but not soggy."
   },
   {
@@ -32,7 +32,7 @@
     "sun_needs": "Partial Sun",
     "water_needs": "Medium",
     "icon": "let",
-    "alternate_text": null,
+    "alternate_text": LTC,
     "tooltip": "Lettuce can tolerate cooler weather. Start indoors and transplant after the danger of frost has passed."
   },
   {
@@ -60,4 +60,5 @@
     "tooltip": "Peas thrive in cool weather and are best sown directly into the ground. Keep them well-watered."
   }
 ]
+
 

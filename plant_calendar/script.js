@@ -6,7 +6,7 @@ let selectedPlantIds = new Set();
 document.addEventListener('DOMContentLoaded', () => {
   loadPlantData();
   setupFrostDateInput();
-  renderSelectedPlants();
+  renderPlantOptions();
 });
 
 // ---------- LOAD PLANT DATA ----------
@@ -17,7 +17,6 @@ async function loadPlantData() {
 
     loadFrostDate();
     renderPlantOptions();    // checkboxes
-    renderSelectedPlants();  // selected list
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   } catch (error) {
     console.error('Error loading plant data:', error);
@@ -129,6 +128,37 @@ function placeIcon(dayDiv, color, icon, action, plantName, altText) {
 }
 
 //PLANT SELECTION
+function renderPlantOptions() {
+  const container = document.getElementById('plant-options');
+  container.innerHTML = '';
+
+  plantData.forEach(plant => {
+    const div = document.createElement('div');
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = `plant-${plant.id}`;
+    checkbox.checked = selectedPlantIds.has(plant.id);
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        selectedPlantIds.add(plant.id);
+      } else {
+        selectedPlantIds.delete(plant.id);
+      }
+      renderSelectedPlants();
+      generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+    });
+
+    const label = document.createElement('label');
+    label.htmlFor = `plant-${plant.id}`;
+    label.textContent = plant.name;
+
+    div.appendChild(checkbox);
+    div.appendChild(label);
+    container.appendChild(div);
+  });
+}
+
 function renderSelectedPlants() {
   const list = document.getElementById('selected-plants-list');
   list.innerHTML = ''; // clear existing items

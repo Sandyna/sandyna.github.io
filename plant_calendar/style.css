@@ -45,7 +45,7 @@ body {
   min-height: 15px;  /* Default height for each day */
   display: block;
   position: relative;  /* Necessary for positioning plant icons */
-  font-size: 1em;
+  font-size: 0.8em;
 }
 
 .calendar-icons {
@@ -123,6 +123,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

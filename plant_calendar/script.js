@@ -14,7 +14,7 @@ async function loadPlantData() {
     plantData = await response.json();
 
     loadFrostDate();
-    generateYearCalendar(year, plantData, frostDate);
+    generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   } catch (error) {
     console.error('Error loading plant data:', error);
   }
@@ -37,7 +37,7 @@ function setupFrostDateInput() {
 
     frostDate = new Date(input);
     localStorage.setItem('userFrostDate', input);
-    generateYearCalendar(year, plantData, frostDate);
+    generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
 
@@ -124,6 +124,7 @@ function placeIcon(dayDiv, color, icon, action, plantName) {
 
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
+
 
 
 

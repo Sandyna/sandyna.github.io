@@ -88,19 +88,19 @@ function renderMonth(month, year, plantData, frostDate) {
       const transplantDate = new Date(frostDate); transplantDate.setDate(transplantDate.getDate() + plant.transplant);
 
       if (sowIndoorsDate.getDate() === day && sowIndoorsDate.getMonth() === month - 1) {
-        placeIcon(dayDiv, 'blue', plant.icon, 'Sow Indoors', plant.name);
+        placeIcon(dayDiv, 'blue', plant.icon, 'Sow Indoors', plant.name, plant.alternate_text);
       }
       if (sowOutdoorsDate.getDate() === day && sowOutdoorsDate.getMonth() === month - 1) {
-        placeIcon(dayDiv, 'brown', plant.icon, 'Sow Outdoors', plant.name);
+        placeIcon(dayDiv, 'brown', plant.icon, 'Sow Outdoors', plant.name, plant.alternate_text);
       }
       if (transplantDate.getDate() === day && transplantDate.getMonth() === month - 1) {
-        placeIcon(dayDiv, 'green', plant.icon, 'Transplant', plant.name);
+        placeIcon(dayDiv, 'green', plant.icon, 'Transplant', plant.name, plant.alternate_text);
       }
     });
   }
   
 // Function to place the icon or placeholder
-function placeIcon(dayDiv, color, icon, action, plantName) {
+function placeIcon(dayDiv, color, icon, action, plantName, altText) {
   const iconElement = document.createElement('span');
 
   // Check if the plant icon exists
@@ -114,16 +114,24 @@ function placeIcon(dayDiv, color, icon, action, plantName) {
   };
 
   img.onerror = function () {
-    // If the icon doesn't exist, use the first 3 letters of the plant name as a placeholder
-    iconElement.textContent = plantName.slice(0, 3).toUpperCase();  // Display first 3 letters
-    iconElement.classList.add('calendar-placeholder');  // Apply the placeholder styling
-    iconElement.style.border = `2px solid ${color}`;
-    dayDiv.appendChild(iconElement);
+    //check if there's alternative text
+    if(altText !== ""){
+      iconElement.textContent = altText;  // Display alt text
+      iconElement.classList.add('calendar-placeholder');  // Apply the placeholder styling
+      iconElement.style.border = `2px solid ${color}`;
+      dayDiv.appendChild(iconElement);
+    } else {
+      // If the icon or alt text doesn't exist, use the first 3 letters of the plant name as a placeholder
+      iconElement.textContent = plantName.slice(0, 3).toUpperCase();  // Display first 3 letters
+      iconElement.classList.add('calendar-placeholder');  // Apply the placeholder styling
+      iconElement.style.border = `2px solid ${color}`;
+      dayDiv.appendChild(iconElement);
   };
 }
 
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
+
 
 
 

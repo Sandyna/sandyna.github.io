@@ -187,6 +187,8 @@ function renderSelectedPlants() {
     li.appendChild(btn);
     list.appendChild(li);
   });
+}
+
 
 
 

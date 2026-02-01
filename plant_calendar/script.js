@@ -37,7 +37,7 @@ function setupFrostDateInput() {
 
     frostDate = new Date(input);
     localStorage.setItem('userFrostDate', input);
-    renderCalendar();
+    generateYearCalendar();
   });
 }
 
@@ -83,7 +83,7 @@ function renderMonth(month, year, plantData, frostDate) {
 
     // Place plant icons
     plantData.forEach(plant => {
-      const sowIndoorsDate = calculateSowingIndoorsDate(frostDate, plant.sow_indoor);
+      const sowIndoorsDate = new Date(frostDate); sowIndoorsDate.setDate(sowIndoorsDate.getDate() + plant.sow_indoor);
       const sowOutdoorsDate = new Date(frostDate); sowOutdoorsDate.setDate(sowOutdoorsDate.getDate() + plant.sow_outdoor);
       const transplantDate = new Date(frostDate); transplantDate.setDate(transplantDate.getDate() + plant.transplant);
 
@@ -101,5 +101,6 @@ function renderMonth(month, year, plantData, frostDate) {
 
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
+
 
 

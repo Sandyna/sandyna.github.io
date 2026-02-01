@@ -32,7 +32,7 @@
     "sun_needs": "Partial Sun",
     "water_needs": "Medium",
     "icon": "let",
-    "alternate_text": LTC,
+    "alternate_text": "LTC",
     "tooltip": "Lettuce can tolerate cooler weather. Start indoors and transplant after the danger of frost has passed."
   },
   {
@@ -60,6 +60,7 @@
     "tooltip": "Peas thrive in cool weather and are best sown directly into the ground. Keep them well-watered."
   }
 ]
+
 
 
 

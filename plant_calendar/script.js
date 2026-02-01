@@ -63,8 +63,8 @@ function renderMonth(month, year, plantData, frostDate) {
   // Month header
   const header = document.createElement('div');
   header.classList.add('calendar-header');
-  const monthColors = ['#99ccff', '#32cccc', '#ccffcc', '#5dcc00', '#ffff99', '#ffcc00', '#ff9900', '#ff6500', '#ff7b80', '#cc99ff', '#ccccff'];
-  header.style.backgroundColor = monthColors[month-2]
+  const monthColors = ['#ccecff', '#99ccff', '#32cccc', '#ccffcc', '#5dcc00', '#ffff99', '#ffcc00', '#ff9900', '#ff6500', '#ff7b80', '#cc99ff', '#ccccff'];
+  header.style.backgroundColor = monthColors[month-1]
   header.textContent = monthName;
   monthDiv.appendChild(header);
 
@@ -124,6 +124,7 @@ function placeIcon(dayDiv, color, icon, action, plantName) {
 
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
+
 
 
 

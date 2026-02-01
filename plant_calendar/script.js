@@ -103,7 +103,7 @@ function renderMonth(month, year, plantData, frostDate) {
 function placeIcon(dayDiv, color, icon, action, plantName, altText) {
   const iconElement = document.createElement('span');
   const img = new Image();
-  img.src = `icons/${icon}.png`;
+  img.src = `icons/${icon}.svg`;
 
   img.onload = function () {
     iconElement.innerHTML = `<img src="${img.src}" class="plant-icon" style="border: 2px solid ${color}" title="${action}: ${icon}">`;
@@ -121,6 +121,7 @@ function placeIcon(dayDiv, color, icon, action, plantName, altText) {
 
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
+
 
 
 

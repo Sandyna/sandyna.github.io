@@ -14,7 +14,7 @@ async function loadPlantData() {
     plantData = await response.json();
 
     loadFrostDate();
-    generateYearCalendar(2026, plantData, frostDate);
+    generateYearCalendar(year, plantData, frostDate);
   } catch (error) {
     console.error('Error loading plant data:', error);
   }
@@ -37,7 +37,7 @@ function setupFrostDateInput() {
 
     frostDate = new Date(input);
     localStorage.setItem('userFrostDate', input);
-    generateYearCalendar(2026, plantData, frostDate);
+    generateYearCalendar(year, plantData, frostDate);
   });
 }
 

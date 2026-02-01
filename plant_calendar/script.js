@@ -134,9 +134,12 @@ function renderPlantOptions() {
   const container = document.getElementById('plant-options');
   container.innerHTML = '';
 
-  plantData.forEach(plant => {
-    const div = document.createElement('div');
+  // Sort the plants alphabetically by name
+  const sortedPlants = [...plantData].sort((a, b) => a.name.localeCompare(b.name));
 
+  sortedPlants.forEach(plant => {
+    const div = document.createElement('div');
+    
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = `plant-${plant.id}`;
@@ -160,20 +163,9 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
-
 function renderSelectedPlants() {
   const list = document.getElementById('selected-plants-list');
   list.innerHTML = ''; // clear existing items
-
-  // Get the selected plants, sorted alphabetically
-  const selectedPlantsSorted = Array.from(selectedPlantIds)
-    .map(id => plantData.find(p => p.id === id))
-    .filter(Boolean) // remove any missing plants
-    .sort((a, b) => a.name.localeCompare(b.name));
-  console.log(selectedPlantsSorted.map(p => p.name));
-  selectedPlantsSorted.forEach(plant => {
-    const li = document.createElement('li');
-    li.textContent = plant.name;
 
     // Remove button
     const btn = document.createElement('button');
@@ -189,6 +181,7 @@ function renderSelectedPlants() {
     list.appendChild(li);
   });
 }
+
 
 
 

@@ -106,7 +106,7 @@ function placeIcon(dayDiv, color, icon, action, plantName, altText) {
   img.src = `icons/${icon}.svg`;
 
   img.onload = function () {
-    iconElement.innerHTML = `<img src="${img.src}" class="plant-icon" style="border: 2px solid ${color}" title="${action}: ${icon}">`;
+    iconElement.innerHTML = `<img src="${img.src}" class="calendar-icon" style="border: 2px solid ${color}" title="${action}: ${icon}">`;
     dayDiv.appendChild(iconElement);
   };
 
@@ -121,6 +121,7 @@ function placeIcon(dayDiv, color, icon, action, plantName, altText) {
 
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
+
 
 
 

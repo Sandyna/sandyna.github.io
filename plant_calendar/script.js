@@ -167,22 +167,28 @@ function renderSelectedPlants() {
   const list = document.getElementById('selected-plants-list');
   list.innerHTML = ''; // clear existing items
 
+  selectedPlantIds.forEach(id => {
+    const plant = plantData.find(p => p.id === id);
+    if (!plant) return;
+
+    const li = document.createElement('li');
+    li.textContent = plant.name;
+
     // Remove button
     const btn = document.createElement('button');
     btn.textContent = 'Remove';
     btn.style.marginLeft = '10px';
     btn.addEventListener('click', () => {
-      selectedPlantIds.delete(plant.id);
+      selectedPlantIds.delete(id);
       renderSelectedPlants();
-      generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+      generateYearCalendar(frostDate.getFullYear(), plantData, frostDate); // update calendar
     });
-  
-    const li = document.createElement('li');
-    li.textContent = plant.name;
-  
+
     li.appendChild(btn);
     list.appendChild(li);
-}
+  });
+
+
 
 
 

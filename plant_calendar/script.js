@@ -8,6 +8,39 @@ async function loadPlantData() {
   }
 }
 
+// Check LocalStorage for saved frost date
+let savedFrostDate = localStorage.getItem('userFrostDate');
+let frostDate;
+
+if (savedFrostDate) {
+  frostDate = new Date(savedFrostDate);
+} else {
+  frostDate = new Date("2026-03-15"); // default frost date
+}
+
+// Pre-fill the input field
+document.getElementById('frost-date-input').value = frostDate.toISOString().split('T')[0];
+
+// Then generate the calendar
+generateYearCalendar(2026, plantData, frostDate);
+
+//Setting the last frost date
+let frostDate = new Date("2026-03-15"); // default
+document.getElementById('update-frost-date').addEventListener('click', () => {
+  const input = document.getElementById('frost-date-input').value;
+  if (input) {
+    frostDate = new Date(input);
+    
+    // Save to LocalStorage
+    localStorage.setItem('userFrostDate', input); // save as YYYY-MM-DD string
+    // regenerate the calendar
+    generateYearCalendar(2026, plantData, frostDate);
+  }
+});
+//prefill the input field
+document.getElementById('frost-date-input').value = frostDate.toISOString().split('T')[0];
+
+
 // Function to generate the full year calendar (12 months)
 function generateYearCalendar(year, plantData, frostDate) {
   const calendarContainer = document.getElementById('calendar-container');
@@ -113,5 +146,6 @@ function placeIcon(dayDiv, color, icon, action, plantName) {
 
 // Load the plant data and generate the full year calendar
 loadPlantData();
+
 
 

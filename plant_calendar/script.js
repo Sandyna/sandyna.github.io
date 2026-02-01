@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   loadPlantData();
   setupFrostDateInput();
   renderPlantOptions();
-  renderSelectedPlants();
 });
 
 // ---------- LOAD PLANT DATA ----------
@@ -150,7 +149,6 @@ function renderPlantOptions() {
       } else {
         selectedPlantIds.delete(plant.id);
       }
-      renderSelectedPlants();
       generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
     });
 
@@ -163,39 +161,3 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
-function renderSelectedPlants() {
-  const list = document.getElementById('selected-plants-list');
-  list.innerHTML = ''; // clear existing items
-
-  selectedPlantIds.forEach(id => {
-    const plant = plantData.find(p => p.id === id);
-    if (!plant) return;
-
-    const li = document.createElement('li');
-    li.textContent = plant.name;
-
-    // Remove button
-    const btn = document.createElement('button');
-    btn.textContent = 'Remove';
-    btn.style.marginLeft = '10px';
-    btn.addEventListener('click', () => {
-      selectedPlantIds.delete(id);
-      renderSelectedPlants();
-      generateYearCalendar(frostDate.getFullYear(), plantData, frostDate); // update calendar
-    });
-
-    li.appendChild(btn);
-    list.appendChild(li);
-  });
-}
-
-
-
-
-
-
-
-
-
-
-

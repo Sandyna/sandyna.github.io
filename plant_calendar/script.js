@@ -170,7 +170,7 @@ function renderSelectedPlants() {
     .map(id => plantData.find(p => p.id === id))
     .filter(Boolean) // remove any missing plants
     .sort((a, b) => a.name.localeCompare(b.name));
-
+  console.log(selectedPlantsSorted.map(p => p.name));
   selectedPlantsSorted.forEach(plant => {
     const li = document.createElement('li');
     li.textContent = plant.name;
@@ -189,6 +189,7 @@ function renderSelectedPlants() {
     list.appendChild(li);
   });
 }
+
 
 
 

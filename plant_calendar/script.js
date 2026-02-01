@@ -176,10 +176,14 @@ function renderSelectedPlants() {
       renderSelectedPlants();
       generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
     });
-
+  
+    const li = document.createElement('li');
+    li.textContent = plant.name;
+  
     li.appendChild(btn);
     list.appendChild(li);
 }
+
 
 
 

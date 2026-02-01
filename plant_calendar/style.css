@@ -11,11 +11,11 @@ body {
 }
 
 #calendar-container {
-  width: 90%;
+  width: 80%;
   margin-top: 30px;
   margin-left: 30px;
   display: flex;
-  flex-wrap: wrap;  /* Allow months to wrap into rows */
+  flex-wrap: nowrap;  /* Allow months to wrap into rows */
   justify-content: left;
 }
 
@@ -42,13 +42,13 @@ body {
   border: 1px solid #ccc;
   text-align: left;
   cursor: pointer;
-  min-height: 30px;  /* Default height for each day */
+  min-height: 15px;  /* Default height for each day */
   display: block;
   position: relative;  /* Necessary for positioning plant icons */
 }
 
 .calendar-day-number {
-  font-size: 1.2em;
+  font-size: 12em;
   margin-bottom: 5px;  /* Space between the day number and icons */
 }
 
@@ -127,6 +127,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

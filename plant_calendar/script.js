@@ -1,5 +1,6 @@
 let plantData = [];
 let frostDate;
+let selectedPlantIds = new Set();
 
 // ---------- INIT ----------
 document.addEventListener('DOMContentLoaded', () => {
@@ -82,7 +83,9 @@ function renderMonth(month, year, plantData, frostDate) {
     grid.appendChild(dayDiv);
 
     // Place plant icons
-    plantData.forEach(plant => {
+    plantData
+      .filter(plant => selectedPlantIds.has(plant.id))
+      .forEach(plant => {
       const sowIndoorsDate = new Date(frostDate); sowIndoorsDate.setDate(sowIndoorsDate.getDate() + plant.sow_indoor);
       const sowOutdoorsDate = new Date(frostDate); sowOutdoorsDate.setDate(sowOutdoorsDate.getDate() + plant.sow_outdoor);
       const transplantDate = new Date(frostDate); transplantDate.setDate(transplantDate.getDate() + plant.transplant);

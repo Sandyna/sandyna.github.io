@@ -15,6 +15,8 @@ async function loadPlantData() {
     plantData = await response.json();
 
     loadFrostDate();
+    renderPlantOptions();    // checkboxes
+    renderSelectedPlants();  // selected list
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   } catch (error) {
     console.error('Error loading plant data:', error);
@@ -125,14 +127,60 @@ function placeIcon(dayDiv, color, icon, action, plantName, altText) {
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
 
+//PLANT SELECTION
+function renderSelectedPlants() {
+  const list = document.getElementById('selected-plants-list');
+  list.innerHTML = ''; // clear existing items
 
+  selectedPlantIds.forEach(id => {
+    const plant = plantData.find(p => p.id === id);
+    if (!plant) return;
 
+    const li = document.createElement('li');
+    li.textContent = plant.name;
 
+    // Remove button
+    const btn = document.createElement('button');
+    btn.textContent = 'Remove';
+    btn.style.marginLeft = '10px';
+    btn.addEventListener('click', () => {
+      selectedPlantIds.delete(id);
+      renderSelectedPlants();
+      generateYearCalendar(frostDate.getFullYear(), plantData, frostDate); // update calendar
+    });
 
+    li.appendChild(btn);
+    list.appendChild(li);
+  });
+}
 
+function renderPlantOptions() {
+  const container = document.getElementById('plant-options');
+  container.innerHTML = '';
 
+  plantData.forEach(plant => {
+    const div = document.createElement('div');
 
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = `plant-${plant.id}`;
+    checkbox.checked = selectedPlantIds.has(plant.id);
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        selectedPlantIds.add(plant.id);
+      } else {
+        selectedPlantIds.delete(plant.id);
+      }
+      renderSelectedPlants();
+      generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+    });
 
+    const label = document.createElement('label');
+    label.htmlFor = `plant-${plant.id}`;
+    label.textContent = plant.name;
 
-
-
+    div.appendChild(checkbox);
+    div.appendChild(label);
+    container.appendChild(div);
+  });
+}

@@ -4,9 +4,11 @@ let selectedPlantIds = new Set();
 
 // ---------- INIT ----------
 document.addEventListener('DOMContentLoaded', () => {
+  selectedPlantIds.clear();
   loadPlantData();
   setupFrostDateInput();
   renderPlantOptions();
+  renderSelectedPlants();
 });
 
 // ---------- LOAD PLANT DATA ----------
@@ -184,5 +186,6 @@ function renderSelectedPlants() {
     list.appendChild(li);
   });
 }
+
 
 

@@ -74,7 +74,6 @@ body {
   max-width: 25%;
   height: 20px;  /* Fixed height for the placeholder */
   padding: 3px 5px;  /* Padding for spacing around text */
-  border: 1px solid #ccc;  /* Border around the placeholder */
   text-align: center;  /* Center the text inside the placeholder */
   font-size: 14px;  /* Font size for the placeholder text */
   line-height: 20px;  /* Vertically center the text inside the placeholder */
@@ -123,6 +122,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

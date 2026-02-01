@@ -126,7 +126,8 @@ function placeIcon(dayDiv, color, icon, action, plantName, altText) {
       iconElement.classList.add('calendar-placeholder');  // Apply the placeholder styling
       iconElement.style.border = `2px solid ${color}`;
       dayDiv.appendChild(iconElement);
-  };
+    };
+  }
 }
 
   document.getElementById('calendar-container').appendChild(monthDiv);

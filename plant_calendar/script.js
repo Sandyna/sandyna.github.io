@@ -165,10 +165,13 @@ function renderSelectedPlants() {
   const list = document.getElementById('selected-plants-list');
   list.innerHTML = ''; // clear existing items
 
-  selectedPlantIds.forEach(id => {
-    const plant = plantData.find(p => p.id === id);
-    if (!plant) return;
+  // Get the selected plants, sorted alphabetically
+  const selectedPlantsSorted = Array.from(selectedPlantIds)
+    .map(id => plantData.find(p => p.id === id))
+    .filter(Boolean) // remove any missing plants
+    .sort((a, b) => a.name.localeCompare(b.name));
 
+  selectedPlantsSorted.forEach(plant => {
     const li = document.createElement('li');
     li.textContent = plant.name;
 
@@ -177,15 +180,16 @@ function renderSelectedPlants() {
     btn.textContent = 'Remove';
     btn.style.marginLeft = '10px';
     btn.addEventListener('click', () => {
-      selectedPlantIds.delete(id);
+      selectedPlantIds.delete(plant.id);
       renderSelectedPlants();
-      generateYearCalendar(frostDate.getFullYear(), plantData, frostDate); // update calendar
+      generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
     });
 
     li.appendChild(btn);
     list.appendChild(li);
   });
 }
+
 
 
 

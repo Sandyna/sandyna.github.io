@@ -114,3 +114,4 @@ function placeIcon(dayDiv, color, icon, action, plantName) {
 // Load the plant data and generate the full year calendar
 loadPlantData();
 
+

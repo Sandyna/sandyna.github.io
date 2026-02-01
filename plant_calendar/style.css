@@ -59,12 +59,13 @@ body {
   display: inline-block;  /* Ensure both icons and placeholders take up only the space they need */
   margin-left: 5px;  /* Space between items */
   margin-bottom: 5px;  /* Vertical space between wrapped items */
+  height: 20px;  /* Fixed height for icons */
+  padding: 3px 3px;  /* Padding for spacing around text */
 }
 
 /* .calendar-icon specific styles */
 .calendar-icon {
   width: 20px;  /* Fixed width for icons */
-  height: 20px;  /* Fixed height for icons */
   margin-bottom: 0;  /* Remove margin below icons to avoid excess spacing */
   text-align: center;  /* Align icon image in the center */
 }
@@ -72,11 +73,8 @@ body {
 /* .calendar-placeholder specific styles */
 .calendar-placeholder {
   max-width: 25%;
-  height: 20px;  /* Fixed height for the placeholder */
-  padding: 3px 5px;  /* Padding for spacing around text */
   text-align: center;  /* Center the text inside the placeholder */
   font-size: 14px;  /* Font size for the placeholder text */
-  line-height: 20px;  /* Vertically center the text inside the placeholder */
 }
 
 .calendar-day:hover {
@@ -122,6 +120,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

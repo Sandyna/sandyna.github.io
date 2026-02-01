@@ -106,9 +106,11 @@ function placeIcon(dayDiv, color, icon, action, plantName) {
     // If the icon doesn't exist, use the first 3 letters of the plant name as a placeholder
     iconElement.textContent = plantName.slice(0, 3).toUpperCase();  // Display first 3 letters
     iconElement.classList.add('calendar-placeholder');  // Apply the placeholder styling
+    iconElement.style.border = `2px solid ${color}`;
     dayDiv.appendChild(iconElement);
   };
 }
 
 // Load the plant data and generate the full year calendar
 loadPlantData();
+

@@ -48,19 +48,12 @@ body {
   font-size: 0.8em;
 }
 
-.calendar-icons {
-  display: flex;
-  flex-wrap: wrap;  /* Allow icons to wrap if there are too many */
-  justify-content: flex-end;  /* Align icons to the right */
-  margin-top: 5px;  /* Space between day number and icons */
-}
-
 .calendar-icon, .calendar-placeholder {
   display: inline-block;  /* Ensure both icons and placeholders take up only the space they need */
   margin-left: 5px;  /* Space between items */
   margin-bottom: 5px;  /* Vertical space between wrapped items */
   height: 20px;  /* Fixed height for icons */
-  padding: 3px 3px;  /* Padding for spacing around text */
+  padding: 2px 2px;  /* Padding for spacing around text */
 }
 
 /* .calendar-icon specific styles */
@@ -74,7 +67,7 @@ body {
 .calendar-placeholder {
   max-width: 25%;
   text-align: center;  /* Center the text inside the placeholder */
-  font-size: 14px;  /* Font size for the placeholder text */
+  font-size: 13px;  /* Font size for the placeholder text */
 }
 
 .calendar-day:hover {
@@ -127,6 +120,7 @@ button:hover {
   max-height: 300px;  /* if too tall, let it scroll */
   overflow-y: auto;
 }
+
 
 
 

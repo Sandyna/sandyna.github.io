@@ -27,7 +27,7 @@ body {
   justify-content: left;
 }
 
-#plant-selection-container {
+#selection-container {
   width: 250px;
   position: sticky;
   top: 20px;
@@ -132,6 +132,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

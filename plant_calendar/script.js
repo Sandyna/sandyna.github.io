@@ -138,6 +138,11 @@ function placeIcon(container, color, icon, action, plantName, altText) {
 
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
+//ICON SET SELECTION
+//function renderIconOptions() {
+//  const container = document.getElementById('icon-set-options');
+//  container.innerHTML = '';
+//}
 
 //PLANT SELECTION
 function renderPlantOptions() {
@@ -172,5 +177,6 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 

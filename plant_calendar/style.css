@@ -48,6 +48,11 @@ body {
   font-size: 0.8em;
 }
 
+.calendar-icons { 
+  display: flex; 
+  flex-wrap: wrap;
+}
+
 .calendar-icon, .calendar-placeholder {
   display: inline-block;  /* Ensure both icons and placeholders take up only the space they need */
   margin-left: 5px;  /* Space between items */

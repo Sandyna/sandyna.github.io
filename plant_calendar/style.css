@@ -10,13 +10,26 @@ body {
   align-items: flex-start;
 }
 
+#app-layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
 #calendar-container {
   width: 80%;
   margin-top: 30px;
   margin-left: 30px;
   display: flex;
+  flex: 1;
   flex-wrap: nowrap;  /* Allow months to wrap into rows */
   justify-content: left;
+}
+
+#plant-selection-container {
+  width: 250px;
+  position: sticky;
+  top: 20px;
 }
 
 .calendar-month {
@@ -117,13 +130,6 @@ button:hover {
 
 #custom-plant-form button:hover {
   background-color: #45a049;
-}
-
-#selected-plants-list {
-  columns: 2;
-  column-gap: 20px;
-  max-height: 300px;  /* if too tall, let it scroll */
-  overflow-y: auto;
 }
 
 

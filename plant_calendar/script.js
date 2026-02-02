@@ -80,12 +80,20 @@ function renderMonth(month, year, plantData, frostDate) {
   // Days
   for (let day = 1; day <= daysInMonth; day++) {
     const dayDiv = document.createElement('div');
-    const iconsContainer = document.createElement('div');
-    iconsContainer.classList.add('calendar-icons');
-    dayDiv.appendChild(iconsContainer);
     dayDiv.classList.add('calendar-day');
     dayDiv.setAttribute('data-day', day);
-    dayDiv.textContent = day;
+    
+    // Day number
+    const dayNumber = document.createElement('div');
+    dayNumber.classList.add('calendar-day-number');
+    dayNumber.textContent = day;
+    
+    // Icons container
+    const iconsContainer = document.createElement('div');
+    iconsContainer.classList.add('calendar-icons');
+    
+    dayDiv.appendChild(dayNumber);
+    dayDiv.appendChild(iconsContainer);
     grid.appendChild(dayDiv);
 
     // Place plant icons
@@ -164,4 +172,5 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 

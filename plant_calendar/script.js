@@ -35,8 +35,9 @@ function loadFrostDate() {
 }
 //setup the button and input for frost date
 function setupFrostDateInput() {
-  document.getElementById('update-frost-date').addEventListener('click', () => {
-    const input = document.getElementById('frost-date-input').value;
+  const inputEl = document.getElementById('frost-date-input');
+  inputEl.addEventListener('change', () => {
+    const input = inputEl.value;
     if (!input) return;
 
     frostDate = new Date(input);
@@ -190,6 +191,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

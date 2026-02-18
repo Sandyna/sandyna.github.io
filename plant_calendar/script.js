@@ -96,14 +96,20 @@ function renderMonth(month, year, plantData, frostDate) {
     dayDiv.appendChild(iconsContainer);
     grid.appendChild(dayDiv);
 
+    function getEventDate(baseDate, offset) {
+    if (offset === null || offset === undefined) return null;
+    const d = new Date(baseDate);
+    d.setDate(d.getDate() + offset);
+    return d;
+    }
+    
     // Place plant icons
     plantData
       .filter(plant => selectedPlantIds.has(plant.id))
       .forEach(plant => {
-      const sowIndoorsDate = new Date(frostDate); sowIndoorsDate.setDate(sowIndoorsDate.getDate() + plant.sow_indoor);
-      const sowOutdoorsDate = new Date(frostDate); sowOutdoorsDate.setDate(sowOutdoorsDate.getDate() + plant.sow_outdoor);
-      const transplantDate = new Date(frostDate); transplantDate.setDate(transplantDate.getDate() + plant.transplant);
-
+          const sowIndoorsDate = getEventDate(frostDate, plant.sow_indoor);
+          const sowOutdoorsDate = getEventDate(frostDate, plant.sow_outdoor);
+          const transplantDate = getEventDate(frostDate, plant.transplant);
       if (sowIndoorsDate.getDate() === day && sowIndoorsDate.getMonth() === month - 1) {
         placeIcon(iconsContainer, 'blue', plant.icon, 'Sow Indoors', plant.name, plant.alternate_text);
       }
@@ -177,6 +183,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

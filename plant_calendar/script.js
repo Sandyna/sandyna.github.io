@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   selectedPlantIds.clear();
   loadPlantData();
   setupFrostDateInput();
+  setupClearSelectionButton();
   renderPlantOptions();
 });
 
@@ -42,6 +43,23 @@ function setupFrostDateInput() {
 
     frostDate = new Date(input);
     localStorage.setItem('userFrostDate', input);
+    generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+  });
+}
+
+//clear selected plants
+function setupClearSelectionButton() {
+  const btn = document.getElementById('clear-selection-btn');
+  
+  btn.addEventListener('click', () => {
+    // Clear internal selection state
+    selectedPlantIds.clear();
+
+    // Uncheck all plant checkboxes
+    const checkboxes = document.querySelectorAll('#plant-options input[type="checkbox"]');
+    checkboxes.forEach(cb => cb.checked = false);
+
+    // Re-render calendar
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
@@ -193,6 +211,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

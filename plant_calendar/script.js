@@ -56,6 +56,14 @@ function generateYearCalendar(year, plantData, frostDate) {
   }
 }
 
+//get date
+function getEventDate(baseDate, offset) {
+if (offset === null || offset === undefined) return null;
+const d = new Date(baseDate);
+d.setDate(d.getDate() + offset);
+return d;
+}
+
 //create one month of the calendar
 function renderMonth(month, year, plantData, frostDate) {
   const daysInMonth = new Date(year, month, 0).getDate();
@@ -95,13 +103,6 @@ function renderMonth(month, year, plantData, frostDate) {
     dayDiv.appendChild(dayNumber);
     dayDiv.appendChild(iconsContainer);
     grid.appendChild(dayDiv);
-
-    function getEventDate(baseDate, offset) {
-    if (offset === null || offset === undefined) return null;
-    const d = new Date(baseDate);
-    d.setDate(d.getDate() + offset);
-    return d;
-    }
     
     // Place plant icons
     plantData
@@ -110,13 +111,13 @@ function renderMonth(month, year, plantData, frostDate) {
           const sowIndoorsDate = getEventDate(frostDate, plant.sow_indoor);
           const sowOutdoorsDate = getEventDate(frostDate, plant.sow_outdoor);
           const transplantDate = getEventDate(frostDate, plant.transplant);
-      if (sowIndoorsDate.getDate() === day && sowIndoorsDate.getMonth() === month - 1) {
+      if (sowIndoorsDate && sowIndoorsDate.getDate() === day && sowIndoorsDate.getMonth() === month - 1) {
         placeIcon(iconsContainer, 'blue', plant.icon, 'Sow Indoors', plant.name, plant.alternate_text);
       }
-      if (sowOutdoorsDate.getDate() === day && sowOutdoorsDate.getMonth() === month - 1) {
+      if (sowOutdoorsDate && sowOutdoorsDate.getDate() === day && sowOutdoorsDate.getMonth() === month - 1) {
         placeIcon(iconsContainer, 'brown', plant.icon, 'Sow Outdoors', plant.name, plant.alternate_text);
       }
-      if (transplantDate.getDate() === day && transplantDate.getMonth() === month - 1) {
+      if (transplantDate && transplantDate.getDate() === day && transplantDate.getMonth() === month - 1) {
         placeIcon(iconsContainer, 'green', plant.icon, 'Transplant', plant.name, plant.alternate_text);
       }
     });
@@ -183,6 +184,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

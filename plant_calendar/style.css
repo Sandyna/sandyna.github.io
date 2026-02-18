@@ -1,6 +1,7 @@
 
 /* Updated CSS for vertical day stacking */
 body {
+  padding:30px;
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -20,7 +21,7 @@ body {
 #calendar-container {
   width: 80%;
   margin-top: 30px;
-  margin-left: 30px;
+/*  margin-left: 30px;*/
   display: flex;
   flex: 1;
   flex-wrap: nowrap;  /* Allow months to wrap into rows */
@@ -138,6 +139,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

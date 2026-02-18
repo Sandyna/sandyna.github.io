@@ -160,12 +160,6 @@ function renderMonth(month, year, selectedPlants, frostDate) {
   // Append the completed month div once
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
-//ICON SET SELECTION
-//function renderIconOptions() {
-//  const container = document.getElementById('icon-set-options');
-//  container.innerHTML = '';
-//}
-
 //PLANT SELECTION
 function renderPlantOptions() {
   const container = document.getElementById('plant-options');
@@ -199,6 +193,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

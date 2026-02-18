@@ -118,16 +118,15 @@ function renderMonth(month, year, selectedPlants, frostDate) {
         placeIcon(iconsContainer, 'blue', plant.icon, 'Sow Indoors', plant.name, plant.alternate_text);
       }
       if (sowOutdoorsDate && sowOutdoorsDate.getDate() === day && sowOutdoorsDate.getMonth() === month - 1) {
-        placeIcon(iconsContainer, 'orange', plant.icon, 'Sow Outdoors', plant.name, plant.alternate_text);
+        placeIcon(iconsContainer, 'green', plant.icon, 'Sow Outdoors', plant.name, plant.alternate_text);
       }
       if (transplantDate && transplantDate.getDate() === day && transplantDate.getMonth() === month - 1) {
-        placeIcon(iconsContainer, 'green', plant.icon, 'Transplant', plant.name, plant.alternate_text);
+        placeIcon(iconsContainer, 'MediumTurquoise', plant.icon, 'Transplant', plant.name, plant.alternate_text);
       }
       if (harvestDate && harvestDate.getDate() === day && harvestDate.getMonth() === month - 1) {
         placeIcon(iconsContainer, 'red', plant.icon, 'Harvest', plant.name, plant.alternate_text);
       }
     });
-  //    document.getElementById('calendar-container').appendChild(monthDiv);
   }
   
 // Function to place the icon or placeholder
@@ -191,6 +190,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

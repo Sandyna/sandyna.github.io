@@ -68,7 +68,7 @@ return d;
 }
 
 //create one month of the calendar
-function renderMonth(month, year, plantData, frostDate) {
+function renderMonth(month, year, selectedPlants, frostDate) {
   const daysInMonth = new Date(year, month, 0).getDate();
   const monthName = new Date(year, month - 1).toLocaleString('default', { month: 'long' });
 
@@ -191,6 +191,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

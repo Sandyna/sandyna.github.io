@@ -49,10 +49,13 @@ function setupFrostDateInput() {
 function generateYearCalendar(year, plantData, frostDate) {
   const calendarContainer = document.getElementById('calendar-container');
   calendarContainer.innerHTML = ''; // Clear existing calendar
+
+  //filter selected plants
+  const selectedPlants = plantData.filter(plant => selectedPlantIds.has(plant.id));
   
   // Loop through all 12 months
   for (let month = 1; month <= 12; month++) {
-    renderMonth(month, year, plantData, frostDate);
+    renderMonth(month, year, selectedPlants, frostDate); // pass filtered list
   }
 }
 
@@ -105,13 +108,12 @@ function renderMonth(month, year, plantData, frostDate) {
     grid.appendChild(dayDiv);
     
     // Place plant icons
-    plantData
-      .filter(plant => selectedPlantIds.has(plant.id))
-      .forEach(plant => {
-          const sowIndoorsDate = getEventDate(frostDate, plant.sow_indoor);
-          const sowOutdoorsDate = getEventDate(frostDate, plant.sow_outdoor);
-          const transplantDate = getEventDate(frostDate, plant.transplant);
-          const harvestDate = getEventDate(frostDate, plant.harvest);
+    selectedPlants.forEach(plant => {
+      const sowIndoorsDate = getEventDate(frostDate, plant.sow_indoor);
+      const sowOutdoorsDate = getEventDate(frostDate, plant.sow_outdoor);
+      const transplantDate = getEventDate(frostDate, plant.transplant);
+      const harvestDate = getEventDate(frostDate, plant.harvest);
+
       if (sowIndoorsDate && sowIndoorsDate.getDate() === day && sowIndoorsDate.getMonth() === month - 1) {
         placeIcon(iconsContainer, 'blue', plant.icon, 'Sow Indoors', plant.name, plant.alternate_text);
       }
@@ -125,6 +127,7 @@ function renderMonth(month, year, plantData, frostDate) {
         placeIcon(iconsContainer, 'red', plant.icon, 'Harvest', plant.name, plant.alternate_text);
       }
     });
+  //    document.getElementById('calendar-container').appendChild(monthDiv);
   }
   
 // Function to place the icon or placeholder
@@ -188,6 +191,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

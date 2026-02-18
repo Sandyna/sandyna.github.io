@@ -89,6 +89,12 @@ body {
   font-size: 13px;  /* Font size for the placeholder text */
 }
 
+.frost-icon {
+  display: inline-block;
+  font-size: 1.2em; /* slightly larger than text */
+  margin: 1px;
+}
+
 .calendar-day:hover {
   background-color: #eef;
 }
@@ -132,6 +138,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

@@ -133,6 +133,14 @@ function renderMonth(month, year, selectedPlants, frostDate) {
     dayDiv.appendChild(iconsContainer);
     grid.appendChild(dayDiv);
 
+    if (frostDate.getDate() === day && frostDate.getMonth() === month - 1 && frostDate.getFullYear() === year) {
+        const frostIcon = document.createElement('span');
+        frostIcon.textContent = '❄️';
+        frostIcon.title = 'Last Frost Date';
+        frostIcon.classList.add('frost-icon');
+        iconsContainer.appendChild(frostIcon);
+  }
+
     // Place icons for each selected plant
     selectedPlants.forEach(plant => {
       const dates = {
@@ -191,6 +199,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

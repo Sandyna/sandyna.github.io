@@ -79,7 +79,7 @@ function renderMonth(month, year, selectedPlants, frostDate) {
   const header = document.createElement('div');
   header.classList.add('calendar-header');
   const monthColors = ['#ccecff', '#99ccff', '#32cccc', '#ccffcc', '#5dcc00', '#ffff99', '#ffcc00', '#ff9900', '#ff6500', '#ff7b80', '#cc99ff', '#ccccff'];
-  header.style.backgroundColor = monthColors[month-1]
+  header.style.backgroundColor = monthColors[month-1];
   header.textContent = monthName;
   monthDiv.appendChild(header);
 
@@ -88,67 +88,49 @@ function renderMonth(month, year, selectedPlants, frostDate) {
   grid.classList.add('calendar-grid');
   monthDiv.appendChild(grid);
 
+  // Action → color mapping
+  const actionColors = {
+    sowIndoors: 'blue',
+    sowOutdoors: 'green',
+    transplant: 'MediumTurquoise',
+    harvest: 'red'
+  };
+
   // Days
   for (let day = 1; day <= daysInMonth; day++) {
     const dayDiv = document.createElement('div');
     dayDiv.classList.add('calendar-day');
     dayDiv.setAttribute('data-day', day);
-    
-    // Day number
+
     const dayNumber = document.createElement('div');
     dayNumber.classList.add('calendar-day-number');
     dayNumber.textContent = day;
-    
-    // Icons container
+
     const iconsContainer = document.createElement('div');
     iconsContainer.classList.add('calendar-icons');
-    
+
     dayDiv.appendChild(dayNumber);
     dayDiv.appendChild(iconsContainer);
     grid.appendChild(dayDiv);
-    
-    // Place plant icons
-    selectedPlants.forEach(plant => {
-      const sowIndoorsDate = getEventDate(frostDate, plant.sow_indoor);
-      const sowOutdoorsDate = getEventDate(frostDate, plant.sow_outdoor);
-      const transplantDate = getEventDate(frostDate, plant.transplant);
-      const harvestDate = getEventDate(frostDate, plant.harvest);
 
-      if (sowIndoorsDate && sowIndoorsDate.getDate() === day && sowIndoorsDate.getMonth() === month - 1) {
-        placeIcon(iconsContainer, 'blue', plant.icon, 'Sow Indoors', plant.name, plant.alternate_text);
-      }
-      if (sowOutdoorsDate && sowOutdoorsDate.getDate() === day && sowOutdoorsDate.getMonth() === month - 1) {
-        placeIcon(iconsContainer, 'green', plant.icon, 'Sow Outdoors', plant.name, plant.alternate_text);
-      }
-      if (transplantDate && transplantDate.getDate() === day && transplantDate.getMonth() === month - 1) {
-        placeIcon(iconsContainer, 'MediumTurquoise', plant.icon, 'Transplant', plant.name, plant.alternate_text);
-      }
-      if (harvestDate && harvestDate.getDate() === day && harvestDate.getMonth() === month - 1) {
-        placeIcon(iconsContainer, 'red', plant.icon, 'Harvest', plant.name, plant.alternate_text);
+    // Place icons for each selected plant
+    selectedPlants.forEach(plant => {
+      const dates = {
+        sowIndoors: getEventDate(frostDate, plant.sow_indoor),
+        sowOutdoors: getEventDate(frostDate, plant.sow_outdoor),
+        transplant: getEventDate(frostDate, plant.transplant),
+        harvest: getEventDate(frostDate, plant.harvest)
+      };
+
+      for (const [action, date] of Object.entries(dates)) {
+        if (date && date.getDate() === day && date.getMonth() === month - 1) {
+          placeIcon(iconsContainer, actionColors[action], plant.icon, action.charAt(0).toUpperCase() + action.slice(1), plant.name, plant.alternate_text);
+        }
       }
     });
   }
-  
-// Function to place the icon or placeholder
-function placeIcon(container, color, icon, action, plantName, altText) {
-  const iconElement = document.createElement('span');
-  const img = new Image();
-  img.src = `icons/${icon}.svg`;
 
-  img.onload = function () {
-    iconElement.innerHTML = `<img src="${img.src}" class="calendar-icon" style="border: 2px solid ${color}" title="${action}: ${icon}">`;
-    container.appendChild(iconElement);
-  };
-
-  img.onerror = function () {
-    // Use altText if available, else first 3 letters of plantName
-    iconElement.textContent = altText || plantName.slice(0, 3).toUpperCase();
-    iconElement.classList.add('calendar-placeholder');
-    iconElement.style.border = `2px solid ${color}`;
-    container.appendChild(iconElement);
-  };
-}
-
+  // Append the completed month div once
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
 //ICON SET SELECTION
@@ -190,6 +172,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

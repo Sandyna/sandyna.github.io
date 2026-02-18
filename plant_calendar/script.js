@@ -129,7 +129,25 @@ function renderMonth(month, year, selectedPlants, frostDate) {
       }
     });
   }
+// Function to place the icon or placeholder
+function placeIcon(container, color, icon, action, plantName, altText) {
+  const iconElement = document.createElement('span');
+  const img = new Image();
+  img.src = `icons/${icon}.svg`;
 
+  img.onload = function () {
+    iconElement.innerHTML = `<img src="${img.src}" class="calendar-icon" style="border: 2px solid ${color}" title="${action}: ${icon}">`;
+    container.appendChild(iconElement);
+  };
+
+  img.onerror = function () {
+    // Use altText if available, else first 3 letters of plantName
+    iconElement.textContent = altText || plantName.slice(0, 3).toUpperCase();
+    iconElement.classList.add('calendar-placeholder');
+    iconElement.style.border = `2px solid ${color}`;
+    container.appendChild(iconElement);
+  };
+}
   // Append the completed month div once
   document.getElementById('calendar-container').appendChild(monthDiv);
 }

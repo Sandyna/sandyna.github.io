@@ -67,6 +67,33 @@ d.setDate(d.getDate() + offset);
 return d;
 }
 
+// Function to place the icon or placeholder
+function placeIcon(container, color, icon, action, plantName, altText) {
+  const iconElement = document.createElement('span');
+  const img = new Image();
+  img.src = `icons/${icon}.svg`;
+
+  img.onload = function () {
+    iconElement.innerHTML = `<img src="${img.src}" class="calendar-icon" style="border: 2px solid ${color}" title="${action}: ${icon}">`;
+    container.appendChild(iconElement);
+  };
+
+  img.onerror = function () {
+    // Use altText if available, else first 3 letters of plantName
+    iconElement.textContent = altText || plantName.slice(0, 3).toUpperCase();
+    iconElement.classList.add('calendar-placeholder');
+    iconElement.style.border = `2px solid ${color}`;
+    container.appendChild(iconElement);
+  };
+}
+// Action → color mapping
+const actionColors = {
+  sowIndoors: 'blue',
+  sowOutdoors: 'green',
+  transplant: 'mediumturquoise',
+  harvest: 'red'
+};
+
 //create one month of the calendar
 function renderMonth(month, year, selectedPlants, frostDate) {
   const daysInMonth = new Date(year, month, 0).getDate();
@@ -87,14 +114,6 @@ function renderMonth(month, year, selectedPlants, frostDate) {
   const grid = document.createElement('div');
   grid.classList.add('calendar-grid');
   monthDiv.appendChild(grid);
-
-  // Action → color mapping
-  const actionColors = {
-    sowIndoors: 'blue',
-    sowOutdoors: 'green',
-    transplant: 'MediumTurquoise',
-    harvest: 'red'
-  };
 
   // Days
   for (let day = 1; day <= daysInMonth; day++) {
@@ -129,25 +148,6 @@ function renderMonth(month, year, selectedPlants, frostDate) {
       }
     });
   }
-// Function to place the icon or placeholder
-function placeIcon(container, color, icon, action, plantName, altText) {
-  const iconElement = document.createElement('span');
-  const img = new Image();
-  img.src = `icons/${icon}.svg`;
-
-  img.onload = function () {
-    iconElement.innerHTML = `<img src="${img.src}" class="calendar-icon" style="border: 2px solid ${color}" title="${action}: ${icon}">`;
-    container.appendChild(iconElement);
-  };
-
-  img.onerror = function () {
-    // Use altText if available, else first 3 letters of plantName
-    iconElement.textContent = altText || plantName.slice(0, 3).toUpperCase();
-    iconElement.classList.add('calendar-placeholder');
-    iconElement.style.border = `2px solid ${color}`;
-    container.appendChild(iconElement);
-  };
-}
   // Append the completed month div once
   document.getElementById('calendar-container').appendChild(monthDiv);
 }
@@ -190,12 +190,6 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
-
-
-
-
-
-
 
 
 

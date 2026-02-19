@@ -387,20 +387,29 @@ function showPlantInfo(plant) {
   const fields = [
     { key: 'sun_needs', label: 'Sun Needs' },
     { key: 'water_needs', label: 'Water Needs' },
-    { key: 'sow_indoor', label: 'Sow Indoors (days from frost)' },
-    { key: 'sow_outdoor', label: 'Sow Outdoors (days from frost)' },
-    { key: 'transplant', label: 'Transplant (days from frost)' },
-    { key: 'harvest', label: 'Harvest (days from frost)' },
+    { key: 'sow_indoor', label: 'Sow Indoors (weeks before last frost)' },
+    { key: 'sow_outdoor', label: 'Sow Outdoors (weeks after last frost)' },
+    { key: 'transplant', label: 'Transplant (weeks after last frost)' },
+    { key: 'harvest', label: 'Harvest (weeks after last frost)' },
     { key: 'tooltip', label: 'Notes' }
   ];
   
-  fields.forEach(({ key, label }) => {
-    if (plant[key] !== null && plant[key] !== undefined && plant[key] !== '') {
-      const div = document.createElement('div');
-      div.textContent = `${label}: ${plant[key]}`;
-      infoBox.appendChild(div);
+fields.forEach(({ key, label }) => {
+  const value = plant[key];
+
+  if (value !== null && value !== undefined && value !== '') {
+    const div = document.createElement('div');
+
+    if (['sow_indoor','sow_outdoor','transplant','harvest'].includes(key)) {
+      const weeks = Math.abs(value / 7);
+      div.textContent = `${label}: ${weeks} week(s)`;
+    } else {
+      div.textContent = `${label}: ${value}`;
     }
-  });
+
+    infoBox.appendChild(div);
+  }
+});
 
   infoBox.style.display = 'block';
 }
@@ -416,6 +425,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

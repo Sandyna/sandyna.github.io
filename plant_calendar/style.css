@@ -201,9 +201,10 @@ button:hover {
   max-width: 400px;
   margin-top: 20px;
   position: relative;
+  padding-top: 50px; /* creates space under name + icon */
 }
 
-.plant-info-box .plant-name {
+.plant-info-box .plant-info-name {
   font-size: 1.5em;
   font-weight: bold;
   float: left;
@@ -221,13 +222,11 @@ button:hover {
   font-size: 0.95em;
 }
 
-
-
-
-
-
-
-
+.plant-info-name {
+  font-size: 1.4em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
 
 
 

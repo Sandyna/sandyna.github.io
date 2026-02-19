@@ -131,7 +131,7 @@ body {
 .frost-icon {
   display: inline-block;
   margin: 1px;
-  font-size: 28px;
+  font-size: 21px;
 }
 
 .calendar-day:hover {
@@ -177,6 +177,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

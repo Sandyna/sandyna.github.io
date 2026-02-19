@@ -67,6 +67,10 @@ body {
   flex-wrap: wrap;
 }
 
+.calendar-icons span {
+  position: relative;
+}
+
 .calendar-icon, .calendar-placeholder {
   display: inline-block;  /* Ensure both icons and placeholders take up only the space they need */
   margin-left: 5px;  /* Space between items */
@@ -87,6 +91,27 @@ body {
   max-width: 25%;
   text-align: center;  /* Center the text inside the placeholder */
   font-size: 13px;  /* Font size for the placeholder text */
+}
+
+.custom-tooltip {
+  position: absolute;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: white;
+  padding: 5px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+}
+
+.calendar-icons span:hover .custom-tooltip {
+  opacity: 1;
 }
 
 .frost-icon {
@@ -138,6 +163,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

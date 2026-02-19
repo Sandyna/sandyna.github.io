@@ -373,7 +373,7 @@ function showPlantInfo(plant) {
 
   // --- Name (top left) ---
   const nameEl = document.createElement('div');
-  nameEl.classList.add('plant-name');
+  nameEl.classList.add('plant-info-name');
   nameEl.textContent = plant.name;
   infoBox.appendChild(nameEl);
   
@@ -433,6 +433,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

@@ -372,11 +372,19 @@ function showPlantInfo(plant) {
   infoBox.innerHTML = '';
 
   // name left
-  const nameEl = document.createElement('div');
-  nameEl.classList.add('plant-name');
-  nameEl.textContent = plant.name;
-  infoBox.appendChild(nameEl);
-
+  const iconEl = document.createElement('div');
+  iconEl.classList.add('plant-icon-display');
+  const img = new Image();
+  img.src = `icons/${plant.icon}.svg`;
+  img.onload = () => {
+    iconEl.appendChild(img);
+  };
+  img.onerror = () => {
+    iconEl.textContent =
+      plant.alternate_text || plant.name.slice(0,3).toUpperCase();
+  };
+  infoBox.appendChild(iconEl);
+  
   // icon / alt right
   const iconEl = document.createElement('div');
   iconEl.classList.add('plant-icon-display');
@@ -425,6 +433,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

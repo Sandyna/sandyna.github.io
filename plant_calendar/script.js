@@ -84,8 +84,9 @@ function setupRestoreDefaultsButton() {
     fetch('plants.json')
       .then(res => res.json())
       .then(defaultPlants => {
-        plantData = defaultPlants;
-        selectedPlantIds.clear();
+        // keep only user-added plants (ids starting with 'custom-')
+        const userPlants = plantData.filter(p => p.id.startsWith('custom-'));
+        plantData = [...userPlants, ...defaultPlants];
         renderPlantOptions();
         generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
       })
@@ -354,6 +355,7 @@ function addCustomPlant() {
 
   document.getElementById('custom-plant-form').reset();
 }
+
 
 
 

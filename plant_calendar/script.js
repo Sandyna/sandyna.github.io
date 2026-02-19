@@ -90,16 +90,12 @@ function renderActionLegend() {
     });
 
     const colorBox = document.createElement('span');
-    colorBox.style.display = 'inline-block';
-    colorBox.style.width = '12px';
-    colorBox.style.height = '12px';
-    colorBox.style.margin = '0 5px';
+    colorBox.classList.add('action-legend');
     colorBox.style.backgroundColor = actionColors[action];
 
     item.appendChild(checkbox);
     item.appendChild(colorBox);
-    item.appendChild(document.createTextNode(action));
-
+    item.appendChild(document.createTextNode(actionLabels[action]));
     container.appendChild(item);
   });
 }
@@ -128,12 +124,6 @@ return d;
 
 //creating tooltip on hover
 function createTooltip(plantName, action) {
-  const actionLabels = {
-    sowIndoors: "Sow Indoors",
-    sowOutdoors: "Sow Outdoors",
-    transplant: "Transplant",
-    harvest: "Harvest"
-  };
   const actionText = actionLabels[action] || action;
   return `${plantName} – ${actionText}`;
 }
@@ -174,6 +164,13 @@ const actionColors = {
   sowOutdoors: 'green',
   transplant: 'mediumturquoise',
   harvest: 'red'
+};
+//Action → text mapping
+const actionLabels = {
+  sowIndoors: "Sow Indoors",
+  sowOutdoors: "Sow Outdoors",
+  transplant: "Transplant",
+  harvest: "Harvest"
 };
 
 //create one month of the calendar
@@ -282,6 +279,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

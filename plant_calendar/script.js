@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   renderPlantOptions();
   setupRestoreDefaultsButton();
   setupCustomPlantForm();
+  setupClearSessionButton();
 });
 
 // ---------- LOAD PLANT DATA ----------
@@ -368,6 +369,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

@@ -371,7 +371,13 @@ function showPlantInfo(plant) {
   const infoBox = document.getElementById('show-plant-info');
   infoBox.innerHTML = '';
 
-  // name left
+  // --- Name (top left) ---
+  const nameEl = document.createElement('div');
+  nameEl.classList.add('plant-name');
+  nameEl.textContent = plant.name;
+  infoBox.appendChild(nameEl);
+  
+  // --- Icon (top right) ---
   const iconEl = document.createElement('div');
   iconEl.classList.add('plant-icon-display');
   const img = new Image();
@@ -385,12 +391,6 @@ function showPlantInfo(plant) {
   };
   infoBox.appendChild(iconEl);
   
-  // icon / alt right
-  const iconEl = document.createElement('div');
-  iconEl.classList.add('plant-icon-display');
-  iconEl.textContent = plant.icon || (plant.name.slice(0,3).toUpperCase());
-  infoBox.appendChild(iconEl);
-
   // other info
   const fields = [
     { key: 'sun_needs', label: 'Sun Needs' },
@@ -433,6 +433,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

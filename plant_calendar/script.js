@@ -349,8 +349,8 @@ function addCustomPlant() {
   const newPlant = {
     id: 'custom-' + Date.now(),
     name,
-    sun,
-    water,
+    sun_needs: sun,
+    water_needs: water,
     sow_indoor: sowIndoor != null ? sowIndoor * -7 : null,   // negative weeks → days
     sow_outdoor: sowOutdoor != null ? sowOutdoor * 7 : null,
     transplant: transplant != null ? transplant * 7 : null,
@@ -384,7 +384,7 @@ function showPlantInfo(plant) {
   infoBox.appendChild(iconEl);
 
   // other info
-  const fields = ['sun', 'water', 'sow_indoor', 'sow_outdoor', 'transplant', 'harvest'];
+  const fields = ['sun_needs', 'water_needs', 'sow_indoor', 'sow_outdoor', 'transplant', 'harvest'];
   fields.forEach(key => {
     if (plant[key] !== null && plant[key] !== undefined && plant[key] !== '') {
       const div = document.createElement('div');
@@ -407,6 +407,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

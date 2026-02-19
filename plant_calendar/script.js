@@ -368,7 +368,7 @@ function addCustomPlant() {
 
 //PLANT INFO
 function showPlantInfo(plant) {
-  const infoBox = document.getElementById('custom-plant-info');
+  const infoBox = document.getElementById('show-plant-info');
   infoBox.innerHTML = '';
 
   // name left
@@ -407,6 +407,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

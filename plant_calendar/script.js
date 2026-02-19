@@ -216,6 +216,7 @@ function renderMonth(month, year, selectedPlants, frostDate) {
         const frostWrapper = document.createElement('span');
         frostWrapper.style.position = 'relative';
         frostWrapper.textContent = '❄️';
+        frostWrapper.classList.add('frost-icon');
     
         const frostTooltip = document.createElement('div');
         frostTooltip.className = 'custom-tooltip';
@@ -279,6 +280,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

@@ -17,6 +17,13 @@ body {
   width: 100%;
 }
 
+#top-controls {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 15px;
+}
+
 #calendar-container {
   width: 80%;
   margin-top: 30px;
@@ -163,6 +170,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

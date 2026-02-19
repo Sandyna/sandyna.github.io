@@ -189,7 +189,7 @@ function renderMonth(month, year, selectedPlants, frostDate) {
 
       for (const [action, date] of Object.entries(dates)) {
         if (date && date.getDate() === day && date.getMonth() === month - 1) {
-          placeIcon(iconsContainer, actionColors[action], plant.icon, action.charAt(0).toUpperCase() + action.slice(1), plant.name, plant.alternate_text);
+          placeIcon(iconsContainer, actionColors[action], plant.icon, action, plant.name, plant.alternate_text);
         }
       }
     });
@@ -230,6 +230,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

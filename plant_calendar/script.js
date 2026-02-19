@@ -283,8 +283,7 @@ function renderPlantOptions() {
     // red × delete button
     const deleteBtn = document.createElement('span');
     deleteBtn.textContent = '×';
-    deleteBtn.style.color = 'red';
-    deleteBtn.style.cursor = 'pointer';
+    deleteBtn.classList.add('plant-delete');
     deleteBtn.addEventListener('click', () => {
       // remove from plantData
       const index = plantData.findIndex(p => p.id === plant.id);
@@ -333,6 +332,7 @@ function addCustomPlant() {
 
   document.getElementById('custom-plant-form').reset();
 }
+
 
 
 

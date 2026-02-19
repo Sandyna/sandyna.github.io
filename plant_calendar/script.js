@@ -262,7 +262,7 @@ function renderPlantOptions() {
 
   sortedPlants.forEach(plant => {
     const div = document.createElement('div');
-    
+    // checkbox
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
     checkbox.id = `plant-${plant.id}`;
@@ -275,13 +275,28 @@ function renderPlantOptions() {
       }
       generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
     });
-
+    //plant names
     const label = document.createElement('label');
     label.htmlFor = `plant-${plant.id}`;
     label.textContent = plant.name;
 
+    // red × delete button
+    const deleteBtn = document.createElement('span');
+    deleteBtn.textContent = '×';
+    deleteBtn.style.color = 'red';
+    deleteBtn.style.cursor = 'pointer';
+    deleteBtn.addEventListener('click', () => {
+      // remove from plantData
+      const index = plantData.findIndex(p => p.id === plant.id);
+      if (index !== -1) plantData.splice(index, 1);
+      selectedPlantIds.delete(plant.id);
+      renderPlantOptions();
+      generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+    });
+    
     div.appendChild(checkbox);
     div.appendChild(label);
+    div.appendChild(deleteBtn);
     container.appendChild(div);
   });
 }
@@ -318,6 +333,7 @@ function addCustomPlant() {
 
   document.getElementById('custom-plant-form').reset();
 }
+
 
 
 

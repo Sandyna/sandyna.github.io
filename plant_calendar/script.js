@@ -409,8 +409,8 @@ fields.forEach(({ key, label }) => {
     const div = document.createElement('div');
 
     if (['sow_indoor','sow_outdoor','transplant','harvest'].includes(key)) {
-      const weeks = Math.abs(value / 7);
-      div.textContent = `${label}: ${weeks} week(s)`;
+      const weeks = Math.round(Math.abs(value / 7));
+      div.textContent = `${label}: cca. ${weeks} weeks`;
     } else {
       div.textContent = `${label}: ${value}`;
     }
@@ -433,6 +433,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

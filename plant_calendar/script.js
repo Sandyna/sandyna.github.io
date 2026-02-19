@@ -11,6 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
   renderActionLegend();
   setupClearSelectionButton();
   renderPlantOptions();
+  // Attach custom plant form submit handler
+  document.getElementById('custom-plant-form').addEventListener('submit', (e) => {
+    e.preventDefault();
+    addCustomPlant();
+  });
 });
 
 // ---------- LOAD PLANT DATA ----------
@@ -281,7 +286,39 @@ function renderPlantOptions() {
   });
 }
 
+//ADD CUSTOM PLANT
+function addCustomPlant() {
+  const name = document.getElementById('plant-name').value.trim();
+  if (!name) return; // require name
 
+  const sun = document.getElementById('sun-needs').value.trim() || '';
+  const water = document.getElementById('water-needs').value.trim() || '';
+  const sowIndoor = parseInt(document.getElementById('sow-indoor').value, 10) || null;
+  const sowOutdoor = parseInt(document.getElementById('sow-outdoor').value, 10) || null;
+  const transplant = parseInt(document.getElementById('transplant').value, 10) || null;
+  const harvest = parseInt(document.getElementById('harvest').value, 10) || null;
+  const icon = document.getElementById('plant-icon').value.trim() || name.slice(0,3).toUpperCase();
+
+  const newPlant = {
+    id: 'custom-' + Date.now(),
+    name,
+    sun,
+    water,
+    sow_indoor: sowIndoor,
+    sow_outdoor: sowOutdoor,
+    transplant,
+    harvest,
+    icon,
+    alternate_text: name.slice(0,3).toUpperCase()
+  };
+
+  plantData.push(newPlant);
+
+  renderPlantOptions();
+  generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+
+  document.getElementById('custom-plant-form').reset();
+}
 
 
 

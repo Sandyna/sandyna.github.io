@@ -107,10 +107,6 @@ body {
   font-size: 13px;  /* Font size for the placeholder text */
 }
 
-.frost-icon {
-  font-size: 28px;
-}
-
 .custom-tooltip {
   position: absolute;
   bottom: 125%;
@@ -134,8 +130,8 @@ body {
 
 .frost-icon {
   display: inline-block;
-  font-size: 1.2em; /* slightly larger than text */
   margin: 1px;
+  font-size: 28px;
 }
 
 .calendar-day:hover {
@@ -181,6 +177,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

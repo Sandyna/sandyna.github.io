@@ -158,9 +158,13 @@ function createTooltip(plantName, action) {
 }
 
 // Function to place the icon or placeholder
-function placeIcon(container, color, icon, action, plantName, altText) {
+function placeIcon(container, color, action, plantDataObj) {
   const wrapper = document.createElement('span');
   wrapper.style.position = 'relative';
+
+  const plantName = plantDataObj.name;
+  const icon = plantDataObj.icon;
+  const altText = plantDataObj.alternate_text;
 
   const tooltipText = createTooltip(plantName, action);
 
@@ -185,6 +189,10 @@ function placeIcon(container, color, icon, action, plantName, altText) {
     wrapper.style.border = `2px solid ${color}`;
     wrapper.appendChild(tooltip);
   };
+
+  // show info box on click
+  wrapper.style.cursor = 'pointer';
+  wrapper.addEventListener('click', () => showPlantInfo(plantDataObj));
 }
 
 // Action → color mapping
@@ -268,7 +276,7 @@ function renderMonth(month, year, selectedPlants, frostDate) {
       for (const [action, date] of Object.entries(dates)) {
         if (!activeActions.has(action)) continue;
         if (date && date.getDate() === day && date.getMonth() === month - 1) {
-          placeIcon(iconsContainer, actionColors[action], plant.icon, action, plant.name, plant.alternate_text);
+          placeIcon(iconsContainer, actionColors[action], action, plant);
         }
       }
     });
@@ -358,6 +366,36 @@ function addCustomPlant() {
   document.getElementById('custom-plant-form').reset();
 }
 
+//PLANT INFO
+function showPlantInfo(plant) {
+  const infoBox = document.getElementById('custom-plant-info');
+  infoBox.innerHTML = '';
+
+  // name left
+  const nameEl = document.createElement('div');
+  nameEl.classList.add('plant-name');
+  nameEl.textContent = plant.name;
+  infoBox.appendChild(nameEl);
+
+  // icon / alt right
+  const iconEl = document.createElement('div');
+  iconEl.classList.add('plant-icon-display');
+  iconEl.textContent = plant.icon || (plant.name.slice(0,3).toUpperCase());
+  infoBox.appendChild(iconEl);
+
+  // other info
+  const fields = ['sun', 'water', 'sow_indoor', 'sow_outdoor', 'transplant', 'harvest'];
+  fields.forEach(key => {
+    if (plant[key] !== null && plant[key] !== undefined && plant[key] !== '') {
+      const div = document.createElement('div');
+      div.textContent = `${key.replace('_',' ')}: ${plant[key]}`;
+      infoBox.appendChild(div);
+    }
+  });
+
+  infoBox.style.display = 'block';
+}
+
 //nuke the session
 function setupClearSessionButton() {
   const btn = document.getElementById('clear-session-btn');
@@ -369,6 +407,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

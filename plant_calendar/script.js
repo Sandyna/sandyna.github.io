@@ -100,30 +100,33 @@ function createTooltip(plantName, action) {
 
 // Function to place the icon or placeholder
 function placeIcon(container, color, icon, action, plantName, altText) {
-  const iconElement = document.createElement('span');
-  const img = new Image();
-  img.src = `icons/${icon}.svg`;
+  const wrapper = document.createElement('span');
+  wrapper.style.position = 'relative';
 
   const tooltipText = createTooltip(plantName, action);
-  
-  img.onload = function () {
-    iconElement.innerHTML = `
-    <img src="${img.src}" 
-    class="calendar-icon" 
-    style="border: 2px solid ${color}" 
-    title="${tooltipText}">`;
-    container.appendChild(iconElement);
-  };
+
+  const img = new Image();
+  img.src = `icons/${icon}.svg`;
+  img.className = "calendar-icon";
+  img.style.border = `2px solid ${color}`;
+
+  const tooltip = document.createElement('div');
+  tooltip.className = 'custom-tooltip';
+  tooltip.textContent = tooltipText;
+
+  wrapper.appendChild(img);
+  wrapper.appendChild(tooltip);
+  container.appendChild(wrapper);
 
   img.onerror = function () {
-    // Use altText if available, else first 3 letters of plantName
-    iconElement.textContent = altText || plantName.slice(0, 3).toUpperCase();
-    iconElement.classList.add('calendar-placeholder');
-    iconElement.style.border = `2px solid ${color}`;
-    iconElement.title = tooltipText;
-    container.appendChild(iconElement);
+    img.remove();
+    wrapper.textContent = altText || plantName.slice(0,3).toUpperCase();
+    wrapper.classList.add('calendar-placeholder');
+    wrapper.style.border = `2px solid ${color}`;
+    wrapper.appendChild(tooltip);
   };
 }
+
 // Action → color mapping
 const actionColors = {
   sowIndoors: 'blue',
@@ -230,6 +233,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

@@ -182,6 +182,7 @@ function renderMonth(month, year, selectedPlants, frostDate) {
     
         const frostTooltip = document.createElement('div');
         frostTooltip.className = 'custom-tooltip';
+        frostTooltip.style.border = `2px solid #a0e0ff`;
         frostTooltip.textContent = 'Last Frost Date';
     
         frostWrapper.appendChild(frostTooltip);
@@ -240,6 +241,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

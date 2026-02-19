@@ -11,11 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   renderActionLegend();
   setupClearSelectionButton();
   renderPlantOptions();
-  // Attach custom plant form submit handler
-  document.getElementById('custom-plant-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    addCustomPlant();
-  });
+  setupRestoreDefaultsButton();
+  setupCustomPlantForm();
 });
 
 // ---------- LOAD PLANT DATA ----------
@@ -30,6 +27,15 @@ async function loadPlantData() {
   } catch (error) {
     console.error('Error loading plant data:', error);
   }
+}
+
+//setup plant form
+function setupCustomPlantForm() {
+  const form = document.getElementById('custom-plant-form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    addCustomPlant();
+  });
 }
 
 // ---------- FROST DATE ----------
@@ -68,6 +74,22 @@ function setupClearSelectionButton() {
 
     // Re-render calendar
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+  });
+}
+
+//Restore default plants
+function setupRestoreDefaultsButton() {
+  const btn = document.getElementById('restore-defaults-btn');
+  btn.addEventListener('click', () => {
+    fetch('plants.json')
+      .then(res => res.json())
+      .then(defaultPlants => {
+        plantData = defaultPlants;
+        selectedPlantIds.clear();
+        renderPlantOptions();
+        generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+      })
+      .catch(err => console.error('Error restoring default plants:', err));
   });
 }
 
@@ -332,6 +354,7 @@ function addCustomPlant() {
 
   document.getElementById('custom-plant-form').reset();
 }
+
 
 
 

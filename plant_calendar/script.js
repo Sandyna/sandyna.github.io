@@ -86,14 +86,32 @@ d.setDate(d.getDate() + offset);
 return d;
 }
 
+//creating tooltip on hover
+function createTooltip(plantName, action) {
+  const actionLabels = {
+    sowIndoors: "Sow Indoors",
+    sowOutdoors: "Sow Outdoors",
+    transplant: "Transplant",
+    harvest: "Harvest"
+  };
+  const actionText = actionLabels[action] || action;
+  return `${plantName} – ${actionText}`;
+}
+
 // Function to place the icon or placeholder
 function placeIcon(container, color, icon, action, plantName, altText) {
   const iconElement = document.createElement('span');
   const img = new Image();
   img.src = `icons/${icon}.svg`;
 
+  const tooltipText = createTooltip(plantName, action);
+  
   img.onload = function () {
-    iconElement.innerHTML = `<img src="${img.src}" class="calendar-icon" style="border: 2px solid ${color}" title="${action}: ${icon}">`;
+    iconElement.innerHTML = `
+    <img src="${img.src}" 
+    class="calendar-icon" 
+    style="border: 2px solid ${color}" 
+    title="${tooltipText}">`;
     container.appendChild(iconElement);
   };
 
@@ -102,6 +120,7 @@ function placeIcon(container, color, icon, action, plantName, altText) {
     iconElement.textContent = altText || plantName.slice(0, 3).toUpperCase();
     iconElement.classList.add('calendar-placeholder');
     iconElement.style.border = `2px solid ${color}`;
+    iconElement.title = tooltipText;
     container.appendChild(iconElement);
   };
 }
@@ -211,6 +230,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

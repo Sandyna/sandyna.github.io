@@ -112,6 +112,7 @@ function placeIcon(container, color, icon, action, plantName, altText) {
 
   const tooltip = document.createElement('div');
   tooltip.className = 'custom-tooltip';
+  tooltip.style.border = `2px solid ${color}`;
   tooltip.textContent = tooltipText;
 
   wrapper.appendChild(img);
@@ -233,6 +234,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

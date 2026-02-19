@@ -1,12 +1,14 @@
 let plantData = [];
 let frostDate;
 let selectedPlantIds = new Set();
+let activeActions = new Set(['sowIndoors','sowOutdoors','transplant','harvest']);
 
 // ---------- INIT ----------
 document.addEventListener('DOMContentLoaded', () => {
   selectedPlantIds.clear();
   loadPlantData();
   setupFrostDateInput();
+  renderActionLegend();
   setupClearSelectionButton();
   renderPlantOptions();
 });
@@ -61,6 +63,44 @@ function setupClearSelectionButton() {
 
     // Re-render calendar
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+  });
+}
+
+//action selection/legend
+function renderActionLegend() {
+  const container = document.getElementById('action-legend');
+  container.innerHTML = '';
+
+  Object.keys(actionColors).forEach(action => {
+    const item = document.createElement('label');
+    item.style.marginRight = '15px';
+    item.style.cursor = 'pointer';
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.checked = activeActions.has(action);
+
+    checkbox.addEventListener('change', () => {
+      if (checkbox.checked) {
+        activeActions.add(action);
+      } else {
+        activeActions.delete(action);
+      }
+      generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+    });
+
+    const colorBox = document.createElement('span');
+    colorBox.style.display = 'inline-block';
+    colorBox.style.width = '12px';
+    colorBox.style.height = '12px';
+    colorBox.style.margin = '0 5px';
+    colorBox.style.backgroundColor = actionColors[action];
+
+    item.appendChild(checkbox);
+    item.appendChild(colorBox);
+    item.appendChild(document.createTextNode(action));
+
+    container.appendChild(item);
   });
 }
 
@@ -199,6 +239,7 @@ function renderMonth(month, year, selectedPlants, frostDate) {
       };
 
       for (const [action, date] of Object.entries(dates)) {
+        if (!activeActions.has(action)) continue;
         if (date && date.getDate() === day && date.getMonth() === month - 1) {
           placeIcon(iconsContainer, actionColors[action], plant.icon, action, plant.name, plant.alternate_text);
         }
@@ -241,6 +282,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

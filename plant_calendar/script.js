@@ -384,11 +384,20 @@ function showPlantInfo(plant) {
   infoBox.appendChild(iconEl);
 
   // other info
-  const fields = ['sun_needs', 'water_needs', 'sow_indoor', 'sow_outdoor', 'transplant', 'harvest'];
-  fields.forEach(key => {
+  const fields = [
+    { key: 'sun_needs', label: 'Sun Needs' },
+    { key: 'water_needs', label: 'Water Needs' },
+    { key: 'sow_indoor', label: 'Sow Indoors (days from frost)' },
+    { key: 'sow_outdoor', label: 'Sow Outdoors (days from frost)' },
+    { key: 'transplant', label: 'Transplant (days from frost)' },
+    { key: 'harvest', label: 'Harvest (days from frost)' },
+    { key: 'tooltip', label: 'Notes' }
+  ];
+  
+  fields.forEach(({ key, label }) => {
     if (plant[key] !== null && plant[key] !== undefined && plant[key] !== '') {
       const div = document.createElement('div');
-      div.textContent = `${key.replace('_',' ')}: ${plant[key]}`;
+      div.textContent = `${label}: ${plant[key]}`;
       infoBox.appendChild(div);
     }
   });
@@ -407,6 +416,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

@@ -138,6 +138,14 @@ body {
   background-color: #eef;
 }
 
+.plant-delete {
+  color: red;
+  cursor: pointer;
+  margin-left: 8px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
 button {
   padding: 10px 15px;
   font-size: 1em;
@@ -177,6 +185,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

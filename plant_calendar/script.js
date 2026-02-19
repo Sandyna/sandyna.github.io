@@ -174,13 +174,19 @@ function renderMonth(month, year, selectedPlants, frostDate) {
     dayDiv.appendChild(iconsContainer);
     grid.appendChild(dayDiv);
 
+    //placing frost date icon into the calendar with a custom tooltip on hover
     if (frostDate.getDate() === day && frostDate.getMonth() === month - 1 && frostDate.getFullYear() === year) {
-        const frostIcon = document.createElement('span');
-        frostIcon.textContent = '❄️';
-        frostIcon.title = 'Last Frost Date';
-        frostIcon.classList.add('frost-icon');
-        iconsContainer.appendChild(frostIcon);
-  }
+        const frostWrapper = document.createElement('span');
+        frostWrapper.style.position = 'relative';
+        frostWrapper.textContent = '❄️';
+    
+        const frostTooltip = document.createElement('div');
+        frostTooltip.className = 'custom-tooltip';
+        frostTooltip.textContent = 'Last Frost Date';
+    
+        frostWrapper.appendChild(frostTooltip);
+        iconsContainer.appendChild(frostWrapper);
+    }
 
     // Place icons for each selected plant
     selectedPlants.forEach(plant => {
@@ -234,6 +240,7 @@ function renderPlantOptions() {
     container.appendChild(div);
   });
 }
+
 
 
 

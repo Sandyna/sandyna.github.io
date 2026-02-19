@@ -304,12 +304,11 @@ function addCustomPlant() {
     name,
     sun,
     water,
-    sow_indoor: sowIndoor,
-    sow_outdoor: sowOutdoor,
-    transplant,
-    harvest,
-    icon,
-    alternate_text: name.slice(0,3).toUpperCase()
+    sow_indoor: sowIndoor != null ? sowIndoor * -7 : null,   // negative weeks → days
+    sow_outdoor: sowOutdoor != null ? sowOutdoor * 7 : null,
+    transplant: transplant != null ? transplant * 7 : null,
+    harvest: harvest != null ? harvest * 7 : null,
+    icon
   };
 
   plantData.push(newPlant);

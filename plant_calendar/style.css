@@ -24,7 +24,7 @@ body {
   margin-bottom: 15px;
 }
 
-.legend-color {
+.action-legend {
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -177,6 +177,7 @@ button:hover {
 #custom-plant-form button:hover {
   background-color: #45a049;
 }
+
 
 
 

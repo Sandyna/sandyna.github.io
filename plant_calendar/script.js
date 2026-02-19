@@ -357,23 +357,17 @@ function addCustomPlant() {
   document.getElementById('custom-plant-form').reset();
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//nuke the session
+function setupClearSessionButton() {
+  const btn = document.getElementById('clear-session-btn');
+  btn.addEventListener('click', () => {
+    localStorage.clear();           // clears frost date, etc.
+    selectedPlantIds.clear();       // unselect all plants
+    loadPlantData();                // reload default plants
+    renderPlantOptions();
+    generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+  });
+}
 
 
 

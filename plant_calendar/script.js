@@ -143,6 +143,7 @@ function setupClearSelectionButton() {
 //Restore default plants
 function setupRestoreDefaultsButton() {
   const btn = document.getElementById('restore-defaults-btn');
+  btn.title = "Restores default plants, keeps custom plants";
   btn.addEventListener('click', () => {
     fetch('plants.json')
       .then(res => res.json())
@@ -571,6 +572,7 @@ function setupJsonBackup() {
     reader.readAsText(file);
   });
 }
+
 
 
 

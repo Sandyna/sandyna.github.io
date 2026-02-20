@@ -5,8 +5,8 @@ let activeActions = new Set(['sowIndoors','sowOutdoors','transplant','harvest'])
 
 // ---------- INIT ----------
 document.addEventListener('DOMContentLoaded', () => {
-  selectedPlantIds.clear();
-  loadPlantData();
+  const savedSelection = JSON.parse(localStorage.getItem('selectedPlantIds') || '[]');
+  selectedPlantIds = new Set(savedSelection);  loadPlantData();
   setupFrostDateInput();
   renderActionLegend();
   setupClearSelectionButton();
@@ -73,6 +73,7 @@ function setupClearSelectionButton() {
   btn.addEventListener('click', () => {
     // Clear internal selection state
     selectedPlantIds.clear();
+    localStorage.setItem('selectedPlantIds', JSON.stringify([...selectedPlantIds]));
 
     // Uncheck all plant checkboxes
     const checkboxes = document.querySelectorAll('#plant-options input[type="checkbox"]');
@@ -93,6 +94,7 @@ function setupRestoreDefaultsButton() {
         // keep only user-added plants (ids starting with 'custom-')
         const userPlants = plantData.filter(p => p.id.startsWith('custom-'));
         plantData = [...userPlants, ...defaultPlants];
+        localStorage.setItem('plantData', JSON.stringify(plantData));
         renderPlantOptions();
         generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
       })
@@ -310,6 +312,7 @@ function renderPlantOptions() {
       } else {
         selectedPlantIds.delete(plant.id);
       }
+      localStorage.setItem('selectedPlantIds', JSON.stringify([...selectedPlantIds]));
       generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
     });
     //plant names
@@ -330,6 +333,8 @@ function renderPlantOptions() {
       localStorage.setItem('plantData', JSON.stringify(plantData));
       // remove from selection
       selectedPlantIds.delete(plant.id);
+      //update local storage
+      localStorage.setItem('selectedPlantIds', JSON.stringify([...selectedPlantIds]));
       //render changes
       renderPlantOptions();
       generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
@@ -445,6 +450,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

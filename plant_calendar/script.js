@@ -6,11 +6,11 @@ let activeActions = new Set(['sowIndoors','sowOutdoors','transplant','harvest'])
 // ---------- INIT ----------
 document.addEventListener('DOMContentLoaded', () => {
   const savedSelection = JSON.parse(localStorage.getItem('selectedPlantIds') || '[]');
-  selectedPlantIds = new Set(savedSelection);  loadPlantData();
+  selectedPlantIds = new Set(savedSelection);
+  loadPlantData();
   setupFrostDateInput();
   renderActionLegend();
   setupClearSelectionButton();
-  renderPlantOptions();
   setupRestoreDefaultsButton();
   setupCustomPlantForm();
   setupClearSessionButton();
@@ -354,10 +354,19 @@ function addCustomPlant() {
 
   const sun = document.getElementById('sun-needs').value.trim() || '';
   const water = document.getElementById('water-needs').value.trim() || '';
-  const sowIndoor = parseInt(document.getElementById('sow-indoor').value, 10) || null;
-  const sowOutdoor = parseInt(document.getElementById('sow-outdoor').value, 10) || null;
-  const transplant = parseInt(document.getElementById('transplant').value, 10) || null;
-  const harvest = parseInt(document.getElementById('harvest').value, 10) || null;
+  
+  const sowIndoorRaw = document.getElementById('sow-indoor').value;
+  const sowIndoor = sowIndoorRaw === '' ? null : parseInt(sowIndoorRaw, 10);
+  
+  const sowOutdoorRaw = document.getElementById('sow-outdoor').value;
+  const sowOutdoor = sowOutdoorRaw === '' ? null : parseInt(sowOutdoorRaw, 10);
+  
+  const transplantRaw = document.getElementById('transplant').value;
+  const transplant = transplantRaw === '' ? null : parseInt(transplantRaw, 10);
+  
+  const harvestRaw = document.getElementById('harvest').value;
+  const harvest = harvestRaw === '' ? null : parseInt(harvestRaw, 10);
+  
   const alternateText = document.getElementById('plant-alt-text').value.trim() || name.slice(0,3).toUpperCase();
 
   const newPlant = {
@@ -446,10 +455,9 @@ function setupClearSessionButton() {
     localStorage.clear();           // clears frost date, etc.
     selectedPlantIds.clear();       // unselect all plants
     loadPlantData();                // reload default plants
-    renderPlantOptions();
-    generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

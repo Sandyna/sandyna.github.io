@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupRestoreDefaultsButton();
   setupCustomPlantForm();
   setupDownloadButtons();
+  setupJsonBackup();
   setupClearSessionButton();
 });
 
@@ -513,6 +514,63 @@ function setupClearSessionButton() {
   });
 }
 
+// ---------- JSON EXPORT / IMPORT ----------
+function setupJsonBackup() {
+  const downloadBtn = document.getElementById('download-json-btn');
+  const uploadBtn = document.getElementById('upload-json-btn');
+  const fileInput = document.getElementById('upload-json-input');
+
+  // --- DOWNLOAD JSON ---
+  downloadBtn.addEventListener('click', () => {
+    const selectedArray = [...selectedPlantIds];
+    const blob = new Blob([JSON.stringify(selectedArray, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'selected-plants.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+
+  // --- UPLOAD JSON ---
+  uploadBtn.addEventListener('click', () => fileInput.click());
+
+  fileInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = (event) => {
+      try {
+        const data = JSON.parse(event.target.result);
+
+        if (Array.isArray(data)) {
+          // Restore selection
+          selectedPlantIds = new Set(data);
+          localStorage.setItem('selectedPlantIds', JSON.stringify([...selectedPlantIds]));
+
+          // Update checkboxes
+          const checkboxes = document.querySelectorAll('#plant-options input[type="checkbox"]');
+          checkboxes.forEach(cb => {
+            const plantId = cb.id.replace('plant-', '');
+            cb.checked = selectedPlantIds.has(plantId);
+          });
+
+          // Re-render calendar
+          generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+        } else {
+          alert('Invalid JSON: expected an array of plant data.');
+        }
+      } catch (err) {
+        alert('Error reading JSON file: ' + err.message);
+      } finally {
+        fileInput.value = ''; // reset input for next use
+      }
+    };
+    reader.readAsText(file);
+  });
+}
 
 
 

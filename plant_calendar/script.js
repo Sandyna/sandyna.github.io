@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupClearSelectionButton();
   setupRestoreDefaultsButton();
   setupCustomPlantForm();
+  setupDownloadButtons();
   setupClearSessionButton();
 });
 
@@ -64,6 +65,58 @@ function setupFrostDateInput() {
     localStorage.setItem('userFrostDate', input);
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
+}
+
+//download buttons listeners
+function setupDownloadButtons() {
+  const pdfBtn = document.getElementById('download-pdf-btn');
+  const jsonBtn = document.getElementById('download-json-btn');
+
+  pdfBtn.addEventListener('click', downloadCalendarPDF);
+  jsonBtn.addEventListener('click', downloadSelectedPlantsJSON);
+}
+
+//Download PDF
+async function downloadCalendarPDF() {
+  const calendar = document.getElementById('calendar-container');
+
+  const canvas = await html2canvas(calendar, {
+    scale: 2
+  });
+
+  const imgData = canvas.toDataURL('image/png');
+
+  const { jsPDF } = window.jspdf;
+  const pdf = new jsPDF('landscape', 'pt', 'a4');
+
+  const pageWidth = pdf.internal.pageSize.getWidth();
+  const pageHeight = pdf.internal.pageSize.getHeight();
+
+  const imgWidth = pageWidth;
+  const imgHeight = canvas.height * imgWidth / canvas.width;
+
+  pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+  pdf.save('planting-calendar.pdf');
+}
+//Download JSON
+function downloadSelectedPlantsJSON() {
+  const selectedPlants = plantData.filter(p =>
+    selectedPlantIds.has(p.id)
+  );
+
+  const blob = new Blob(
+    [JSON.stringify(selectedPlants, null, 2)],
+    { type: 'application/json' }
+  );
+
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'selected-plants.json';
+  a.click();
+
+  URL.revokeObjectURL(url);
 }
 
 //clear selected plants
@@ -457,6 +510,7 @@ function setupClearSessionButton() {
     loadPlantData();                // reload default plants
   });
 }
+
 
 
 

@@ -22,6 +22,10 @@ async function loadPlantData() {
     const response = await fetch('plants.json');
     plantData = await response.json();
 
+    // Load user-added plants from localStorage
+    const savedCustom = JSON.parse(localStorage.getItem('customPlants') || '[]');
+    plantData = [...savedCustom, ...defaultPlants];
+    
     loadFrostDate();
     renderPlantOptions();    // checkboxes
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
@@ -357,9 +361,12 @@ function addCustomPlant() {
     harvest: harvest != null ? harvest * 7 : null,
     alternate_text: alternateText
   };
-
+  //add the plant
   plantData.push(newPlant);
-
+  // Save custom plants into local storage
+  const customPlants = plantData.filter(p => p.id.startsWith('custom-'));
+  localStorage.setItem('customPlants', JSON.stringify(customPlants));
+  //render options and callendar
   renderPlantOptions();
   generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
 

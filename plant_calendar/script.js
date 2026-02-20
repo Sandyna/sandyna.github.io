@@ -19,15 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
 // ---------- LOAD PLANT DATA ----------
 async function loadPlantData() {
   try {
-    const response = await fetch('plants.json');
-    plantData = await response.json();
-
-    // Load user-added plants from localStorage
-    const savedCustom = JSON.parse(localStorage.getItem('customPlants') || '[]');
-    plantData = [...savedCustom, ...defaultPlants];
-    
+    const saved = localStorage.getItem('plantData');
+    if (saved) {
+      plantData = JSON.parse(saved);
+    } else {
+      const response = await fetch('plants.json');
+      plantData = await response.json();
+      localStorage.setItem('plantData', JSON.stringify(plantData));
+    }
     loadFrostDate();
-    renderPlantOptions();    // checkboxes
+    renderPlantOptions();
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   } catch (error) {
     console.error('Error loading plant data:', error);
@@ -325,7 +326,11 @@ function renderPlantOptions() {
       // remove from plantData
       const index = plantData.findIndex(p => p.id === plant.id);
       if (index !== -1) plantData.splice(index, 1);
+      //save the change in local storage
+      localStorage.setItem('plantData', JSON.stringify(plantData));
+      // remove from selection
       selectedPlantIds.delete(plant.id);
+      //render changes
       renderPlantOptions();
       generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
     });
@@ -363,9 +368,8 @@ function addCustomPlant() {
   };
   //add the plant
   plantData.push(newPlant);
-  // Save custom plants into local storage
-  const customPlants = plantData.filter(p => p.id.startsWith('custom-'));
-  localStorage.setItem('customPlants', JSON.stringify(customPlants));
+  // Add custom plants into local storage
+  localStorage.setItem('plantData', JSON.stringify(plantData));
   //render options and callendar
   renderPlantOptions();
   generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
@@ -441,6 +445,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

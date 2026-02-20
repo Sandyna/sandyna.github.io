@@ -344,7 +344,7 @@ function addCustomPlant() {
   const sowOutdoor = parseInt(document.getElementById('sow-outdoor').value, 10) || null;
   const transplant = parseInt(document.getElementById('transplant').value, 10) || null;
   const harvest = parseInt(document.getElementById('harvest').value, 10) || null;
-  const icon = document.getElementById('plant-icon').value.trim() || name.slice(0,3).toUpperCase();
+  const alternateText = document.getElementById('plant-alt-text').value.trim() || name.slice(0,3).toUpperCase();
 
   const newPlant = {
     id: 'custom-' + Date.now(),
@@ -355,7 +355,7 @@ function addCustomPlant() {
     sow_outdoor: sowOutdoor != null ? sowOutdoor * 7 : null,
     transplant: transplant != null ? transplant * 7 : null,
     harvest: harvest != null ? harvest * 7 : null,
-    icon: icon
+    alternate_text: alternateText
   };
 
   plantData.push(newPlant);
@@ -434,6 +434,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

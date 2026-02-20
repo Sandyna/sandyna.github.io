@@ -355,7 +355,7 @@ function addCustomPlant() {
     sow_outdoor: sowOutdoor != null ? sowOutdoor * 7 : null,
     transplant: transplant != null ? transplant * 7 : null,
     harvest: harvest != null ? harvest * 7 : null,
-    icon
+    icon: iconInput
   };
 
   plantData.push(newPlant);
@@ -434,6 +434,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

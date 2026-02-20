@@ -103,22 +103,32 @@ async function downloadCalendarPDF() {
 }
 //Download JSON
 function downloadSelectedPlantsJSON() {
-  const selectedPlants = plantData.filter(p =>
-    selectedPlantIds.has(p.id)
-  );
+  const selectedPlants = plantData.filter(plant => selectedPlantIds.has(plant.id));
 
-  const blob = new Blob(
-    [JSON.stringify(selectedPlants, null, 2)],
-    { type: 'application/json' }
-  );
+  // Map each plant to ensure it has all fields in the proper format
+  const jsonPlants = selectedPlants.map(p => ({
+    id: p.id,
+    name: p.name,
+    sow_indoor: p.sow_indoor !== undefined ? p.sow_indoor : null,
+    sow_outdoor: p.sow_outdoor !== undefined ? p.sow_outdoor : null,
+    transplant: p.transplant !== undefined ? p.transplant : null,
+    harvest: p.harvest !== undefined ? p.harvest : null,
+    sun_needs: p.sun_needs || '',
+    water_needs: p.water_needs || '',
+    icon: p.icon || '',
+    alternate_text: p.alternate_text || null,
+    tooltip: p.tooltip || ''
+  }));
 
+  const blob = new Blob([JSON.stringify(jsonPlants, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
 
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'selected-plants.json';
+  a.download = 'selected_plants.json';
+  document.body.appendChild(a);
   a.click();
-
+  document.body.removeChild(a);
   URL.revokeObjectURL(url);
 }
 
@@ -534,44 +544,84 @@ function setupJsonBackup() {
     URL.revokeObjectURL(url);
   });
 
-  // --- UPLOAD JSON ---
+  // --- UPLOAD JSON --- 
+  //temporarily disabled in HTML because I don't yet know how I want to approach JSON validation and merging of plants that have identical IDs/already exist internally
   uploadBtn.addEventListener('click', () => fileInput.click());
+
 
   fileInput.addEventListener('change', (e) => {
     const file = e.target.files[0];
     if (!file) return;
-
+  
     const reader = new FileReader();
     reader.onload = (event) => {
       try {
         const data = JSON.parse(event.target.result);
-
-        if (Array.isArray(data)) {
-          // Restore selection
-          selectedPlantIds = new Set(data);
-          localStorage.setItem('selectedPlantIds', JSON.stringify([...selectedPlantIds]));
-
-          // Update checkboxes
-          const checkboxes = document.querySelectorAll('#plant-options input[type="checkbox"]');
-          checkboxes.forEach(cb => {
-            const plantId = cb.id.replace('plant-', '');
-            cb.checked = selectedPlantIds.has(plantId);
-          });
-
-          // Re-render calendar
-          generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
-        } else {
-          alert('Invalid JSON: expected an array of plant data.');
+  
+        if (!Array.isArray(data)) {
+          alert('Invalid JSON: expected an array of plant objects.');
+          return;
         }
+  
+        // Validate and normalize each plant object
+        const requiredKeys = [
+          "id", "name", "sow_indoor", "sow_outdoor",
+          "transplant", "harvest", "sun_needs",
+          "water_needs", "icon", "alternate_text", "tooltip"
+        ];
+  
+        const sanitizedPlants = data.map(p => {
+          const plant = {};
+          requiredKeys.forEach(key => {
+            if (p[key] !== undefined) {
+              plant[key] = p[key];
+            } else {
+              switch (key) {
+                case 'id': plant[key] = 'custom-' + Date.now(); break;
+                case 'name': plant[key] = 'Unnamed Plant'; break;
+                case 'sow_indoor':
+                case 'sow_outdoor':
+                case 'transplant':
+                case 'harvest':
+                  plant[key] = null; break;
+                case 'sun_needs':
+                case 'water_needs':
+                case 'icon':
+                case 'tooltip':
+                  plant[key] = ''; break;
+                case 'alternate_text':
+                  plant[key] = null; break;
+              }
+            }
+          });
+          return plant;
+        });
+  
+        // Replace existing plantData with uploaded plants
+        plantData = sanitizedPlants;
+        localStorage.setItem('plantData', JSON.stringify(plantData));
+  
+        // Clear selection (or could preserve if desired)
+        selectedPlantIds.clear();
+        localStorage.setItem('selectedPlantIds', JSON.stringify([...selectedPlantIds]));
+  
+        // Update checkboxes and calendar
+        renderPlantOptions();
+        generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+  
+        alert('Plants successfully uploaded!');
+  
       } catch (err) {
         alert('Error reading JSON file: ' + err.message);
       } finally {
-        fileInput.value = ''; // reset input for next use
+        fileInput.value = ''; // reset input
       }
     };
+  
     reader.readAsText(file);
   });
 }
+
 
 
 

@@ -382,6 +382,7 @@ function showPlantInfo(plant) {
   iconEl.classList.add('plant-icon-display');
   const img = new Image();
   img.src = `icons/${plant.icon}.svg`;
+  img.classList.add('plant-icon-display');
   img.onload = () => {
     iconEl.appendChild(img);
   };
@@ -433,6 +434,7 @@ function setupClearSessionButton() {
     generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
   });
 }
+
 
 
 

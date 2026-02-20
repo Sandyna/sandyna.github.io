@@ -15,6 +15,8 @@
       <input type="date" id="frost-date-input" />
     </div>    
     <div id="action-legend"></div>
+    <button id="download-pdf-btn">Download Calendar PDF</button>
+    <button id="download-json-btn">Download Selected Plants JSON</button>
   </div>
   
   <div id="app-layout">
@@ -64,9 +66,13 @@
   
   <button id="clear-session-btn">Clear Session</button>
   User-generated plants are saved locally, in your browser. Clear session to remove local data. 
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 

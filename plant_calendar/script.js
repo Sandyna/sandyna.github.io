@@ -67,11 +67,13 @@ function setupFrostDateInput() {
   });
 }
 
-//download buttons listeners
+//download buttons
 function setupDownloadButtons() {
   const pdfBtn = document.getElementById('download-pdf-btn');
+//  pdfBtn.title = "Download a PDF version of the calendar";
   const jsonBtn = document.getElementById('download-json-btn');
-
+  jsonBtn.title = "Download a JSON file of all currently selected plants for backup or sharing. You can upload the JSON later to restore your session";
+    
   pdfBtn.addEventListener('click', downloadCalendarPDF);
   jsonBtn.addEventListener('click', downloadSelectedPlantsJSON);
 }
@@ -510,6 +512,7 @@ function setupClearSessionButton() {
     loadPlantData();                // reload default plants
   });
 }
+
 
 
 

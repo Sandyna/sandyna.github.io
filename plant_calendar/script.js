@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupDownloadButtons();
   setupJsonBackup();
   setupClearSessionButton();
+  setupJsonUpload();
 });
 
 // ---------- LOAD PLANT DATA ----------
@@ -74,9 +75,16 @@ function setupDownloadButtons() {
   pdfBtn.title = "Download a PDF version of the calendar";
   const jsonBtn = document.getElementById('download-json-btn');
   jsonBtn.title = "Download a JSON file of all currently selected plants for backup or sharing. You can upload the JSON later to restore your session";
-    
+  const uploadBtn = document.getElementById('upload-json-btn');
+  uploadBtn.title = "You can edit the JSON but if you break it, that's on you.";
+  
   pdfBtn.addEventListener('click', downloadCalendarPDF);
   jsonBtn.addEventListener('click', downloadSelectedPlantsJSON);
+    // JSON upload trigger
+  uploadBtn.addEventListener('click', () => {
+    const fileInput = document.getElementById('upload-json-input');
+    fileInput.click();
+  });
 }
 
 //Download PDF
@@ -527,42 +535,140 @@ function setupClearSessionButton() {
 
 // ---------- JSON EXPORT ----------
 function downloadSelectedPlantsJSON() {
-  const selectedPlants = plantData.filter(plant =>
-    selectedPlantIds.has(plant.id)
-  );
+  // Separate defaults vs custom
+  const defaults = [];
+  const custom = [];
 
-  const jsonPlants = selectedPlants.map(p => ({
-    id: p.id,
-    name: p.name,
-    sow_indoor: p.sow_indoor ?? null,
-    sow_outdoor: p.sow_outdoor ?? null,
-    transplant: p.transplant ?? null,
-    harvest: p.harvest ?? null,
-    sun_needs: p.sun_needs || '',
-    water_needs: p.water_needs || '',
-    icon: p.icon || '',
-    alternate_text: p.alternate_text ?? null,
-    tooltip: p.tooltip || ''
-  }));
+  plantData.forEach(p => {
+    if (p.id.startsWith('custom-')) {
+      custom.push({
+        id: p.id,
+        name: p.name,
+        sow_indoor: p.sow_indoor ?? null,
+        sow_outdoor: p.sow_outdoor ?? null,
+        transplant: p.transplant ?? null,
+        harvest: p.harvest ?? null,
+        sun_needs: p.sun_needs || '',
+        water_needs: p.water_needs || '',
+        icon: p.icon || '',
+        alternate_text: p.alternate_text ?? null,
+        tooltip: p.tooltip || ''
+      });
+    } else if (selectedPlantIds.has(p.id)) {
+      defaults.push(p.id);
+    }
+  });
 
-  const blob = new Blob(
-    [JSON.stringify(jsonPlants, null, 2)],
-    { type: 'application/json' }
-  );
+  const jsonData = { defaults, custom };
 
+  const blob = new Blob([JSON.stringify(jsonData, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;
-  a.download = 'selected_plants.json';
+  a.download = 'planting-calendar.json';
   a.click();
   URL.revokeObjectURL(url);
 }
 
+function setupJsonUpload() {
+  const fileInput = document.getElementById('upload-json-input');
 
+  fileInput.addEventListener('change', async (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
 
+    const text = await file.text();
+    let data;
+    try {
+      data = JSON.parse(text);
+    } catch {
+      alert('Invalid JSON file.');
+      return;
+    }
 
+    // Validate structure
+    if (!data.defaults || !Array.isArray(data.defaults) || !data.custom || !Array.isArray(data.custom)) {
+      alert('Invalid JSON structure. Expected {defaults: [...], custom: [...]}');
+      return;
+    }
 
+    // Load true defaults
+    let defaultPlants = [];
+    try {
+      const response = await fetch('plants.json');
+      defaultPlants = await response.json();
+    } catch {
+      alert('Failed to load default plants.');
+      return;
+    }
+    const defaultIds = new Set(defaultPlants.map(p => p.id));
 
+    // Add selected defaults
+    const newPlantData = [];
+    data.defaults.forEach(id => {
+      const dp = defaultPlants.find(p => p.id === id);
+      if (dp) newPlantData.push(dp);
+    });
 
+    // Add custom plants
+    const seenIds = new Set(newPlantData.map(p => p.id));
+    let idEditedCount = 0;
 
+    for (let i = 0; i < data.custom.length; i++) {
+      const plant = data.custom[i];
 
+      // Ensure ID exists and starts with 'custom-'
+      if (!plant.id || !plant.id.startsWith('custom-')) {
+        plant.id = 'custom-' + Date.now() + '-' + i;
+        idEditedCount++;
+      }
+
+      // Check duplicate
+      if (seenIds.has(plant.id)) {
+        alert('Duplicate IDs found in uploaded plants. Upload aborted.');
+        return;
+      }
+
+      seenIds.add(plant.id);
+
+      // Ensure fields exist
+      const normalizedPlant = {
+        id: plant.id,
+        name: plant.name || 'Unnamed Plant',
+        sow_indoor: plant.sow_indoor ?? null,
+        sow_outdoor: plant.sow_outdoor ?? null,
+        transplant: plant.transplant ?? null,
+        harvest: plant.harvest ?? null,
+        sun_needs: plant.sun_needs || '',
+        water_needs: plant.water_needs || '',
+        icon: plant.icon || '',
+        alternate_text: plant.alternate_text ?? null,
+        tooltip: plant.tooltip || ''
+      };
+
+      newPlantData.push(normalizedPlant);
+    }
+
+    // Update plantData and selection
+    plantData = newPlantData;
+    selectedPlantIds = new Set([
+      ...data.defaults.filter(id => defaultIds.has(id)),
+      ...data.custom.map(p => p.id)
+    ]);
+
+    localStorage.setItem('plantData', JSON.stringify(plantData));
+    localStorage.setItem('selectedPlantIds', JSON.stringify([...selectedPlantIds]));
+
+    renderPlantOptions();
+    generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
+
+    // Notify user
+    if (idEditedCount > 0) {
+      alert(`${idEditedCount} custom plant IDs were updated to avoid conflicts.`);
+    } else {
+      alert('Plants uploaded successfully!');
+    }
+
+    fileInput.value = '';
+  });
+}

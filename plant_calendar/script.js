@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
   setupRestoreDefaultsButton();
   setupCustomPlantForm();
   setupDownloadButtons();
-  setupJsonBackup();
   setupClearSessionButton();
   setupJsonUpload();
 });
@@ -672,3 +671,4 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+

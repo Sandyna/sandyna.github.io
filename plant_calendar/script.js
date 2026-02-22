@@ -432,7 +432,7 @@ function renderPlantOptions() {
     });
     
     div.appendChild(checkbox);
-    div.appendChild(label);
+    div.appendChild(plantLabel);
     div.appendChild(deleteBtn);
     container.appendChild(div);
   });
@@ -688,6 +688,7 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 
 

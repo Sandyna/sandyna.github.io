@@ -43,7 +43,7 @@ body {
   display: inline-block;
   color: red;
   font-weight: 900px;
-  transform: scale(1.6) translateY(-1px);
+  transform: scale(3.2) translateY(-6px);
   transform-origin: center;
 }
 
@@ -247,6 +247,7 @@ button:hover {
   width: 48px;   /* big size */
   height: 48px;  /* match width */
 }
+
 
 
 

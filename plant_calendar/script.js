@@ -391,22 +391,26 @@ function renderPlantOptions() {
     });
 
     //Add icon before name
+    const plantLabel = document.createElement('label'); // renamed variable
+    plantLabel.htmlFor = `plant-${plant.id}`;
+    
     const iconImg = new Image();
     iconImg.src = `icons/${plant.icon}`;
     iconImg.classList.add('plant-label-icon');
-    iconImg.onerror = () => {
-      iconImg.replaceWith(document.createTextNode(plant.alternate_text || plant.name.slice(0,3).toUpperCase() + ' '));
-    };
-    label.appendChild(iconImg);
-    // append colon + space unconditionally
-    label.appendChild(document.createTextNode(': '));
-    label.appendChild(document.createTextNode(plant.name));
     
-    //plant names
-    const label = document.createElement('label');
-    label.htmlFor = `plant-${plant.id}`;
-    label.textContent = plant.name;
-
+    // fallback if image fails
+    iconImg.onerror = () => {
+      iconImg.replaceWith(document.createTextNode(plant.alternate_text || plant.name.slice(0,3).toUpperCase()));
+    };
+    
+    plantLabel.appendChild(iconImg);
+    
+    // always add colon + space
+    plantLabel.appendChild(document.createTextNode(': '));
+    
+    // append plant name
+    plantLabel.appendChild(document.createTextNode(plant.name));
+    
     // red × delete button
     const deleteBtn = document.createElement('span');
     deleteBtn.textContent = '×';
@@ -684,6 +688,7 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 
 

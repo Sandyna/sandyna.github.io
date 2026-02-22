@@ -255,6 +255,43 @@ button:hover {
   height: 48px;  /* match width */
 }
 
+/* PDF export container */
+.pdf-export-container {
+  background-color: #f4f4f9;
+  padding: 20px;
+}
+
+/* Legend wrapper */
+.pdf-legend-wrapper {
+  margin-top: 20px;
+}
+
+/* Each plant in the legend */
+.pdf-legend-plant {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 0.95em;
+}
+
+/* Icon / image */
+.pdf-legend-icon {
+  display: inline-block;
+  margin-right: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+/* Img inside legend */
+.pdf-legend-img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Name span */
+.pdf-legend-name {
+  display: inline-block;
+}
 
 
 

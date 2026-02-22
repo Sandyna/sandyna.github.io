@@ -39,6 +39,11 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
+.arrow{
+  font-size:23px;
+  font-weight: 900;
+  color: red;
+}
 
 #calendar-container {
   width: 80%;
@@ -240,6 +245,7 @@ button:hover {
   width: 48px;   /* big size */
   height: 48px;  /* match width */
 }
+
 
 
 

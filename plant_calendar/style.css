@@ -31,6 +31,11 @@ body {
   margin: 0 5px;
 }
 
+.frost_info {
+  font-size: 20px;
+  font-weight: bold;
+}
+
 #calendar-container {
   width: 80%;
   margin-top: 30px;
@@ -231,5 +236,6 @@ button:hover {
   width: 48px;   /* big size */
   height: 48px;  /* match width */
 }
+
 
 

@@ -389,6 +389,19 @@ function renderPlantOptions() {
       localStorage.setItem('selectedPlantIds', JSON.stringify([...selectedPlantIds]));
       generateYearCalendar(frostDate.getFullYear(), plantData, frostDate);
     });
+
+    //Add icon before name
+    const iconImg = new Image();
+    iconImg.src = `icons/${plant.icon}`;
+    iconImg.classList.add('plant-label-icon');
+    iconImg.onerror = () => {
+      iconImg.replaceWith(document.createTextNode(plant.alternate_text || plant.name.slice(0,3).toUpperCase() + ' '));
+    };
+    label.appendChild(iconImg);
+    // append colon + space unconditionally
+    label.appendChild(document.createTextNode(': '));
+    label.appendChild(document.createTextNode(plant.name));
+    
     //plant names
     const label = document.createElement('label');
     label.htmlFor = `plant-${plant.id}`;
@@ -671,6 +684,7 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 
 

@@ -403,13 +403,12 @@ function renderPlantOptions() {
       iconImg.replaceWith(document.createTextNode(plant.alternate_text || plant.name.slice(0,3).toUpperCase()));
     };
     
-    plantLabel.appendChild(iconImg);
-    
-    // always add colon + space
-    plantLabel.appendChild(document.createTextNode(': '));
-    
     // append plant name
     plantLabel.appendChild(document.createTextNode(plant.name));
+    // always add colon + space
+    plantLabel.appendChild(document.createTextNode(': '));
+    //append image
+    plantLabel.appendChild(iconImg);
     
     // red × delete button
     const deleteBtn = document.createElement('span');
@@ -688,6 +687,7 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 
 

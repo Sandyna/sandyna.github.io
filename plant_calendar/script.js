@@ -1,7 +1,7 @@
 let plantData = [];
 let frostDate;
 let selectedPlantIds = new Set();
-let activeActions = new Set(['sowIndoors','sowOutdoors','transplant','harvest']);
+let activeActions = new Set(['sowIndoors','sowOutdoors','transplant']);//removed harvest
 
 // ---------- INIT ----------
 document.addEventListener('DOMContentLoaded', () => {
@@ -119,7 +119,7 @@ function downloadSelectedPlantsJSON() {
     sow_indoor: p.sow_indoor !== undefined ? p.sow_indoor : null,
     sow_outdoor: p.sow_outdoor !== undefined ? p.sow_outdoor : null,
     transplant: p.transplant !== undefined ? p.transplant : null,
-    harvest: p.harvest !== undefined ? p.harvest : null,
+//    harvest: p.harvest !== undefined ? p.harvest : null,
     sun_needs: p.sun_needs || '',
     water_needs: p.water_needs || '',
     icon: p.icon || '',
@@ -281,14 +281,14 @@ const actionColors = {
   sowIndoors: 'blue',
   sowOutdoors: 'green',
   transplant: 'mediumturquoise',
-  harvest: 'red'
+//  harvest: 'red'
 };
 //Action → text mapping
 const actionLabels = {
   sowIndoors: "Sow Indoors",
   sowOutdoors: "Sow Outdoors",
   transplant: "Transplant",
-  harvest: "Harvest"
+//  harvest: "Harvest"
 };
 
 //create one month of the calendar
@@ -351,7 +351,7 @@ function renderMonth(month, year, selectedPlants, frostDate) {
         sowIndoors: getEventDate(frostDate, plant.sow_indoor),
         sowOutdoors: getEventDate(frostDate, plant.sow_outdoor),
         transplant: getEventDate(frostDate, plant.transplant),
-        harvest: getEventDate(frostDate, plant.harvest)
+  //      harvest: getEventDate(frostDate, plant.harvest)
       };
 
       for (const [action, date] of Object.entries(dates)) {
@@ -438,8 +438,8 @@ function addCustomPlant() {
   const transplantRaw = document.getElementById('transplant').value;
   const transplant = transplantRaw === '' ? null : parseInt(transplantRaw, 10);
   
-  const harvestRaw = document.getElementById('harvest').value;
-  const harvest = harvestRaw === '' ? null : parseInt(harvestRaw, 10);
+//  const harvestRaw = document.getElementById('harvest').value;
+//  const harvest = harvestRaw === '' ? null : parseInt(harvestRaw, 10);
   
   const alternateText = document.getElementById('plant-alt-text').value.trim() || name.slice(0,3).toUpperCase();
 
@@ -451,7 +451,7 @@ function addCustomPlant() {
     sow_indoor: sowIndoor != null ? sowIndoor * -7 : null,   // negative weeks → days
     sow_outdoor: sowOutdoor != null ? sowOutdoor * 7 : null,
     transplant: transplant != null ? transplant * 7 : null,
-    harvest: harvest != null ? harvest * 7 : null,
+//    harvest: harvest != null ? harvest * 7 : null,
     alternate_text: alternateText
   };
   //add the plant
@@ -498,7 +498,7 @@ function showPlantInfo(plant) {
     { key: 'sow_indoor', label: 'Sow Indoors (weeks before last frost)' },
     { key: 'sow_outdoor', label: 'Sow Outdoors (weeks after last frost)' },
     { key: 'transplant', label: 'Transplant (weeks after last frost)' },
-    { key: 'harvest', label: 'Harvest (weeks after last frost)' },
+//    { key: 'harvest', label: 'Harvest (weeks after last frost)' },
     { key: 'tooltip', label: 'Notes' }
   ];
   
@@ -508,7 +508,7 @@ fields.forEach(({ key, label }) => {
   if (value !== null && value !== undefined && value !== '') {
     const div = document.createElement('div');
 
-    if (['sow_indoor','sow_outdoor','transplant','harvest'].includes(key)) {
+    if (['sow_indoor','sow_outdoor','transplant'].includes(key)) { //removed harvest
       const weeks = Math.round(Math.abs(value / 7));
       div.textContent = `${label}: cca. ${weeks} weeks`;
     } else {
@@ -546,7 +546,7 @@ function downloadSelectedPlantsJSON() {
         sow_indoor: p.sow_indoor ?? null,
         sow_outdoor: p.sow_outdoor ?? null,
         transplant: p.transplant ?? null,
-        harvest: p.harvest ?? null,
+//        harvest: p.harvest ?? null,
         sun_needs: p.sun_needs || '',
         water_needs: p.water_needs || '',
         icon: p.icon || '',
@@ -637,7 +637,7 @@ function setupJsonUpload() {
         sow_indoor: plant.sow_indoor ?? null,
         sow_outdoor: plant.sow_outdoor ?? null,
         transplant: plant.transplant ?? null,
-        harvest: plant.harvest ?? null,
+//        harvest: plant.harvest ?? null,
         sun_needs: plant.sun_needs || '',
         water_needs: plant.water_needs || '',
         icon: plant.icon || '',
@@ -671,4 +671,5 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 

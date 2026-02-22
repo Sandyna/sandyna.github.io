@@ -1,16 +1,16 @@
 id,name,sow_indoors,sow_outdoors,transplant,sun_needs,water_needs,icon,alternate_text,tooltip
-1000,Zucchini,-14,14,14,"Full sun, 6-8h","High, keep moist",,ZCN,"Cucurbita pepo. Annual. 18°C+. Can be staked like tomatoes. Beware powdery mildew. Male and female flowers, hand-pollinate or plant with things to attract pollinators. 60Cm apart, 45Cm when staked. Remove leaves below the lowest fruit and sick or damaged leaves. Harvest depends on the variety. "
-1001,Pumpkin,0,,14,Full sun,"High, keep moist",,\uD83C\uDF83,
-1002,Winged beans,-32,,14,Full sun,"High, keep moist",,WBN,"Psophocarpus tetragonolobus. 15°C+, ideally more. Soak seeds for 24h+, 25-30°C to germinate. Careful with transplant, delicate roots. Climbing vine, needs trellis. "
-1003,Malabar spinach,-49,,14,"Full sun, afternoon shade","High, keep moist",,MSP,"Basella alba. 15°C+. Soak seeds overnight. Keep moist or it will bloom. Leaves turn bitter when blooming. Add compost 1-2x per season. Dry whole fruit for planting. Vining plant, needs a trellis. Harvest when it has 8-10 leaves. "
-1004,Thai eggplant,-42,,14,Full sun,"High, keep moist",,TEG,
-1005,Onion,-70,-35,-14,Full sun,"Medium, allow to dry out",,\ud83e\udd85,"Allium cepa. Check which variety is suitable for your area: there’s long-day, short-day and day-neutral. Sowing outdoors possible only in zones 6+. "
-1006,Tomato,-42,,,Full sun,"High, keep moist",,\ud83c\udf45,
-1007,Pepper,-49,,14,Full sun,"High, keep moist",,\ud83c\udf36,
-1008,Cucumber,0,,21,Full sun,"High, keep moist",,\ud83e\udd66,
-1009,Bush beans,-21,21,21,Full sun,"High, keep moist",,BBN,12°C+. No staking needed. 40cm spacing. 
-1010,Radish,,0,,Full sun,"High, keep moist",,RAD,"Can be sown repeatedly until the end of summer. 10-15cm spacing. 10°C+, can tolerate lower sunlight"
-1011,Dill,,7,,Full sun,"High, keep moist",,DIL,"Anethum graveolens, 15°C+"
-1012,Chicory,-21,7,18,Full sun,"High, keep moist",,CHC,Chicorium. 10°C-23°C. Can be sown repeatedly until early summer and then again in late summer. Hot weather causes it to go to seed. 
-1013,Coriander,,7,,"Full sun, afternoon shade","Medium, allow to dry out",,COR,Coriandrum sativum. 10°C-23°C. Can be sown repeatedly until early summer and then again in late summer. Hot weather causes it to go to seed. Seedlings need more water. 
-1014,Chives,-49,7,7,"Full sun, afternoon shade","Medium, allow to dry out",,CHV,Allium tuberosum. Perrenial. Zones 3-9
+1000,Zucchini,-14,14,14,Full sun,"High, keep moist",zucchini.svg,ZCN,"Cucurbita pepo. Annual. 18°C+. Can be staked like tomatoes. Beware powdery mildew. Male and female flowers, hand-pollinate or plant with things to attract pollinators. 60Cm apart, 45Cm when staked. Remove leaves below the lowest fruit and sick or damaged leaves. Harvest depends on the variety. "
+1001,Pumpkin,0,,14,Full sun,"High, keep moist",pumpkin.svg,🎃,
+1002,Winged beans,-32,,15,Full sun,"High, keep moist",winged_beans.svg,WBN,"Psophocarpus tetragonolobus. 15°C+, ideally more. Soak seeds for 24h+, 25-30°C to germinate. Careful with transplant, delicate roots. Climbing vine, needs trellis. "
+1003,Malabar spinach,-49,,15,"Full sun, afternoon shade","High, keep moist",basella.svg,MSP,"Basella alba. 15°C+. Soak seeds overnight. Keep moist or it will bloom. Leaves turn bitter when blooming. Add compost 1-2x per season. Dry whole fruit for planting. Vining plant, needs a trellis. Harvest when it has 8-10 leaves. "
+1004,Thai eggplant,-42,,16,Full sun,"High, keep moist",thai_eggplant.svg,TEG,
+1005,Onion,-70,-35,-14,Full sun,"Medium, allow to dry out",onion.svg,ONI,"Allium cepa. Check which variety is suitable for your area: there’s long-day, short-day and day-neutral. Sowing outdoors possible only in zones 6+. "
+1006,Tomato,-42,,16,Full sun,"High, keep moist",tomato.svg,🍅,
+1007,Pepper,-49,,17,Full sun,"High, keep moist",pepper.svg,🫑,
+1008,Cucumber,0,,21,Full sun,"High, keep moist",cucumber.svg,🥒,
+1009,Bush beans,-21,21,21,Full sun,"High, keep moist",bush_beans.svg,BBN,12°C+. No staking needed. 40cm spacing. 
+1010,Radish,,0,,Full sun,"High, keep moist",radish.svg,RAD,"Can be sown repeatedly until the end of summer. 10-15cm spacing. 10°C+, can tolerate lower sunlight"
+1011,Dill,,7,,Full sun,"High, keep moist",dill.svg,DIL,"Anethum graveolens, 15°C+"
+1012,Chicory,-21,7,18,Full sun,"High, keep moist",chicory.svg,CHC,Chicorium. 10°C-23°C. Can be sown repeatedly until early summer and then again in late summer. Hot weather causes it to go to seed. 
+1013,Coriander,,7,,"Full sun, afternoon shade","Medium, allow to dry out",coriander.svg,COR,Coriandrum sativum. 10°C-23°C. Can be sown repeatedly until early summer and then again in late summer. Hot weather causes it to go to seed. Seedlings need more water. 
+1014,Chives,-49,8,7,"Full sun, afternoon shade","Medium, allow to dry out",chives.svg,CHV,Allium tuberosum. Perrenial. Zones 3-9

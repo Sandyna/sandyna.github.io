@@ -20,7 +20,7 @@
 	"sun_needs": "Full sun",
 	"water_needs": "High, keep moist",
 	"icon": null,
-	"alternate_text": "",
+	"alternate_text": "\uD83C\uDF83",
 	"tooltip": ""
 },
 {
@@ -56,7 +56,7 @@
 	"sun_needs": "Full sun",
 	"water_needs": "High, keep moist",
 	"icon": null,
-	"alternate_text": "",
+	"alternate_text": "TEG",
 	"tooltip": ""
 },
 {

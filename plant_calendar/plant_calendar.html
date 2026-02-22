@@ -11,7 +11,7 @@
   <h1>Planting calendar</h1>
   Select your frost date, select your plants, find out when to sow.
   <div id="top-controls">
-    <div id="frost-date-container">
+    <div id="frost-date-container" class="frost-date-container">
       <label for="frost-date-input">Last Frost Date:</label>
       <input type="date" id="frost-date-input" />
     </div>    
@@ -24,7 +24,7 @@
       <input type="file" id="upload-json-input" accept=".json" style="display:none;">
     </div>
   </div>
-  <div class="frost_info">Find out your last frost date <a href="https://www.plantmaps.com/climate-maps-and-data/frost" target="_blank" rel="noopener noreferrer">here</a>. </div>
+  <div class="frost-info">Find out your last frost date <a href="https://www.plantmaps.com/climate-maps-and-data/frost" target="_blank" rel="noopener noreferrer">here</a>. </div>
   <div id="app-layout">
     <div id="calendar-container">
       <!-- Calendar will be dynamically generated here -->
@@ -78,6 +78,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 

@@ -89,58 +89,69 @@ function setupDownloadButtons() {
 //Download PDF
 async function downloadCalendarPDF() {
   const calendar = document.getElementById('calendar-container');
+  const selectionContainer = document.getElementById('plant-options');
 
-  // Render calendar to canvas
-  const canvas = await html2canvas(calendar, { scale: 2 });
+  // Temporary container for pdf rendering
+  const tempContainer = document.createElement('div');
+  tempContainer.className = 'pdf-export-container';
+
+  // Clone calendar
+  tempContainer.appendChild(calendar.cloneNode(true));
+
+  // Build legend
+  const legendWrapper = document.createElement('div');
+  legendWrapper.className = 'pdf-legend-wrapper';
+  legendWrapper.innerHTML = '<h2>Selected Plants</h2>';
+
+  const checkboxes = selectionContainer.querySelectorAll('input[type="checkbox"]');
+  checkboxes.forEach(cb => {
+    if (cb.checked) {
+      const plantDiv = document.createElement('div');
+      plantDiv.className = 'pdf-legend-plant';
+
+      const plant = plantData.find(p => p.id === cb.id.replace('plant-', ''));
+      if (!plant) return;
+
+      // Icon / alternate text / emoji
+      const iconSpan = document.createElement('span');
+      iconSpan.className = 'pdf-legend-icon';
+
+      if (plant.icon) {
+        const img = new Image();
+        img.src = `icons/${plant.icon}`;
+        img.className = 'pdf-legend-img';
+        img.onerror = () => {
+          img.replaceWith(document.createTextNode(plant.alternate_text || plant.name.slice(0,3).toUpperCase()));
+        };
+        iconSpan.appendChild(img);
+      } else {
+        iconSpan.textContent = plant.alternate_text || plant.name.slice(0,3).toUpperCase();
+      }
+
+      const nameSpan = document.createElement('span');
+      nameSpan.className = 'pdf-legend-name';
+      nameSpan.textContent = `: ${plant.name}`;
+
+      plantDiv.appendChild(iconSpan);
+      plantDiv.appendChild(nameSpan);
+      legendWrapper.appendChild(plantDiv);
+    }
+  });
+
+  tempContainer.appendChild(legendWrapper);
+
+  // Render with html2canvas
+  const canvas = await html2canvas(tempContainer, { scale: 2 });
   const imgData = canvas.toDataURL('image/png');
 
   const { jsPDF } = window.jspdf;
   const pdf = new jsPDF('landscape', 'pt', 'a4');
 
   const pageWidth = pdf.internal.pageSize.getWidth();
-  const pageHeight = pdf.internal.pageSize.getHeight();
-
-  const imgWidth = pageWidth * 0.75; // leave room for legend on right
+  const imgWidth = pageWidth;
   const imgHeight = canvas.height * imgWidth / canvas.width;
 
   pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
-
-  // --- Legend of selected plants ---
-  const startX = imgWidth + 20; // start after calendar
-  let startY = 40;              // top margin
-
-  pdf.setFontSize(12);
-  pdf.text("Legend:", startX, startY);
-  startY += 15;
-
-  const selectedPlants = plantData.filter(p => selectedPlantIds.has(p.id));
-
-  for (const p of selectedPlants) {
-    // Check if icon is emoji (1-2 chars)
-    if (p.icon && p.icon.length <= 2) {
-      pdf.text(`${p.icon}: ${p.name}`, startX, startY);
-    } 
-    // Check if icon is an image file
-    else if (p.icon && /\.(png|jpg|jpeg|svg)$/i.test(p.icon)) {
-      try {
-        // load image
-        const img = await loadImage(`icons/${p.icon}`);
-        pdf.addImage(img, 'PNG', startX, startY - 12, 12, 12);
-        pdf.text(`: ${p.name}`, startX + 16, startY + 0); // offset after image
-      } catch {
-        const alt = p.alternate_text || p.name.slice(0, 3).toUpperCase();
-        pdf.text(`${alt}: ${p.name}`, startX, startY);
-      }
-    } 
-    // fallback
-    else {
-      const alt = p.alternate_text || p.name.slice(0, 3).toUpperCase();
-      pdf.text(`${alt}: ${p.name}`, startX, startY);
-    }
-
-    startY += 18;
-  }
-
   pdf.save('planting-calendar.pdf');
 }
 
@@ -740,6 +751,7 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 
 

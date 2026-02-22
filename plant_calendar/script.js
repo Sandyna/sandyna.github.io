@@ -90,34 +90,77 @@ function setupDownloadButtons() {
 async function downloadCalendarPDF() {
   const calendar = document.getElementById('calendar-container');
 
+  // Render calendar to canvas
   const canvas = await html2canvas(calendar, { scale: 2 });
   const imgData = canvas.toDataURL('image/png');
+
   const { jsPDF } = window.jspdf;
   const pdf = new jsPDF('landscape', 'pt', 'a4');
 
   const pageWidth = pdf.internal.pageSize.getWidth();
-  const imgWidth = pageWidth * 0.75; // leave space for legend
+  const pageHeight = pdf.internal.pageSize.getHeight();
+
+  const imgWidth = pageWidth * 0.75; // leave room for legend on right
   const imgHeight = canvas.height * imgWidth / canvas.width;
 
   pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
 
-  // Add legend to the right
-  const startX = imgWidth + 10;
-  let startY = 40;
+  // --- Legend of selected plants ---
+  const startX = imgWidth + 20; // start after calendar
+  let startY = 40;              // top margin
+
   pdf.setFontSize(12);
-  pdf.text("Selected Plants:", startX, startY);
+  pdf.text("Legend:", startX, startY);
+  startY += 15;
 
   const selectedPlants = plantData.filter(p => selectedPlantIds.has(p.id));
-  startY += 15;
-  selectedPlants.forEach(p => {
-    const iconText = p.alternate_text || p.name.slice(0,3).toUpperCase();
-    pdf.text(`${iconText} ${p.name}`, startX, startY);
-    startY += 15;
-  });
+
+  for (const p of selectedPlants) {
+    // Check if icon is emoji (1-2 chars)
+    if (p.icon && p.icon.length <= 2) {
+      pdf.text(`${p.icon}: ${p.name}`, startX, startY);
+    } 
+    // Check if icon is an image file
+    else if (p.icon && /\.(png|jpg|jpeg|svg)$/i.test(p.icon)) {
+      try {
+        // load image
+        const img = await loadImage(`icons/${p.icon}`);
+        pdf.addImage(img, 'PNG', startX, startY - 12, 12, 12);
+        pdf.text(`: ${p.name}`, startX + 16, startY + 0); // offset after image
+      } catch {
+        const alt = p.alternate_text || p.name.slice(0, 3).toUpperCase();
+        pdf.text(`${alt}: ${p.name}`, startX, startY);
+      }
+    } 
+    // fallback
+    else {
+      const alt = p.alternate_text || p.name.slice(0, 3).toUpperCase();
+      pdf.text(`${alt}: ${p.name}`, startX, startY);
+    }
+
+    startY += 18;
+  }
 
   pdf.save('planting-calendar.pdf');
 }
 
+// Helper to load image as base64
+function loadImage(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = 'Anonymous';
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      canvas.width = img.width;
+      canvas.height = img.height;
+      const ctx = canvas.getContext('2d');
+      ctx.drawImage(img, 0, 0);
+      resolve(canvas.toDataURL('image/png'));
+    };
+    img.onerror = reject;
+    img.src = url;
+  });
+}
 //Download JSON
 function downloadSelectedPlantsJSON() {
   const selectedPlants = plantData.filter(plant => selectedPlantIds.has(plant.id));
@@ -697,6 +740,7 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 
 

@@ -154,6 +154,13 @@ body {
   background-color: #eef;
 }
 
+.plant-label-icon {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
 .plant-delete {
   color: red;
   cursor: pointer;
@@ -247,6 +254,7 @@ button:hover {
   width: 48px;   /* big size */
   height: 48px;  /* match width */
 }
+
 
 
 

@@ -68,7 +68,7 @@
 	"sun_needs": "Full sun",
 	"water_needs": "Medium, allow to dry out",
 	"icon": null,
-	"alternate_text": "🧅",
+	"alternate_text": "ONI",
 	"tooltip": "Allium cepa. Check which variety is suitable for your area: there’s long-day, short-day and day-neutral. Sowing outdoors possible only in zones 6+. "
 },
 {
@@ -180,3 +180,4 @@
 	"tooltip": "Allium tuberosum. Perrenial. Zones 3-9"
 }
 ]
+

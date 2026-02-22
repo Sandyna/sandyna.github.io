@@ -250,7 +250,7 @@ function placeIcon(container, color, action, plantDataObj) {
   const tooltipText = createTooltip(plantName, action);
 
   const img = new Image();
-  img.src = `icons/${icon}.svg`;
+  img.src = `icons/${icon}`;
   img.className = "calendar-icon";
   img.style.border = `2px solid ${color}`;
 
@@ -480,7 +480,7 @@ function showPlantInfo(plant) {
   const iconEl = document.createElement('div');
   iconEl.classList.add('plant-icon-display');
   const img = new Image();
-  img.src = `icons/${plant.icon}.svg`;
+  img.src = `icons/${plant.icon}`;
   img.classList.add('plant-icon-display');
   img.onload = () => {
     iconEl.appendChild(img);
@@ -671,5 +671,6 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 

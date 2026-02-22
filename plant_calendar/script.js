@@ -90,24 +90,34 @@ function setupDownloadButtons() {
 async function downloadCalendarPDF() {
   const calendar = document.getElementById('calendar-container');
 
-  const canvas = await html2canvas(calendar, {
-    scale: 2
-  });
-
+  const canvas = await html2canvas(calendar, { scale: 2 });
   const imgData = canvas.toDataURL('image/png');
-
   const { jsPDF } = window.jspdf;
   const pdf = new jsPDF('landscape', 'pt', 'a4');
 
   const pageWidth = pdf.internal.pageSize.getWidth();
-  const pageHeight = pdf.internal.pageSize.getHeight();
-
-  const imgWidth = pageWidth;
+  const imgWidth = pageWidth * 0.75; // leave space for legend
   const imgHeight = canvas.height * imgWidth / canvas.width;
 
   pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+
+  // Add legend to the right
+  const startX = imgWidth + 10;
+  let startY = 40;
+  pdf.setFontSize(12);
+  pdf.text("Selected Plants:", startX, startY);
+
+  const selectedPlants = plantData.filter(p => selectedPlantIds.has(p.id));
+  startY += 15;
+  selectedPlants.forEach(p => {
+    const iconText = p.alternate_text || p.name.slice(0,3).toUpperCase();
+    pdf.text(`${iconText} ${p.name}`, startX, startY);
+    startY += 15;
+  });
+
   pdf.save('planting-calendar.pdf');
 }
+
 //Download JSON
 function downloadSelectedPlantsJSON() {
   const selectedPlants = plantData.filter(plant => selectedPlantIds.has(plant.id));
@@ -687,6 +697,7 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 
 

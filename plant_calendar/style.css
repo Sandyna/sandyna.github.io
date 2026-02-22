@@ -39,10 +39,12 @@ body {
   font-size: 20px;
   font-weight: bold;
 }
-.arrow{
-  font-size:23px;
-  font-weight: 900;
+.arrow {
+  display: inline-block;
   color: red;
+  font-weight: 900px;
+  transform: scale(1.6) translateY(-1px);
+  transform-origin: center;
 }
 
 #calendar-container {
@@ -245,6 +247,7 @@ button:hover {
   width: 48px;   /* big size */
   height: 48px;  /* match width */
 }
+
 
 
 

@@ -1,3 +1,6 @@
+spreadsheet_path <- "plant_calendar/plant_data.csv"
+df <- read.csv(spreadsheet_path, stringsAsFactors = FALSE)
+
 output_file <- "plant_calendar/plants.json"
 
 #replace NA (empty cells) with null
@@ -18,8 +21,8 @@ for (i in 1:nrow(df)) {
   cat("{\n",
       "\t\"id\": ", format_val(row$id), ",\n",
       "\t\"name\": ", format_val(row$name), ",\n",
-      "\t\"sow_indoor\": ", format_val(row$sow_indoor), ",\n",
-      "\t\"sow_outdoor\": ", format_val(row$sow_outdoor), ",\n",
+      "\t\"sow_indoors\": ", format_val(row$sow_indoors), ",\n",
+      "\t\"sow_outdoors\": ", format_val(row$sow_outdoors), ",\n",
       "\t\"transplant\": ", format_val(row$transplant), ",\n",
       "\t\"sun_needs\": ", format_val(row$sun_needs), ",\n",
       "\t\"water_needs\": ", format_val(row$water_needs), ",\n",

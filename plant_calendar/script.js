@@ -91,14 +91,15 @@ async function downloadCalendarPDF() {
   const calendar = document.getElementById('calendar-container');
   const selectionContainer = document.getElementById('plant-options');
 
-  // Temporary container for pdf rendering
+  // Temporary container for PDF export
   const tempContainer = document.createElement('div');
   tempContainer.className = 'pdf-export-container';
 
   // Clone calendar
-  tempContainer.appendChild(calendar.cloneNode(true));
+  const calendarClone = calendar.cloneNode(true);
+  tempContainer.appendChild(calendarClone);
 
-  // Build legend
+  // Build legend using existing selected plants
   const legendWrapper = document.createElement('div');
   legendWrapper.className = 'pdf-legend-wrapper';
   legendWrapper.innerHTML = '<h2>Selected Plants</h2>';
@@ -108,7 +109,6 @@ async function downloadCalendarPDF() {
     if (cb.checked) {
       const plantDiv = document.createElement('div');
       plantDiv.className = 'pdf-legend-plant';
-
       const plant = plantData.find(p => p.id === cb.id.replace('plant-', ''));
       if (!plant) return;
 
@@ -120,6 +120,7 @@ async function downloadCalendarPDF() {
         const img = new Image();
         img.src = `icons/${plant.icon}`;
         img.className = 'pdf-legend-img';
+        // fallback if image fails
         img.onerror = () => {
           img.replaceWith(document.createTextNode(plant.alternate_text || plant.name.slice(0,3).toUpperCase()));
         };
@@ -139,8 +140,18 @@ async function downloadCalendarPDF() {
   });
 
   tempContainer.appendChild(legendWrapper);
+  document.body.appendChild(tempContainer); // necessary for html2canvas to access images
 
-  // Render with html2canvas
+  // Wait until all images in tempContainer are loaded
+  const images = tempContainer.querySelectorAll('img');
+  await Promise.all(Array.from(images).map(img => {
+    if (img.complete) return Promise.resolve();
+    return new Promise(resolve => {
+      img.onload = img.onerror = () => resolve();
+    });
+  }));
+
+  // Render to canvas
   const canvas = await html2canvas(tempContainer, { scale: 2 });
   const imgData = canvas.toDataURL('image/png');
 
@@ -153,6 +164,8 @@ async function downloadCalendarPDF() {
 
   pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
   pdf.save('planting-calendar.pdf');
+
+  document.body.removeChild(tempContainer); // clean up
 }
 
 // Helper to load image as base64
@@ -751,6 +764,7 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 
 

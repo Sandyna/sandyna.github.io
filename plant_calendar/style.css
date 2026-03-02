@@ -257,7 +257,8 @@ button:hover {
 /* PDF Export Styling */
 .pdf-export-container {
   background-color: #ffffff; /* white background for PDF */
-  padding: 10px;
+  padding: 0px;
+  margin: 0px;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -341,6 +342,8 @@ button:hover {
 
 .pdf-export-container .pdf-calendar {
   margin: 10px;
+  width: 100%;
 }
+
 
 

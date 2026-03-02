@@ -259,7 +259,7 @@ button:hover {
 .pdf-export-container {
   background-color: #ffffff; /* white background for PDF */
   font-family: Arial, sans-serif;
-  height: 90%
+  height: 90%;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -336,6 +336,7 @@ button:hover {
 .pdf-legend-name {
   font-weight: 500;
 }
+
 
 
 

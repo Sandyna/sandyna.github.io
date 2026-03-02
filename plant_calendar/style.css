@@ -257,7 +257,7 @@ button:hover {
 
 /* PDF Export Styling */
 .pdf-export-container {
-  height: auto;
+  height: 800px;
 }
 
 .pdf-title {
@@ -286,5 +286,6 @@ button:hover {
 
 .pdf-legend-name {
 }
+
 
 

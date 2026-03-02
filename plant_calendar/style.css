@@ -259,12 +259,11 @@ button:hover {
 .pdf-export-container {
   background-color: #ffffff; /* white background for PDF */
   font-family: Arial, sans-serif;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   box-sizing: border-box;
-  width: 100vw;      /* full viewport width */
-  height: 100vh;     /* full viewport height */
   padding: 0;
   margin: 0;
 }
@@ -279,7 +278,6 @@ button:hover {
   display: flex;
   flex-wrap: nowrap;      /* Keep months in a row */
   justify-content: space-between;
-  width: 100% !important;
   height: auto;           /* let it expand */
   margin: 0;
   padding: 0;
@@ -338,15 +336,6 @@ button:hover {
   font-weight: 500;
 }
 
-/* PDF export tweaks */
-.pdf-export-container .pdf-title {
-  margin: 10px;
-}
-
-.pdf-export-container .pdf-calendar {
-  margin: 10px;
-  width: 100%;
-}
 
 
 

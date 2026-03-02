@@ -48,7 +48,7 @@ body {
 }
 
 #calendar-container {
-  width: 80%;
+  width: 100%;
   margin-top: 30px;
 /*  margin-left: 30px;*/
   display: flex;
@@ -346,6 +346,7 @@ button:hover {
   margin: 10px;
   width: 100%;
 }
+
 
 
 

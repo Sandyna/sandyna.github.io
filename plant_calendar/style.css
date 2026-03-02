@@ -278,7 +278,7 @@ button:hover {
   display: flex;
   flex-wrap: nowrap;      /* Keep months in a row */
   justify-content: space-between;
-  width: 100%;
+  width: 100% !important;
   height: auto;           /* let it expand */
   margin: 0;
   padding: 0;
@@ -346,6 +346,7 @@ button:hover {
   margin: 10px;
   width: 100%;
 }
+
 
 
 

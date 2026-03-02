@@ -1,6 +1,6 @@
 html {
 	background-color: #E9EDBB;
-	background-image: url("/~sandyna/cookbook/assets/images/cooking_pattern.svg");
+	background-image: url("/assets/images/cooking_pattern.svg");
 	background-repeat: repeat;
 	background-position: right 20px;
 }
@@ -123,3 +123,4 @@ div.content img {
 	height: 70%;
 	margin: 24px auto 24px auto;
 }
+

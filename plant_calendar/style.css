@@ -257,19 +257,26 @@ button:hover {
 
 /* PDF Export Styling */
 .pdf-export-container {
-  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }
 
 .pdf-title {
 }
 
 .pdf-calendar {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 100%;
 }
 
 .pdf-calendar .calendar-month {
+  flex: 1 1 auto;
 }
 
 .pdf-calendar .calendar-day {
+  height: auto;
 }
 
 .pdf-legend-wrapper {
@@ -286,6 +293,7 @@ button:hover {
 
 .pdf-legend-name {
 }
+
 
 
 

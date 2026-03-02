@@ -259,16 +259,16 @@ button:hover {
 .pdf-export-container {
   display: flex;
   flex-direction: column;
-  align-items: stretch;
+  align-items: center;
 }
 
 .pdf-title {
 }
 
 .pdf-calendar {
-  display: flex;
-  flex-wrap: nowrap;
-  height: 100%;
+  transform-origin: top left;
+  width: auto;
+  height: auto;
 }
 
 .pdf-calendar .calendar-month {
@@ -293,6 +293,7 @@ button:hover {
 
 .pdf-legend-name {
 }
+
 
 
 

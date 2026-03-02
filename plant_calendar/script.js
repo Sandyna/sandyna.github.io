@@ -369,7 +369,6 @@ function renderMonth(month, year, selectedPlants, frostDate) {
     //placing frost date icon into the calendar with a custom tooltip on hover
     if (frostDate.getDate() === day && frostDate.getMonth() === month - 1 && frostDate.getFullYear() === year) {
         const frostWrapper = document.createElement('span');
-        frostWrapper.style.position = 'relative';
         frostWrapper.textContent = '❄️';
         frostWrapper.classList.add('frost-icon');
     
@@ -724,6 +723,7 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 
 

@@ -257,20 +257,21 @@ button:hover {
 /* PDF Export Styling */
 .pdf-export-container {
   background-color: #ffffff; /* white background for PDF */
-  padding: 0px;
-  margin: 0px;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  width: 100%;
   box-sizing: border-box;
+  width: 100vw;      /* full viewport width */
+  height: 100vh;     /* full viewport height */
+  padding: 0;
+  margin: 0;
 }
 
 .pdf-title {
   text-align: center;
   font-size: 30px;
-  margin-bottom: 5px;
+  margin: 5px 0;
 }
 
 .pdf-calendar {
@@ -279,7 +280,8 @@ button:hover {
   justify-content: space-between;
   width: 100%;
   height: auto;           /* let it expand */
-  margin-bottom: 10px;
+  margin: 0;
+  padding: 0;
 }
 
 .pdf-calendar .calendar-month {
@@ -344,6 +346,7 @@ button:hover {
   margin: 10px;
   width: 100%;
 }
+
 
 
 

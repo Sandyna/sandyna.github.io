@@ -640,9 +640,10 @@ async function downloadCalendarPDF() {
   const calendar = document.getElementById('calendar-container');
   const selectionContainer = document.getElementById('plant-options');
 
-  // Create temporary containers
+  // --- PAGE 1: Calendar ---
   const tempCalendar = document.createElement('div');
   tempCalendar.className = 'pdf-export-container';
+
   const title = document.createElement('h1');
   title.className = 'pdf-title';
   title.textContent = 'Planting Calendar';
@@ -654,102 +655,99 @@ async function downloadCalendarPDF() {
 
   document.body.appendChild(tempCalendar);
 
-  // Wait for images to load in calendar
-  const calendarImages = tempCalendar.querySelectorAll('img');
-  await Promise.all(Array.from(calendarImages).map(img => {
+  // Wait for images to load
+  await Promise.all(Array.from(tempCalendar.querySelectorAll('img')).map(img => {
     if (img.complete) return Promise.resolve();
     return new Promise(resolve => { img.onload = img.onerror = resolve; });
   }));
 
-  // Render calendar to canvas
   const calendarCanvas = await html2canvas(tempCalendar, { scale: 2 });
   const calendarImgData = calendarCanvas.toDataURL('image/png');
 
-  // Create PDF in landscape
   const pdf = new jsPDF('landscape', 'pt', 'a4');
   const pageWidth = pdf.internal.pageSize.getWidth();
   const pageHeight = pdf.internal.pageSize.getHeight();
-  const imgWidth = pageWidth;
-  const imgHeight = calendarCanvas.height * (imgWidth / calendarCanvas.width);
-  
-  // If the scaled height is less than page height, scale further
-  if (imgHeight < pageHeight) {
+
+  // Scale to fit page width and height
+  let imgWidth = pageWidth;
+  let imgHeight = calendarCanvas.height * (imgWidth / calendarCanvas.width);
+  if (imgHeight > pageHeight) {
     const scaleFactor = pageHeight / imgHeight;
     imgWidth *= scaleFactor;
     imgHeight *= scaleFactor;
   }
-  
+
   pdf.addImage(calendarImgData, 'PNG', 0, 0, imgWidth, imgHeight);
+  document.body.removeChild(tempCalendar);
 
-  // --- Page 2: Selected Plants ---
+  // --- PAGE 2: Selected Plants ---
   pdf.addPage();
-
   const tempPlants = document.createElement('div');
   tempPlants.className = 'pdf-export-container';
+
   const plantsTitle = document.createElement('h1');
   plantsTitle.className = 'pdf-title';
   plantsTitle.textContent = 'Selected Plants';
   tempPlants.appendChild(plantsTitle);
 
-  // Collect selected plants
   const checkboxes = selectionContainer.querySelectorAll('input[type="checkbox"]');
   checkboxes.forEach(cb => {
-    if (cb.checked) {
-      const plantDiv = document.createElement('div');
-      plantDiv.className = 'pdf-legend-plant';
+    if (!cb.checked) return;
 
-      const plant = plantData.find(p => p.id === cb.id.replace('plant-', ''));
-      if (!plant) return;
+    const plantDiv = document.createElement('div');
+    plantDiv.className = 'pdf-legend-plant';
 
-      const iconSpan = document.createElement('span');
-      iconSpan.className = 'pdf-legend-icon';
+    const plant = plantData.find(p => p.id === cb.id.replace('plant-', ''));
+    if (!plant) return;
 
-      if (plant.icon) {
-        const img = new Image();
-        img.src = `icons/${plant.icon}`;
-        img.className = 'pdf-legend-img';
-        img.onerror = () => {
-          img.replaceWith(document.createTextNode(plant.alternate_text || plant.name.slice(0,3).toUpperCase()));
-        };
-        iconSpan.appendChild(img);
-      } else {
-        iconSpan.textContent = plant.alternate_text || plant.name.slice(0,3).toUpperCase();
-      }
+    const iconSpan = document.createElement('span');
+    iconSpan.className = 'pdf-legend-icon';
 
-      const nameSpan = document.createElement('span');
-      nameSpan.className = 'pdf-legend-name';
-      nameSpan.textContent = `: ${plant.name}`;
-
-      plantDiv.appendChild(iconSpan);
-      plantDiv.appendChild(nameSpan);
-      tempPlants.appendChild(plantDiv);
+    if (plant.icon) {
+      const img = new Image();
+      img.src = `icons/${plant.icon}`;
+      img.className = 'pdf-legend-img';
+      img.onerror = () => {
+        img.replaceWith(document.createTextNode(plant.alternate_text || plant.name.slice(0,3).toUpperCase()));
+      };
+      iconSpan.appendChild(img);
+    } else {
+      iconSpan.textContent = plant.alternate_text || plant.name.slice(0,3).toUpperCase();
     }
+
+    const nameSpan = document.createElement('span');
+    nameSpan.className = 'pdf-legend-name';
+    nameSpan.textContent = `: ${plant.name}`;
+
+    plantDiv.appendChild(iconSpan);
+    plantDiv.appendChild(nameSpan);
+    tempPlants.appendChild(plantDiv);
   });
 
   document.body.appendChild(tempPlants);
 
-  // Wait for plant icons to load
-  const plantImages = tempPlants.querySelectorAll('img');
-  await Promise.all(Array.from(plantImages).map(img => {
+  await Promise.all(Array.from(tempPlants.querySelectorAll('img')).map(img => {
     if (img.complete) return Promise.resolve();
     return new Promise(resolve => { img.onload = img.onerror = resolve; });
   }));
 
-  // Render selected plants to canvas
   const plantsCanvas = await html2canvas(tempPlants, { scale: 2 });
   const plantsImgData = plantsCanvas.toDataURL('image/png');
 
   const plantsImgWidth = pageWidth;
-  const plantsImgHeight = plantsCanvas.height * (plantsImgWidth / plantsCanvas.width);
+  let plantsImgHeight = plantsCanvas.height * (plantsImgWidth / plantsCanvas.width);
+  if (plantsImgHeight > pageHeight) {
+    const scaleFactor = pageHeight / plantsImgHeight;
+    plantsImgHeight *= scaleFactor;
+  }
+
   pdf.addImage(plantsImgData, 'PNG', 0, 0, plantsImgWidth, plantsImgHeight);
 
-  // Save PDF
   pdf.save('planting-calendar.pdf');
-
-  // Clean up temporary elements
-  document.body.removeChild(tempCalendar);
   document.body.removeChild(tempPlants);
 }
+
+
 
 
 

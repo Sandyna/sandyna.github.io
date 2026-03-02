@@ -640,25 +640,49 @@ async function downloadCalendarPDF() {
   const calendar = document.getElementById('calendar-container');
   const selectionContainer = document.getElementById('plant-options');
 
-  // Temporary container for PDF export
-  const tempContainer = document.createElement('div');
-  tempContainer.className = 'pdf-export-container';
-
-  // Title
+  // Create temporary containers
+  const tempCalendar = document.createElement('div');
+  tempCalendar.className = 'pdf-export-container';
   const title = document.createElement('h1');
   title.className = 'pdf-title';
   title.textContent = 'Planting Calendar';
-  tempContainer.appendChild(title);
+  tempCalendar.appendChild(title);
 
-  // Clone calendar
   const calendarClone = calendar.cloneNode(true);
   calendarClone.classList.add('pdf-calendar');
-  tempContainer.appendChild(calendarClone);
+  tempCalendar.appendChild(calendarClone);
 
-  // Selected plants legend
-  const legendWrapper = document.createElement('div');
-  legendWrapper.className = 'pdf-legend-wrapper';
-  legendWrapper.innerHTML = '<h2>Selected Plants</h2>';
+  document.body.appendChild(tempCalendar);
+
+  // Wait for images to load in calendar
+  const calendarImages = tempCalendar.querySelectorAll('img');
+  await Promise.all(Array.from(calendarImages).map(img => {
+    if (img.complete) return Promise.resolve();
+    return new Promise(resolve => { img.onload = img.onerror = resolve; });
+  }));
+
+  // Render calendar to canvas
+  const calendarCanvas = await html2canvas(tempCalendar, { scale: 2 });
+  const calendarImgData = calendarCanvas.toDataURL('image/png');
+
+  // Create PDF in landscape
+  const pdf = new jsPDF('landscape', 'pt', 'a4');
+  const pageWidth = pdf.internal.pageSize.getWidth();
+  const pageHeight = pdf.internal.pageSize.getHeight();
+  const imgWidth = pageWidth;
+  const imgHeight = calendarCanvas.height * (imgWidth / calendarCanvas.width);
+
+  pdf.addImage(calendarImgData, 'PNG', 0, 0, imgWidth, imgHeight);
+
+  // --- Page 2: Selected Plants ---
+  pdf.addPage();
+
+  const tempPlants = document.createElement('div');
+  tempPlants.className = 'pdf-export-container';
+  const plantsTitle = document.createElement('h1');
+  plantsTitle.className = 'pdf-title';
+  plantsTitle.textContent = 'Selected Plants';
+  tempPlants.appendChild(plantsTitle);
 
   // Collect selected plants
   const checkboxes = selectionContainer.querySelectorAll('input[type="checkbox"]');
@@ -670,7 +694,6 @@ async function downloadCalendarPDF() {
       const plant = plantData.find(p => p.id === cb.id.replace('plant-', ''));
       if (!plant) return;
 
-      // Icon span
       const iconSpan = document.createElement('span');
       iconSpan.className = 'pdf-legend-icon';
 
@@ -692,33 +715,31 @@ async function downloadCalendarPDF() {
 
       plantDiv.appendChild(iconSpan);
       plantDiv.appendChild(nameSpan);
-      legendWrapper.appendChild(plantDiv);
+      tempPlants.appendChild(plantDiv);
     }
   });
 
-  tempContainer.appendChild(legendWrapper);
-  document.body.appendChild(tempContainer); // required for html2canvas to access styles/images
+  document.body.appendChild(tempPlants);
 
-  // Wait for all images to load
-  const images = tempContainer.querySelectorAll('img');
-  await Promise.all(Array.from(images).map(img => {
+  // Wait for plant icons to load
+  const plantImages = tempPlants.querySelectorAll('img');
+  await Promise.all(Array.from(plantImages).map(img => {
     if (img.complete) return Promise.resolve();
     return new Promise(resolve => { img.onload = img.onerror = resolve; });
   }));
 
-  // Render to canvas
-  const canvas = await html2canvas(tempContainer, { scale: 2 });
-  const imgData = canvas.toDataURL('image/png');
+  // Render selected plants to canvas
+  const plantsCanvas = await html2canvas(tempPlants, { scale: 2 });
+  const plantsImgData = plantsCanvas.toDataURL('image/png');
 
-  // PDF in landscape
-  const pdf = new jsPDF('landscape', 'pt', 'a4');
-  const pageWidth = pdf.internal.pageSize.getWidth();
-  const pageHeight = pdf.internal.pageSize.getHeight();
-  const imgWidth = pageWidth;
-  const imgHeight = canvas.height * (imgWidth / canvas.width);
+  const plantsImgWidth = pageWidth;
+  const plantsImgHeight = plantsCanvas.height * (plantsImgWidth / plantsCanvas.width);
+  pdf.addImage(plantsImgData, 'PNG', 0, 0, plantsImgWidth, plantsImgHeight);
 
-  pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
+  // Save PDF
   pdf.save('planting-calendar.pdf');
 
-  document.body.removeChild(tempContainer); // clean up
+  // Clean up temporary elements
+  document.body.removeChild(tempCalendar);
+  document.body.removeChild(tempPlants);
 }

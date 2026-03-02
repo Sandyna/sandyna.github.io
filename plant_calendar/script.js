@@ -91,99 +91,89 @@ async function downloadCalendarPDF() {
   const calendar = document.getElementById('calendar-container');
   const selectionContainer = document.getElementById('plant-options');
 
-  // Temporary container for PDF export
-  const tempContainer = document.createElement('div');
-  tempContainer.className = 'pdf-export-container';
+  // Create export wrapper
+  const exportWrapper = document.createElement('div');
+  exportWrapper.className = 'pdf-export-container';
 
-  // Clone calendar
+  // ----- TITLE -----
+  const title = document.createElement('h1');
+  title.textContent = 'Planting calendar';
+  title.className = 'pdf-title';
+  exportWrapper.appendChild(title);
+
+  // ----- CALENDAR -----
   const calendarClone = calendar.cloneNode(true);
-  tempContainer.appendChild(calendarClone);
+  calendarClone.classList.add('pdf-calendar');
+  exportWrapper.appendChild(calendarClone);
 
-  // Build legend using existing selected plants
+  // ----- SELECTED PLANTS -----
   const legendWrapper = document.createElement('div');
   legendWrapper.className = 'pdf-legend-wrapper';
-  legendWrapper.innerHTML = '<h2>Selected Plants</h2>';
 
-  const checkboxes = selectionContainer.querySelectorAll('input[type="checkbox"]');
-  checkboxes.forEach(cb => {
-    if (cb.checked) {
-      const plantDiv = document.createElement('div');
-      plantDiv.className = 'pdf-legend-plant';
-      const plant = plantData.find(p => p.id === cb.id.replace('plant-', ''));
-      if (!plant) return;
+  const legendTitle = document.createElement('h2');
+  legendTitle.textContent = 'Selected Plants';
+  legendWrapper.appendChild(legendTitle);
 
-      // Icon / alternate text / emoji
-      const iconSpan = document.createElement('span');
-      iconSpan.className = 'pdf-legend-icon';
+  const selectedPlants = plantData.filter(p => selectedPlantIds.has(p.id));
 
-      if (plant.icon) {
-        const img = new Image();
-        img.src = `icons/${plant.icon}`;
-        img.className = 'pdf-legend-img';
-        // fallback if image fails
-        img.onerror = () => {
-          img.replaceWith(document.createTextNode(plant.alternate_text || plant.name.slice(0,3).toUpperCase()));
-        };
-        iconSpan.appendChild(img);
-      } else {
-        iconSpan.textContent = plant.alternate_text || plant.name.slice(0,3).toUpperCase();
-      }
+  selectedPlants.forEach(plant => {
+    const plantRow = document.createElement('div');
+    plantRow.className = 'pdf-legend-plant';
 
-      const nameSpan = document.createElement('span');
-      nameSpan.className = 'pdf-legend-name';
-      nameSpan.textContent = `: ${plant.name}`;
+    const iconWrapper = document.createElement('span');
+    iconWrapper.className = 'pdf-legend-icon';
 
-      plantDiv.appendChild(iconSpan);
-      plantDiv.appendChild(nameSpan);
-      legendWrapper.appendChild(plantDiv);
+    if (plant.icon) {
+      const img = new Image();
+      img.src = `icons/${plant.icon}`;
+      img.className = 'pdf-legend-img';
+      img.onerror = () => {
+        iconWrapper.textContent =
+          plant.alternate_text || plant.name.slice(0,3).toUpperCase();
+      };
+      iconWrapper.appendChild(img);
+    } else {
+      iconWrapper.textContent =
+        plant.alternate_text || plant.name.slice(0,3).toUpperCase();
     }
+
+    const nameSpan = document.createElement('span');
+    nameSpan.textContent = plant.name;
+    nameSpan.className = 'pdf-legend-name';
+
+    plantRow.appendChild(iconWrapper);
+    plantRow.appendChild(nameSpan);
+    legendWrapper.appendChild(plantRow);
   });
 
-  tempContainer.appendChild(legendWrapper);
-  document.body.appendChild(tempContainer); // necessary for html2canvas to access images
+  exportWrapper.appendChild(legendWrapper);
+  document.body.appendChild(exportWrapper);
 
-  // Wait until all images in tempContainer are loaded
-  const images = tempContainer.querySelectorAll('img');
+  // Wait for images
+  const images = exportWrapper.querySelectorAll('img');
   await Promise.all(Array.from(images).map(img => {
     if (img.complete) return Promise.resolve();
-    return new Promise(resolve => {
-      img.onload = img.onerror = () => resolve();
+    return new Promise(res => {
+      img.onload = img.onerror = () => res();
     });
   }));
 
-  // Render to canvas
-  const canvas = await html2canvas(tempContainer, { scale: 2 });
+  const canvas = await html2canvas(exportWrapper, { scale: 2 });
   const imgData = canvas.toDataURL('image/png');
 
   const { jsPDF } = window.jspdf;
   const pdf = new jsPDF('landscape', 'pt', 'a4');
 
   const pageWidth = pdf.internal.pageSize.getWidth();
+  const pageHeight = pdf.internal.pageSize.getHeight();
+
   const imgWidth = pageWidth;
   const imgHeight = canvas.height * imgWidth / canvas.width;
 
   pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight);
   pdf.save('planting-calendar.pdf');
 
-  document.body.removeChild(tempContainer); // clean up
-}
-
-// Helper to load image as base64
-function loadImage(url) {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.crossOrigin = 'Anonymous';
-    img.onload = () => {
-      const canvas = document.createElement('canvas');
-      canvas.width = img.width;
-      canvas.height = img.height;
-      const ctx = canvas.getContext('2d');
-      ctx.drawImage(img, 0, 0);
-      resolve(canvas.toDataURL('image/png'));
-    };
-    img.onerror = reject;
-    img.src = url;
-  });
+  document.body.removeChild(exportWrapper);
 }
 
 //clear selected plants
@@ -734,6 +724,7 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 
 

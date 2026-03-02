@@ -260,7 +260,7 @@ button:hover {
   background-color: #ffffff; /* white background for PDF */
   font-family: Arial, sans-serif;
   width: auto;
-  height: auto;
+  height: 100%;
   margin: 5px;
   padding: 0;
 }
@@ -324,6 +324,7 @@ button:hover {
 .pdf-legend-name {
   font-weight: 500;
 }
+
 
 
 

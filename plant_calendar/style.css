@@ -42,7 +42,7 @@ body {
 .arrow {
   display: inline-block;
   color: red;
-  font-weight: 900px;
+  font-weight: 900;
   transform: scale(3.2) translateY(-6px);
   transform-origin: center;
 }
@@ -260,33 +260,42 @@ button:hover {
   padding: 20px;
   font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", sans-serif;
 }
+.pdf-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.pdf-calendar {
+  width: 100%;
+}
 
 .pdf-legend-wrapper {
-  margin-top: 20px;
+  margin-top: 30px;
 }
 
 .pdf-legend-plant {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
-  font-size: 0.95em;
+  margin-bottom: 6px;
+  font-size: 16px;
 }
 
 .pdf-legend-icon {
-  display: inline-block;
-  margin-right: 5px;
-  width: 20px;
-  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin-right: 8px;
+  font-size: 20px;
 }
 
 .pdf-legend-img {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 }
 
 .pdf-legend-name {
-  display: inline-block;
+  font-weight: 500;
 }
-
-
-

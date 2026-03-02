@@ -257,27 +257,27 @@ button:hover {
 
 /* PDF Export Styling */
 .pdf-export-container {
-  background-color: #ffffff; /* white background for PDF */
+  background-color: #ffffff;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   box-sizing: border-box;
-  padding: 0;
+  padding: 10px;       /* small padding so text doesn't touch edges */
   margin: 0;
 }
 
 .pdf-title {
   text-align: center;
   font-size: 30px;
-  margin: 5px 0;
+  margin: 5px 0 15px 0; /* space below title */
 }
 
 .pdf-calendar {
   display: flex;
-  flex-wrap: nowrap;      /* Keep months in a row */
+  flex-wrap: nowrap;
   justify-content: space-between;
-  width: 100%;            /* full width of container */
+  width: 100%;
   margin: 0;
   padding: 0;
 }
@@ -289,8 +289,9 @@ button:hover {
 }
 
 .pdf-calendar .calendar-day {
-  min-height: 18px;      /* slightly taller for PDF readability */
-  font-size: 10pt;
+  min-height: 22px;      /* taller to prevent overlap */
+  font-size: 10pt;       /* slightly larger text */
+  padding: 2px;
 }
 
 .pdf-legend-wrapper {

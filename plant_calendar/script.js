@@ -185,36 +185,6 @@ function loadImage(url) {
     img.src = url;
   });
 }
-//Download JSON
-function downloadSelectedPlantsJSON() {
-  const selectedPlants = plantData.filter(plant => selectedPlantIds.has(plant.id));
-
-  // Map each plant to ensure it has all fields in the proper format
-  const jsonPlants = selectedPlants.map(p => ({
-    id: p.id,
-    name: p.name,
-    sow_indoor: p.sow_indoor !== undefined ? p.sow_indoor : null,
-    sow_outdoor: p.sow_outdoor !== undefined ? p.sow_outdoor : null,
-    transplant: p.transplant !== undefined ? p.transplant : null,
-//    harvest: p.harvest !== undefined ? p.harvest : null,
-    sun_needs: p.sun_needs || '',
-    water_needs: p.water_needs || '',
-    icon: p.icon || '',
-    alternate_text: p.alternate_text || null,
-    tooltip: p.tooltip || ''
-  }));
-
-  const blob = new Blob([JSON.stringify(jsonPlants, null, 2)], { type: 'application/json' });
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'selected_plants.json';
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
-  URL.revokeObjectURL(url);
-}
 
 //clear selected plants
 function setupClearSelectionButton() {
@@ -764,6 +734,7 @@ function setupJsonUpload() {
     fileInput.value = '';
   });
 }
+
 
 
 

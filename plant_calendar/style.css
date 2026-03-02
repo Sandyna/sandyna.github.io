@@ -334,3 +334,12 @@ button:hover {
   font-weight: 500;
 }
 
+/* PDF export tweaks */
+.pdf-export-container .pdf-title {
+  margin-bottom: 10px; /* reduce space below the title */
+}
+
+.pdf-export-container .pdf-calendar {
+  margin-bottom: 10px; /* reduce space below the calendar */
+}
+

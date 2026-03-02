@@ -257,98 +257,32 @@ button:hover {
 
 /* PDF Export Styling */
 .pdf-export-container {
-  background-color: #ffffff; /* white background for PDF */
-  font-family: Arial, sans-serif;
-  width: auto;
-  height: 100%;
-  margin: 5px;
-  padding: 0;
 }
 
 .pdf-title {
-  text-align: center;
-  font-size: 30px;
-  margin: 5px 0;
 }
 
 .pdf-calendar {
-  display: flex;
-  flex-wrap: nowrap;      /* Keep months in a row */
-  justify-content: space-between;
-  height: auto;           /* let it expand */
-  margin: 0;
-  padding: 0;
 }
 
 .pdf-calendar .calendar-month {
-  flex: 1 1 auto;
-  margin: 0 2px;
-  box-sizing: border-box;
 }
 
 .pdf-calendar .calendar-day {
-  min-height: 18px;      /* slightly taller for PDF readability */
-  font-size: 10pt;
 }
 
 .pdf-legend-wrapper {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  width: 100%;
 }
 
 .pdf-legend-plant {
-  display: flex;
-  align-items: center;
-  margin-bottom: 6px;
-  font-size: 12pt;
 }
 
 .pdf-legend-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  margin-right: 8px;
-  font-size: 20px;
 }
 
 .pdf-legend-img {
-  width: 24px;
-  height: 24px;
 }
 
 .pdf-legend-name {
-  font-weight: 500;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 

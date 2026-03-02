@@ -660,13 +660,11 @@ async function downloadCalendarPDF() {
     if (img.complete) return Promise.resolve();
     return new Promise(resolve => { img.onload = img.onerror = resolve; });
   }));
-
   const calendarCanvas = await html2canvas(tempCalendar, {
-    scale: 3,       // higher scale = sharper PDF
-    width: tempCalendar.offsetWidth,
-    height: tempCalendar.offsetHeight,
+    scale: 3,       // keeps it sharp
     useCORS: true
   });
+  
   const calendarImgData = calendarCanvas.toDataURL('image/png');
 
   const pdf = new jsPDF('landscape', 'pt', 'a4');
@@ -751,6 +749,7 @@ async function downloadCalendarPDF() {
   pdf.save('planting-calendar.pdf');
   document.body.removeChild(tempPlants);
 }
+
 
 
 

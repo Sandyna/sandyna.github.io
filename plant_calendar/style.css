@@ -257,7 +257,7 @@ button:hover {
 
 /* PDF Export Styling */
 .pdf-export-container {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -271,7 +271,7 @@ button:hover {
   flex-wrap: nowrap;
   width: auto;    /* keep natural width for months */
   height: auto;   /* allow height to expand naturally */
-  width: 100%;
+  width: 90%;
 }
 
 .pdf-calendar .calendar-month {
@@ -296,12 +296,4 @@ button:hover {
 
 .pdf-legend-name {
 }
-
-
-
-
-
-
-
-
 

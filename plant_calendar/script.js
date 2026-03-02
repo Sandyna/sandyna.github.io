@@ -671,9 +671,6 @@ async function downloadCalendarPDF() {
   const pageHeight = pdf.internal.pageSize.getHeight();
   const imgWidth = pageWidth;
   const imgHeight = calendarCanvas.height * (imgWidth / calendarCanvas.width);
-
-    // Scale the canvas to fill width
-  let imgHeight = canvas.height * (imgWidth / canvas.width);
   
   // If the scaled height is less than page height, scale further
   if (imgHeight < pageHeight) {
@@ -753,5 +750,6 @@ async function downloadCalendarPDF() {
   document.body.removeChild(tempCalendar);
   document.body.removeChild(tempPlants);
 }
+
 
 

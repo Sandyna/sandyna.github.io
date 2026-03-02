@@ -664,15 +664,16 @@ async function downloadCalendarPDF() {
   // Render calendar to canvas
   const calendarCanvas = await html2canvas(tempCalendar, { scale: 3, useCORS: true });
   const calendarImgData = calendarCanvas.toDataURL('image/png');
-
+  
   const pdf = new jsPDF('landscape', 'pt', 'a4');
   const pageWidth = pdf.internal.pageSize.getWidth();
   const pageHeight = pdf.internal.pageSize.getHeight();
-
-  // Fit image to page width, preserve aspect ratio
-  const imgWidth = pageWidth;
-  const imgHeight = calendarCanvas.height * (imgWidth / calendarCanvas.width);
-
+  
+  // Scale to fit PDF height while keeping aspect ratio
+  const scaleFactor = pageHeight / calendarCanvas.height;
+  const imgWidth = calendarCanvas.width * scaleFactor;
+  const imgHeight = pageHeight;
+  
   pdf.addImage(calendarImgData, 'PNG', 0, 0, imgWidth, imgHeight);
   document.body.removeChild(tempCalendar);
 
@@ -738,6 +739,7 @@ async function downloadCalendarPDF() {
   pdf.save('planting-calendar.pdf');
   document.body.removeChild(tempPlants);
 }
+
 
 
 

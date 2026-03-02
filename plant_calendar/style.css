@@ -266,9 +266,10 @@ button:hover {
 }
 
 .pdf-calendar {
-  transform-origin: top left;
-  width: auto;
-  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  width: auto;    /* keep natural width for months */
+  height: auto;   /* allow height to expand naturally */
 }
 
 .pdf-calendar .calendar-month {
@@ -293,6 +294,7 @@ button:hover {
 
 .pdf-legend-name {
 }
+
 
 
 

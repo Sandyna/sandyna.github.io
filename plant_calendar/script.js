@@ -672,6 +672,17 @@ async function downloadCalendarPDF() {
   const imgWidth = pageWidth;
   const imgHeight = calendarCanvas.height * (imgWidth / calendarCanvas.width);
 
+    // Scale the canvas to fill width
+  let imgWidth = pageWidth;
+  let imgHeight = canvas.height * (imgWidth / canvas.width);
+  
+  // If the scaled height is less than page height, scale further
+  if (imgHeight < pageHeight) {
+    const scaleFactor = pageHeight / imgHeight;
+    imgWidth *= scaleFactor;
+    imgHeight *= scaleFactor;
+  }
+  
   pdf.addImage(calendarImgData, 'PNG', 0, 0, imgWidth, imgHeight);
 
   // --- Page 2: Selected Plants ---
@@ -743,3 +754,4 @@ async function downloadCalendarPDF() {
   document.body.removeChild(tempCalendar);
   document.body.removeChild(tempPlants);
 }
+

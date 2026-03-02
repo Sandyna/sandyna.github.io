@@ -254,31 +254,57 @@ button:hover {
   width: 48px;   /* big size */
   height: 48px;  /* match width */
 }
-
+/* PDF Export Styling */
 .pdf-export-container {
-  background-color: #f4f4f9;
+  background-color: #ffffff; /* white background for PDF */
   padding: 20px;
-  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", "Segoe UI Symbol", sans-serif;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  box-sizing: border-box;
 }
+
 .pdf-title {
   text-align: center;
-  margin-bottom: 20px;
   font-size: 32px;
+  margin-bottom: 20px;
 }
 
 .pdf-calendar {
+  display: flex;
+  flex-wrap: nowrap;      /* Keep months in a row */
+  justify-content: space-between;
   width: 100%;
+  height: auto;           /* let it expand */
+  margin-bottom: 30px;
+}
+
+.pdf-calendar .calendar-month {
+  flex: 1 1 auto;
+  margin: 0 2px;
+  box-sizing: border-box;
+}
+
+.pdf-calendar .calendar-day {
+  min-height: 18px;      /* slightly taller for PDF readability */
+  font-size: 10pt;
 }
 
 .pdf-legend-wrapper {
-  margin-top: 30px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .pdf-legend-plant {
   display: flex;
   align-items: center;
   margin-bottom: 6px;
-  font-size: 16px;
+  font-size: 12pt;
 }
 
 .pdf-legend-icon {
@@ -299,3 +325,12 @@ button:hover {
 .pdf-legend-name {
   font-weight: 500;
 }
+.pdf-legend-img {
+  width: 24px;
+  height: 24px;
+}
+
+.pdf-legend-name {
+  font-weight: 500;
+}
+

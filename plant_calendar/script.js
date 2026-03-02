@@ -639,19 +639,24 @@ async function downloadCalendarPDF() {
   const calendar = document.getElementById('calendar-container');
   const selectionContainer = document.getElementById('plant-options');
 
-  // Temporary container for PDF export
+  // Create temporary container for rendering PDF
   const tempContainer = document.createElement('div');
   tempContainer.className = 'pdf-export-container';
+
+  // Add title at top
+  const title = document.createElement('h1');
+  title.className = 'pdf-title';
+  title.textContent = 'Planting Calendar';
+  tempContainer.appendChild(title);
 
   // Clone calendar
   const calendarClone = calendar.cloneNode(true);
   calendarClone.classList.add('pdf-calendar');
   tempContainer.appendChild(calendarClone);
 
-  // Build legend using selected plants
+  // Add selected plants legend
   const legendWrapper = document.createElement('div');
   legendWrapper.className = 'pdf-legend-wrapper';
-  legendWrapper.innerHTML = '<h2 class="pdf-title">Selected Plants</h2>';
 
   const checkboxes = selectionContainer.querySelectorAll('input[type="checkbox"]');
   checkboxes.forEach(cb => {
@@ -690,14 +695,14 @@ async function downloadCalendarPDF() {
   tempContainer.appendChild(legendWrapper);
   document.body.appendChild(tempContainer);
 
-  // Wait for all images to load
+  // Wait for all images in tempContainer to load
   const images = tempContainer.querySelectorAll('img');
   await Promise.all(Array.from(images).map(img => {
     if (img.complete) return Promise.resolve();
     return new Promise(resolve => { img.onload = img.onerror = () => resolve(); });
   }));
 
-  // Render temp container to canvas
+  // Render entire tempContainer to canvas
   const canvas = await html2canvas(tempContainer, { scale: 2 });
   const imgData = canvas.toDataURL('image/png');
 
@@ -706,15 +711,14 @@ async function downloadCalendarPDF() {
   const pageWidth = pdf.internal.pageSize.getWidth();
   const pageHeight = pdf.internal.pageSize.getHeight();
 
-  // Scale calendar to full width
-  const imgWidth = pageWidth - 40; // optional margin
+  // Scale entire content to fit width of PDF
+  const imgWidth = pageWidth - 40; // optional 20pt margins
   const imgHeight = canvas.height * imgWidth / canvas.width;
 
-  // Add calendar image at top with optional title
-  pdf.setFontSize(28);
-  pdf.text("Planting Calendar", pageWidth / 2, 40, { align: "center" });
-  pdf.addImage(imgData, 'PNG', 20, 60, imgWidth, imgHeight);
+  pdf.addImage(imgData, 'PNG', 20, 20, imgWidth, imgHeight);
 
-  document.body.removeChild(tempContainer); // cleanup
+  // Clean up temporary container
+  document.body.removeChild(tempContainer);
+
   pdf.save('planting-calendar.pdf');
 }

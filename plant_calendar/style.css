@@ -257,7 +257,7 @@ button:hover {
 /* PDF Export Styling */
 .pdf-export-container {
   background-color: #ffffff; /* white background for PDF */
-  padding: 20px;
+  padding: 10px;
   font-family: Arial, sans-serif;
   display: flex;
   flex-direction: column;
@@ -268,8 +268,8 @@ button:hover {
 
 .pdf-title {
   text-align: center;
-  font-size: 32px;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 5px;
 }
 
 .pdf-calendar {
@@ -278,7 +278,7 @@ button:hover {
   justify-content: space-between;
   width: 100%;
   height: auto;           /* let it expand */
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .pdf-calendar .calendar-month {
@@ -336,10 +336,11 @@ button:hover {
 
 /* PDF export tweaks */
 .pdf-export-container .pdf-title {
-  margin-bottom: 10px; /* reduce space below the title */
+  margin: 10px;
 }
 
 .pdf-export-container .pdf-calendar {
-  margin-bottom: 10px; /* reduce space below the calendar */
+  margin: 10px;
 }
+
 

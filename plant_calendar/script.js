@@ -635,7 +635,6 @@ function setupJsonUpload() {
 }
 
 //download pdf
-
 async function downloadCalendarPDF() {
   const { jsPDF } = window.jspdf;
   const calendar = document.getElementById('calendar-container');
@@ -656,30 +655,23 @@ async function downloadCalendarPDF() {
 
   document.body.appendChild(tempCalendar);
 
-  // Wait for images to load
+  // Wait for all images to load
   await Promise.all(Array.from(tempCalendar.querySelectorAll('img')).map(img => {
     if (img.complete) return Promise.resolve();
     return new Promise(resolve => { img.onload = img.onerror = resolve; });
   }));
-  const calendarCanvas = await html2canvas(tempCalendar, {
-    scale: 3,       // keeps it sharp
-    useCORS: true
-  });
-  
+
+  // Render calendar to canvas
+  const calendarCanvas = await html2canvas(tempCalendar, { scale: 3, useCORS: true });
   const calendarImgData = calendarCanvas.toDataURL('image/png');
 
   const pdf = new jsPDF('landscape', 'pt', 'a4');
   const pageWidth = pdf.internal.pageSize.getWidth();
   const pageHeight = pdf.internal.pageSize.getHeight();
 
-  // Scale to fit page width and height
-  let imgWidth = pageWidth;
-  let imgHeight = calendarCanvas.height * (imgWidth / calendarCanvas.width);
-  if (imgHeight > pageHeight) {
-    const scaleFactor = pageHeight / imgHeight;
-    imgWidth *= scaleFactor;
-    imgHeight *= scaleFactor;
-  }
+  // Fit image to page width, preserve aspect ratio
+  const imgWidth = pageWidth;
+  const imgHeight = calendarCanvas.height * (imgWidth / calendarCanvas.width);
 
   pdf.addImage(calendarImgData, 'PNG', 0, 0, imgWidth, imgHeight);
   document.body.removeChild(tempCalendar);
@@ -739,17 +731,15 @@ async function downloadCalendarPDF() {
   const plantsImgData = plantsCanvas.toDataURL('image/png');
 
   const plantsImgWidth = pageWidth;
-  let plantsImgHeight = plantsCanvas.height * (plantsImgWidth / plantsCanvas.width);
-  if (plantsImgHeight > pageHeight) {
-    const scaleFactor = pageHeight / plantsImgHeight;
-    plantsImgHeight *= scaleFactor;
-  }
+  const plantsImgHeight = plantsCanvas.height * (plantsImgWidth / plantsCanvas.width);
 
   pdf.addImage(plantsImgData, 'PNG', 0, 0, plantsImgWidth, plantsImgHeight);
 
   pdf.save('planting-calendar.pdf');
   document.body.removeChild(tempPlants);
 }
+
+
 
 
 

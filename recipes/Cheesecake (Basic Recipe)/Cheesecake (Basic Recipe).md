@@ -5,6 +5,11 @@ time: 30min preparation 2h baking
 servings: 1 cake
 source: Chef parade baking course
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

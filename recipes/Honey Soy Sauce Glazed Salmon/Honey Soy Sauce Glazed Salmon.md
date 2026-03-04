@@ -5,12 +5,20 @@ time: 15 min
 servings: 4
 source: https://www.yummly.com/#recipe/Honey-Soy-Sauce-Glazed-Salmon-1624934
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - lazy
+  - fish
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients
 * 4 pieces salmon fillets (try to select (2 cm) 1 inch thick fillets with an even thickness. If you use thicker salmon, you will need to extend the baking time)
 * 4 tablespoons honey (or brown sugar?)
-* 4 tablespoons soy sauce
+* 4 tablespoons soy sauce, gluten-free if needed (!)
 * 4 tablespoons whole grain dijon mustard
 * 2 teaspoons minced ginger
 * 1/4 teaspoon ground paprika (or chili powder)

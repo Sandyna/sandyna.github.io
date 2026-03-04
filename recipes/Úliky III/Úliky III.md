@@ -5,6 +5,11 @@ time: 60 min
 servings: 80 malých ks
 source: https://varecha.pravda.sk/recepty/orechovo-salkove-uliky/34103-recept.html
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

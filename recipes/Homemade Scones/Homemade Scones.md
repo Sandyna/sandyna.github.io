@@ -5,6 +5,12 @@ time: 120 min
 servings:  
 source: http://angiebakes.com/2017/05/07/domace-piskotky/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - milk-free
 ---
 
 ## Ingredients

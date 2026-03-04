@@ -5,12 +5,17 @@ time: time
 servings: several
 source: Filip
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - gluten-free
+  - elaborate
 ---
 
 ## Ingredients
 * 1-2 Leek
-
-### 500g-700g wild mushrooms, you can substitute dried 3:1
+* 500g-700g wild mushrooms, you can substitute dried 3:1
 * 2dcl-4dcl Dry shardonay wine or other white
 * Dry sherry or vermut
 * Butter or olive oil

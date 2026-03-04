@@ -5,6 +5,12 @@ time:
 servings: 6-8
 source: https://www.theguardian.com/lifeandstyle/2015/mar/19/how-to-make-the-perfect-meatloaf
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - elaborate
+  - meat
 ---
 
 ## Ingredients

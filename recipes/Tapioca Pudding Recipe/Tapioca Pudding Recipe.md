@@ -5,6 +5,12 @@ time: 25 min
 servings: 6
 source: https://www.dominicancooking.com/17327-cassava-flour-tapioca-pudding-recipe.html
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients

@@ -5,6 +5,13 @@ time: 30 min
 servings: 4
 source: https://www.tablefortwoblog.com/sweet-and-spicy-chicken-tenders/
 image: ./image.jpg
+tags:
+  - untested
+  - savory
+  - main-course
+  - meat
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients

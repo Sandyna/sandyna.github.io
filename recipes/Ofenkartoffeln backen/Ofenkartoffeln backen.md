@@ -5,11 +5,18 @@ time:
 servings: 
 source: https://www.globus.ch/delicatessa/delicuisine/how-tos/ultimative-ofenkartoffeln-backen?utm_campaign=delicuisine%C2%A7&utm_source=facebook%C2%A7&utm_medium=cpc&utm_term&utm_content=ofenkartoffeln&fbclid=IwAR0T-scKj8H4oCtpSYJKX6iskNobpTJ2rbdlV4zqnGhV8fN5fdmd2kt1DBM
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - side-dish
+  - medium-effort
+  - vegetarian
+  - milk-free
 ---
 
 ## Ingredients
 * 1 Kilo mehligkochende Kartoffeln
-* 100 g Gänse- oder Wagyu Fett. Auch Bratbutter oder 100 ml Olivenöl geht.
+* 100 g Gänse- oder Wagyu Fett. Auch Bratbutter oder 100 ml Olivenöl geht.(!)
 * 2 TL Weissmehl
 * Maldon Salz
 

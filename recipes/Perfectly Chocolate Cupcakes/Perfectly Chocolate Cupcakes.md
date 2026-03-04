@@ -5,13 +5,18 @@ time: 30 min
 servings: 24-27
 source: https://www.glorioustreats.com/2010/04/recipe-perfectly-chocolate-cupcakes.html
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients
 
 ### Cupcakes
 * 400g sugar
-* 225g cups all purpose flour
+* 225g all purpose flour
 * 75g unsweetened cocoa (best quality available)
 * 1.5 teaspoons baking powder
 * 1.5 teaspoons baking soda
@@ -20,7 +25,7 @@ image: ./image.jpg
 * 240ml whole milk
 * 120ml vegetable oil
 * 2 teaspoons vanilla extract (best quality available)
-* 240ml boiling water
+* 240ml boiling water or hot coffee
 
 ### Vanilla Cream Cheese Frosting
 * 113g unsalted butter (set at room temp about 10 minutes, but should still be cool)

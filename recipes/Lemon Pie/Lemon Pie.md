@@ -5,6 +5,11 @@ time:
 servings: runde Kuchen- oder Tarteform ca. 24 cm
 source: https://www.stilpalast.ch/savoir-vivre/genuss/der-weltbeste-lemon-pie-2110#sthash.07JAtiJz.dpbs
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

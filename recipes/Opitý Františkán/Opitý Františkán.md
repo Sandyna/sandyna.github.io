@@ -5,6 +5,12 @@ time:
 servings: 1 plech
 source: stará mama Zvolen
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - elaborate
+  - vegetarian
 ---
 
 ## Ingredients
@@ -37,4 +43,4 @@ Na to poukladáme odkvapkane polovičky marhúľ.<br/>
 Zasypeme mletými orechami premiesanymi s pras, cukrom.<br/>
 Polejeme rumom, aby orechy nasiakli.<br/>
 Polejeme cok, polevou.<br/>
-Poznámka: zlé jazyky tvrdia, že sa tento koláč volá opitý izidor. Nedajte sa zmiasť. Je to opitý františkán.<br/>
+Poznámka: Text ponechaný v pôvodnom znení. Zlé jazyky tvrdia, že sa tento koláč volá opitý Izidor. Nedajte sa zmiasť. Je to opitý Františkán.<br/>

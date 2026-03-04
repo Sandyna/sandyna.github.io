@@ -5,6 +5,11 @@ time: 35min
 servings: 20cm cake
 source: https://homesweetsweden.com/kladdkaka-swedish-sticky-chocolate-cake-and-a-rant/
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

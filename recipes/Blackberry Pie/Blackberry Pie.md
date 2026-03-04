@@ -5,6 +5,11 @@ time:
 servings:  
 source: http://angiebakes.com/2016/08/12/cernicovy-berry-bory-mall-cake
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

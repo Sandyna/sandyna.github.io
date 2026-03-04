@@ -5,6 +5,11 @@ time: 1h
 servings: 10
 source: https://www.allrecipes.com/recipe/227985/rhubarb-strawberry-and-blueberry-cobblerette/?internalSource=rotd&referringId=1100&referringContentType=recipe%20hub&clickId=cardslot%201
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

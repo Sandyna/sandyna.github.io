@@ -5,6 +5,14 @@ time: 1-2 hours preparation time, 10 to 30 mins cooking time
 servings: 6 x 20cm pizza bases
 source: https://www.bbc.co.uk/food/recipes/pizzadoughbase_70980
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - snack
+  - medium-effort
+  - vegetarian
+  - meat
 ---
 
 ## Ingredients
@@ -14,7 +22,7 @@ image: ./image.jpg
 * 25ml olive oil
 * 50ml warm milk
 * 325ml warm water
-* pizza toppings
+* pizza toppings (!)
 
 ## Instructions
 Make the dough:<br/>

@@ -5,6 +5,11 @@ time:
 servings:  
 source: http://angiebakes.com/2016/09/26/bananovo-cokoladove-crumble/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients
@@ -17,4 +22,5 @@ image: ./image.jpg
 * mandľové lupienky
 
 ## Instructions
-Rúru zapneme na 175°C. Keramické misky (alebo jednu misku) vymažeme jemne maslom. Banány nakrájame na kolieska a naukladáme na seba do misky. Posypeme na malé kúsky nakrájanou čokoládou. Orechy, vločky a cukor zmiešame a pridáme maslo, spracujeme rukou na mrveničku a posypeme ním vrch banánov. Môžeme prihodiť zopár mandľových lupienkov. Pečieme cca 25 minút. Mňam!<br/>
+Rúru zapneme na 175°C. Keramické misky (alebo jednu misku) vymažeme jemne maslom. Banány nakrájame na kolieska a naukladáme na seba do misky. Posypeme na malé kúsky nakrájanou čokoládou. <br/>
+Orechy, vločky a cukor zmiešame a pridáme maslo, spracujeme rukou na mrveničku a posypeme ním vrch banánov. Môžeme prihodiť zopár mandľových lupienkov. Pečieme cca 25 minút. Mňam!<br/>

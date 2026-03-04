@@ -5,6 +5,11 @@ time:
 servings:  
 source: http://moje-jedlo.sk/rebarborovy-kolac-swarovski/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

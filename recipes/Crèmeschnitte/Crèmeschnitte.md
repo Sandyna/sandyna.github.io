@@ -5,6 +5,11 @@ time:
 servings: Für 8 bis 12 Stück
 source: https://www.stilpalast.ch/savoir-vivre/genuss/die-weltbeste-cr%C3%A8meschnitte-5916#sthash.yWBjbULn.dpbs
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

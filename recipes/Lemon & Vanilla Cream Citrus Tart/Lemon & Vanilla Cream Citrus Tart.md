@@ -5,6 +5,13 @@ time:
 servings: 
 source: https://www.thekitchenmccabe.com/2017/01/26/lemon-vanilla-cream-citrus-tart-gf-paleo-vegan-friendly/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients
@@ -29,7 +36,7 @@ image: ./image.jpg
 * Zest of 2 Meyer Lemons
 
 ### TO GARNISH
-* 9-10 Oranges in varying shades, segmented (I used blood oranges, Cara Cara,, and standard oranges)
+* 9-10 Oranges in varying shades, segmented (I used blood oranges, Cara Cara, and standard oranges)
 * Honey or Agave Syrup (for Vegan), as needed
 
 ## Instructions

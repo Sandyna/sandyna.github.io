@@ -5,15 +5,21 @@ time:
 servings: 
 source: http://angiebakes.com/2015/06/03/cokoladova-pavlova/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients
 * 4 bielka
-* 230 g Sweet family práškového cukru
+* 230 g práškového cukru
 * 2 kopcovité lyžice kakaa
 * 50 g najemno nastrúhanej horkej čokolády
 * 1 lyžička bieleho octu
-* 1 lyžica kukuričného škrobu Dr. Oetker
+* 1 lyžica kukuričného škrobu
 * 500 ml smotany na šľahanie
 * ovocie, veľa ovocia
 

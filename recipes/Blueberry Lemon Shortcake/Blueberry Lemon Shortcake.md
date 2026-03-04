@@ -5,6 +5,11 @@ time: 1h 35min
 servings: 20
 source: https://www.allrecipes.com/recipe/222845/blueberry-lemon-shortcake/?internalSource=staff%20pick&referringId=1100&referringContentType=recipe%20hub&clickId=cardslot%209
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

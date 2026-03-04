@@ -5,6 +5,11 @@ time:
 servings:  
 source: Mamka
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

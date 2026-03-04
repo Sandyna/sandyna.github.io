@@ -5,6 +5,11 @@ time: Prep 25 min Cook 35 min
 servings: 8
 source: https://amp.theguardian.com/food/2021/feb/06/benjamina-ebuehi-orange-and-brown-butter-cornmeal-cake-recipe
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

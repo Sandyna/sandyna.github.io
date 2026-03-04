@@ -1,10 +1,16 @@
 ---
 title: Parížske rožky
 layout: recipe
-time: way too long
+time: way too long, I want to eat them
 servings: servings
 source: Stará mama DS
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
+  - elaborate
 ---
 
 ## Ingredients
@@ -34,3 +40,4 @@ prac doska struhankou, lyzickou kopky, tie sa sulaju na 5-6cm valcek, potlacit a
 0.5 vymiesana hera hera + prask cukor podla chuti + vanilkova esencia optional<br/>
 VYCHLADNUTYuty nahusto vanilkovy puding vmiesat, zakryt po uvareni aby nebola koza<br/>
 cokolada vo vodnom kupeli + pol lyzica oleja pre lesk<br/>
+Poznámky: Nie, nemôžeš puding nahradiť custard, budú príliš mastné. Rožteky sa majú šúľať rukou, nie dávkovať špičkou - mení to konzistenciu, budú príliš chrumkavé. Nie, netreba temperovať čokoládu. Don't try to fix perfection.<br/>

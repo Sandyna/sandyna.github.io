@@ -5,6 +5,12 @@ time:
 servings: 4-6
 source: https://www.thekitchenmccabe.com/2016/04/25/white-chocolate-vanilla-panna-cotta-with-rhubarb-vegan/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients

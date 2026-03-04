@@ -5,6 +5,11 @@ time:
 servings: 
 source: http://angiebakes.com/2017/10/17/kokosove-kosiky-plnene-cokoladovym-kremom/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

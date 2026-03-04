@@ -5,6 +5,11 @@ time: time
 servings: 12
 source: https://www.irishtimes.com/life-and-style/food-and-drink/recipes/caramel-sea-salt-chocolate-chunk-cookies-1.4480377?mode=amp
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

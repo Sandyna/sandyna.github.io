@@ -5,6 +5,11 @@ time: 45min
 servings: 12
 source: https://www.allrecipes.com/recipe/228532/blueberry-shortbread-bars/?internalSource=staff%20pick&referringId=1100&referringContentType=recipe%20hub&clickId=cardslot%206
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

@@ -5,6 +5,11 @@ time: 1h 20min
 servings: 18 bars
 source: https://www.foodnetwork.com/recipes/strawberry-cheesecake-brownies-recipe-2109145
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

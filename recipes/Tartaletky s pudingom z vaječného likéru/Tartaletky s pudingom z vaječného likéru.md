@@ -5,6 +5,11 @@ time:
 servings: 4
 source: https://www.sweet-family.sk/recepty/tartaletky-s-pudingom-z-vajecneho-likeru
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

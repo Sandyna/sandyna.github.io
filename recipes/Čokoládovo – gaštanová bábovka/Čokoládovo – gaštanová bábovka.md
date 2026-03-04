@@ -5,6 +5,11 @@ time: 80 min
 servings: 1 bábovka
 source: http://angiebakes.com/2016/10/30/cokoladovo-gastanova-babovka/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

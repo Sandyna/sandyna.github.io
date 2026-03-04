@@ -5,6 +5,11 @@ time: time
 servings: servings
 source: source
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

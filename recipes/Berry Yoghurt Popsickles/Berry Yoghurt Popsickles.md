@@ -5,6 +5,12 @@ time:
 servings:  
 source: http://angiebakes.com/2015/07/05/malinove-a-cernicove-jogurtove-nanuky/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients

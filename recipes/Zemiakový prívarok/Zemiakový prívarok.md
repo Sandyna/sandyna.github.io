@@ -5,6 +5,13 @@ time: 30min
 servings: 
 source: Mamka
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - side-dish
+  - simple
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients

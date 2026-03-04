@@ -5,17 +5,24 @@ time: 25 min
 servings: 12
 source: https://cafedelites.com/best-fluffy-pancakes/
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - main-course
+  - simple
+  - vegetarian
 ---
 
 ## Ingredients
-* 2 cups all purpose | plain flour
-* 1/4 cup granulated sugar or sweetener
-* 4 teaspoons baking powder
-* 1/4 teaspoon baking soda
-* 1/2 teaspoon salt
-* 1 1/2 cups milk (plus up to 1/4 cup extra if needed)
-* 1/4 cup butter , melted
-* 2 teaspoons pure vanilla extract
+* 300 g all-purpose or plain flour
+* 60 g granulated sugar or sweetener
+* 18 g baking powder
+* 0.25 teaspoon baking soda
+* 3 g salt
+* 440 ml milk
+* 60 g butter
+* 10 ml pure vanilla extract
 * 1 large egg
 
 ## Instructions
@@ -26,3 +33,4 @@ Set the batter aside and allow to rest while heating up your pan or griddle.<br/
 Heat a nonstick pan or griddle over low-medium heat and wipe over with a little butter to lightly grease pan. Pour ¼ cup of batter onto the pan and spread out gently into a round shape with the back of your ladle or measuring cup.<br/>
 When the underside is golden and bubbles begin to appear on the surface, flip with a spatula and cook until golden. Repeat with remaining batter.<br/>
 Serve with honey, maple syrup, fruit, ice cream or frozen yoghurt, or enjoy plain!<br/>
+Note: to get the pancakes nice and round, make them in a small pan.<br/>

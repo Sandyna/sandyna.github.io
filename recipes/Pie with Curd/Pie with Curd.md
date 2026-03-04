@@ -5,6 +5,11 @@ time:
 servings: 
 source: https://www.sweet-family.sk/recepty/tvarohovy-kolac
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients
@@ -28,3 +33,4 @@ image: ./image.jpg
 ## Instructions
 Všetky suroviny na cesto vypracujeme rukou na pevné cesto, zabalíme do potravinárskej fólie a uložíme na hodinu do chladničky. Zatiaľ si do misky dáme tvaroh (ja som použila jeden hrudkovitý a jeden jemný), cukor, kyslú smotanu, šťavu z citróna a pudingový prášok a tyčovým mixérom vymiešame do hladkého krému. Cesto vyberieme, rozdelíme na dve rovnaké časti. Jednu časť vyvaľkáme na pomúčenej doske a opatrne prenesieme do 22-24 cm koláčovej formy. Zbytočné cesto orežeme z krajov.<br/>
 Na cesto nanesieme tvarohový krém a uhladíme. Druhú časť cesta taktiež vyvaľkáme a opatrne prenesieme na vrch koláča. Na krajoch popritláčame a vrch popicháme vidličkou. Dáme piecť do predhriatej rúry na 180°C na cca 25 minút. Po upečení necháme úplne vychladnúť, ideálne 3-4 hodiny, potom vrch posypeme práškovým cukrom a nakrájame. Môžeme ozdobiť malinami.<br/>
+Poznámka: Porovnaj s "Jablkové pité, kakaovo-tvarohový, mrežovník"<br/>

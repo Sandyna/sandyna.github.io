@@ -5,6 +5,12 @@ time:
 servings:  
 source: https://gratulki.cz/oslave-sve-kamaradky-ochutnala-skvele-karamelky-nevahala-minutu-hned-pozadala-recept-lepsi-nikdy-nemela/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients

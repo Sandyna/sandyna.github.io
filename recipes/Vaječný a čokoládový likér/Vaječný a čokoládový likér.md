@@ -5,6 +5,14 @@ time: time
 servings: servings
 source: http://angiebakes.com/2016/12/05/vajecny-a-cokoladovy-liker/
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - drink
+  - vegetarian
+  - gluten-free
+  - medium-effort
 ---
 
 ## Ingredients

@@ -5,6 +5,12 @@ time: 1h 30min
 servings: 8
 source: https://www.inspiredtaste.net/22401/fresh-vegetable-lasagna-recipe/#itr-recipe-22401
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - vegetarian
+  - elaborate
 ---
 
 ## Ingredients

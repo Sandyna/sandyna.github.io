@@ -5,6 +5,11 @@ time:
 servings: 
 source: http://angiebakes.com/2017/07/06/ribezlove-madlenky/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients
@@ -12,7 +17,7 @@ image: ./image.jpg
 * 1 lyžička kypriaceho prášku
 * 2 vajíčka
 * 100 g rozpusteného masla
-* 100 g kryštálového cukru SweetFamily
+* 100 g kryštálového cukru
 * štipka soli
 * 100 g ríbezlí
 

@@ -3,8 +3,14 @@ title: Mäsové fašírky
 layout: recipe
 time: 45m
 servings: 6
-source: Jožko
+source: Jozef
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - meat
+  - milk-free
 ---
 
 ## Ingredients

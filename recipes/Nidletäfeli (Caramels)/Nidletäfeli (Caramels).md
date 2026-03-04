@@ -5,13 +5,19 @@ time: 40 min
 servings: 50 pcs
 source: https://www.swissmilk.ch/de/rezepte-kochideen/rezepte/LM200311_20_A/nidletaefeli-caramels/?utm_source=facebook-instagram%3Futm_medium%3DSocial_Media%3Futm_content%3Dbildad%3Futm_campaign%3Dgeschenkeausderk%C3%BCche-2020-de
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients
-* 2,5 dl	Vollrahm
-* ½ - 1 Päckchen	Vanillezucker
+* 2,5 dl Vollrahm
+* ½ - 1 Päckchen Vanillezucker
 * 250 g	Zucker
-* 1 Prise	Salz
+* 1 Prise Salz
 * 20 g	Butter, weich
 
 ## Instructions

@@ -5,6 +5,11 @@ time:
 servings: 40 ks
 source: https://varecha.pravda.sk/recepty/piskotove-uliky-so-salkom-fotorecept/37370-recept.html
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

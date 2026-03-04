@@ -5,6 +5,12 @@ time: 1-3 h
 servings: 3.5 l
 source: 
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - drink
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients

@@ -5,6 +5,12 @@ time:
 servings: 
 source: stará mama z Dunajskej Stredy
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - soup
+  - medium-effort
+  - vegetarian
 ---
 
 ## Ingredients

@@ -5,12 +5,19 @@ time: 45min
 servings: 1-2
 source: https://glutensugardairyfree.com/recipe-items/balsamic-chicken-wings/
 image: ./image.jpg
+tags:
+  - untested
+  - savory
+  - main-course
+  - meat
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients
 * 1 pound chicken wings
 * 2 cloves garlic minced finely
-* 2 Tbsp. Gluten Free soy sauce or Tamari or coconut aminos
+* 2 Tbsp. Gluten Free soy sauce or Tamari or coconut aminos (!)
 * ¼ cup balsamic vinegar
 * 2 tablespoons honey
 * 1/2 teaspoon powdered ginger

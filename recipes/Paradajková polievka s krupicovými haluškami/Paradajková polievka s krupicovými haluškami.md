@@ -3,8 +3,14 @@ title: Paradajková polievka s krupicovými haluškami
 layout: recipe
 time: 1h
 servings: 4
-source: Domáce
+source: Jaro, various family members
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - soup
+  - simple
+  - vegetarian
 ---
 
 ## Ingredients

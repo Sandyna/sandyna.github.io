@@ -5,6 +5,14 @@ time: 30 min
 servings: 4
 source: https://wearenotmartha.com/lavender-lemonade-mojitos/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - drink
+  - medium-effort
+  - vegetarian
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients

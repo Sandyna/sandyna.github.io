@@ -5,6 +5,11 @@ time: 1h 50 min
 servings: 10
 source: https://recepty.azet.sk/recept/6005/mrkvovo-tekvicova-torta/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

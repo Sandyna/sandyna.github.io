@@ -5,6 +5,11 @@ time:
 servings: 12-15
 source: https://www.thekitchenmccabe.com/2014/06/27/blueberry-lavender-hand-pies/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

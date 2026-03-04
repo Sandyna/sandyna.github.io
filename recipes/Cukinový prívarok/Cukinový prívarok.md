@@ -3,8 +3,14 @@ title: Cukinový prívarok
 layout: recipe
 time: 20m
 servings: 4
-source: Jožko
+source: Jozef
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - side-dish
+  - simple
+  - vegetarian
 ---
 
 ## Ingredients

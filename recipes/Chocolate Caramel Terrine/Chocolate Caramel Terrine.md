@@ -5,6 +5,11 @@ time: 45 min
 servings: 900g tin loaf
 source: https://www.bbcgoodfood.com/recipes/chocolate-caramel-terrine
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

@@ -5,6 +5,11 @@ time: 45 min
 servings: 40
 source: https://www.inspiredtaste.net/18897/salted-chocolate-covered-caramels-recipe/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

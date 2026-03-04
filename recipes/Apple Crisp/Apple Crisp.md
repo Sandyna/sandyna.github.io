@@ -5,6 +5,11 @@ time: 1 h 20 m
 servings: 12
 source: https://www.allrecipes.com/recipe/12409/apple-crisp-ii/?clickId=right%20rail%204&internalSource=rr_feed_recipe&referringId=12409&referringContentType=recipe
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

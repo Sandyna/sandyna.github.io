@@ -5,6 +5,11 @@ time:
 servings:  
 source: http://www.sweet-family.sk/nase-recepty/pecenie/tvarohovy-kolac-s-malinami.html?page_id=1141
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

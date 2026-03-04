@@ -5,6 +5,11 @@ time:
 servings: 
 source: http://angiebakes.com/2017/07/21/trojvrstvove-brownie/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

@@ -5,6 +5,13 @@ time:
 servings: 
 source: mamka, https://dobruchut.aktuality.sk/recept/24935/fotorecept-domaca-mrvenicka-do-polievky/
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - soup
+  - medium-effort
+  - vegetarian
+  - milk-free
 ---
 
 ## Ingredients

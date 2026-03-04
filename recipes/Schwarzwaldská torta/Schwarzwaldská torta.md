@@ -5,6 +5,11 @@ time:
 servings: 1 torta, priemer 28cm
 source: Mamka
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients
@@ -42,3 +47,4 @@ Višne necháme odkvapkat. Škrob zmiešame so 4 lyžicami šťavy, zvyšok priv
 Smotanu šľaháme ~30 sekúnd, pridáme práškový a vanilkový cukor, stužovač, a vyšľaháme do tuha.<br/>
 Na dolnú časť korpusu nanesieme polovicu višní a tretinu šľahačky. Priložíme druhý diel, pritlačíme, nanesieme zvyšok višní a ďalšiu tretinu šľahačky. Položíme tretí diel korpusu a zvyškom šľahačky natrieme tortu zvonku.<br/>
 Čokoládu si rozpustíme a natrieme na papier na pečenie. Vykrajujeme z nej ozdoby (napr. stromčeky), ktoré postavíme na tortu. Môžeme zdobiť šľahačkou z vrecúška s násadkou alebo postrúhanou čokoládou.<br/>
+Poznámky: Cesto zatiaľ vždy vyšlo príliš tuhé. Treba pozrieť video na cesto. <br/>

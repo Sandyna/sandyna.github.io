@@ -5,6 +5,11 @@ time: time
 servings: 23 cm cake form
 source: https://www.dailymail.co.uk/femail/article-9133191/amp/London-baker-Eloise-Head-shares-recipe-incredible-Milkybar-cheesecake.html
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

@@ -5,6 +5,11 @@ time:
 servings: 20cm tart
 source: https://www.tastemade.co.uk/videos/chocolate-and-clementine-tart
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

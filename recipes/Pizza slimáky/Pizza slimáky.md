@@ -5,18 +5,26 @@ time: 30 min
 servings: 1 štrúdľa
 source: Šandyna
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - snack
+  - main-course
+  - lazy
+  - vegetarian
+  - meat
 ---
 
 ## Ingredients
 * Lístkové cesto
 * Paradajkový pretlak alebo kyslá smotana alebo bryndza
-* slanina
+* slanina (!)
 * syr
 * olivy
 * kapari
-* šunka
+* šunka (!)
 * oregano
-* skrátka veci, čo idú na pizzu
+* skrátka veci, čo idú na pizzu, podľa ľubovôle
 
 ## Instructions
 Lístkové cesto uložíme na plech a potrieme paradajkovým pretlakom/kyslou smotanou/bryndzou, navrchu si necháme 2cm miesta. Posypeme oreganom, topingy nakrájame na malé kúsky a rovnomerne rozložíme po ceste.<br/>

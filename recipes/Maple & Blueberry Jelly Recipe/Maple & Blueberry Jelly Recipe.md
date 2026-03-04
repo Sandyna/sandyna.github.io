@@ -5,6 +5,12 @@ time:
 servings: 4
 source: http://www.thesugarhit.com/2013/08/elegant-maple-blueberry-jelly.html
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients

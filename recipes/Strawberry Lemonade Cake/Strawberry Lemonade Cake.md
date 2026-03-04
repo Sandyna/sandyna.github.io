@@ -5,6 +5,11 @@ time:
 servings: 8-10
 source: https://www.buzzfeed.com/kianomoju/do-summer-right-with-this-strawberry-lemonade-cake?utm_term=.sbRpW9DKn#
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

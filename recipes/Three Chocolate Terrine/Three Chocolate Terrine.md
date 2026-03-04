@@ -5,6 +5,11 @@ time: 50min
 servings: 10  slices, 500g tin loaf
 source: https://www.oetker.co.uk/uk-en/recipe/r/three-chocolate-terrine
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

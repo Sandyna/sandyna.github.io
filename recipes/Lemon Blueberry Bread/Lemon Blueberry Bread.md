@@ -5,6 +5,11 @@ time: 1h 30min
 servings: 12
 source: https://www.allrecipes.com/recipe/24843/lemon-blueberry-bread/?clickId=right%20rail%202&internalSource=rr_feed_recipe&referringId=24843&referringContentType=recipe
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

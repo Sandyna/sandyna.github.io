@@ -5,6 +5,11 @@ time:
 servings: 1 VEĽKÝ koláč
 source: Stará mama Dunajská Streda
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

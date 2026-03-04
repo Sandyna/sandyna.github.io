@@ -5,6 +5,11 @@ time:
 servings:  
 source: http://www.sweet-family.sk/nase-recepty/pecenie/tvarohovo-jahodova-strudla.html?page_id=1138
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

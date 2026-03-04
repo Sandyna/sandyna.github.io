@@ -5,6 +5,11 @@ time: 8h/1h
 servings: 10
 source: https://www.allrecipes.com/recipe/21412/tiramisu-ii/
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

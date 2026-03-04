@@ -5,6 +5,13 @@ time: 10 min preparation, 6 hours in the freezer
 servings: 4-8
 source: https://sk.pinterest.com/pin/310959549271721624/
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - lazy
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients

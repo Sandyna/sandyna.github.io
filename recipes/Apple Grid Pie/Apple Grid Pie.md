@@ -5,6 +5,11 @@ time:
 servings:  
 source: http://angiebakes.com/2017/01/23/mriezkovy-jablkovy-kolac
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

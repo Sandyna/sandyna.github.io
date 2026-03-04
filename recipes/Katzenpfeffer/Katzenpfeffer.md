@@ -3,8 +3,9 @@ title: Katzenpfeffer
 layout: recipe
 time: 
 servings: 
-source: 
+source: Swiss traditional, from a Swiss acquaintance
 image: ./image.jpg
+tags:
 ---
 
 ## Ingredients

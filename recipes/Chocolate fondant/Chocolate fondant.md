@@ -5,6 +5,11 @@ time: 60 min
 servings: 9
 source: https://www.bbcgoodfood.com/recipes/8168/chocolate-fondant
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

@@ -5,6 +5,11 @@ time:
 servings: 24cm tart
 source: http://www.sweet-family.sk/recepty/gastanovy-tart-s-hruskami
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

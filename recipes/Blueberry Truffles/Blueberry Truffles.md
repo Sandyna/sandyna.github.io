@@ -5,6 +5,12 @@ time:
 servings: 18-20
 source: https://omgchocolatedesserts.com/white-chocolate-blueberry-truffles/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients

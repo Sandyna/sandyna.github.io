@@ -5,6 +5,13 @@ time: 20min
 servings: 4
 source: https://rasamalaysia.com/soy-glazed-chicken-recipe/
 image: ./image.jpg
+tags:
+  - untested
+  - savory
+  - main-course
+  - meat
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients

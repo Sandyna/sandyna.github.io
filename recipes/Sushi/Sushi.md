@@ -5,6 +5,16 @@ time: 30m
 servings: 5
 source: n/a
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - snack
+  - main-course
+  - medium-effort
+  - vegetarian
+  - fish
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients

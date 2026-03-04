@@ -5,6 +5,13 @@ time:
 servings: 8
 source: http://recepty.itech.sk/index.php/Plnen%C3%A9_paradajky
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - snack
+  - medium-effort
+  - fish
+  - gluten-free
 ---
 
 ## Ingredients
@@ -14,7 +21,7 @@ image: ./image.jpg
 * 200 gramov mrazených lúpaných prepláchnutých kreviet
 * 1 kávová lyžička mletého zázvoru, možno trochu viac
 * petržlenová vňať
-* trochu sójovej omáčky
+* trochu sójovej omáčky, gluten-free if needed (!)
 * 200 g kyslej smotany
 
 ## Instructions

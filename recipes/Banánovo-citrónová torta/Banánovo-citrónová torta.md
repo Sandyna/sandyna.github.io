@@ -5,6 +5,13 @@ time:
 servings: 1 torta
 source: https://m.facebook.com/frangipani.sk/photos/a.232404950255492.1073741828.229009490595038/1053869244775721/?type=3&fs=1
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients

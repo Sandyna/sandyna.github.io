@@ -5,6 +5,12 @@ time:
 servings: 13
 source: http://angiebakes.com/2017/09/30/nutellove-keksiky-s-nutellou-a-orieskami/
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
+  - simple
 ---
 
 ## Ingredients

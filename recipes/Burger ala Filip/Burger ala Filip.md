@@ -5,6 +5,12 @@ time:
 servings:  
 source: Filip
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - elaborate
+  - meat
 ---
 
 ## Ingredients

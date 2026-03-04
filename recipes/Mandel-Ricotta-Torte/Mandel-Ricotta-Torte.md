@@ -5,6 +5,11 @@ time:
 servings: runde Kuchenform mit ca. 24 bis 28 cm Durchmesser
 source: https://www.stilpalast.ch/savoir-vivre/genuss/mandel-ricotta-torte-2108#sthash.pNHoSFHE.dpbs
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

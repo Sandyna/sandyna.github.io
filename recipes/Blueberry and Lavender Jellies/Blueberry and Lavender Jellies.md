@@ -5,6 +5,12 @@ time:
 servings: 6
 source: https://lickyourownbowl.wordpress.com/2007/07/29/jelly-belly/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients

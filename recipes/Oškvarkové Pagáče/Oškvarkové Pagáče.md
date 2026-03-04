@@ -5,6 +5,11 @@ time: 6h/2h
 servings: 10
 source: Stará mama
 image: ./image.jpg
+tags:
+  - untested
+  - savory
+  - snack
+  - meat
 ---
 
 ## Ingredients
@@ -19,9 +24,6 @@ image: ./image.jpg
 
 ## Instructions
 Mlieko, kvsnice a kocku cukru zohrejeme necháme vykvasiť. Zmiešame múku, soľ, masť, smotanu a<br/>
-kvasnice. Vyhnietime cesto. Na doske rozvaľkáme na tenko, potrieme škvarkami, stočíme ako štrúdľu a<br/>
-preložíme okraje dovnútra (ostane "kocka"). Necháme 30m vykvasiť.<br/>
-Rozvaľkanie, potrenie škvarkami a poskldanie zopakujeme ešte dvakrát. Pri prvom opakovaní môžeme<br/>
-pridať masť alebo soľ.<br/>
-Rozvaľkáme ako na pagáče (duh), povykrajujeme a vrch potrieme žĺtkom. Pečieme 10-15 minút na vyššej<br/>
-teplote (200°C?), potom stiahneme na nižšie (180°C?) a priebežne kontrolujeme (cca 15-30 minút?).<br/>
+kvasnice. Vyhnietime cesto. Na doske rozvaľkáme na tenko, potrieme škvarkami, stočíme ako štrúdľu a preložíme okraje dovnútra (ostane "kocka"). Necháme 30m vykvasiť.<br/>
+Rozvaľkanie, potrenie škvarkami a poskldanie zopakujeme ešte dvakrát. Pri prvom opakovaní môžeme pridať masť alebo soľ.<br/>
+Rozvaľkáme ako na pagáče (duh), povykrajujeme a vrch potrieme žĺtkom. Pečieme 10-15 minút na vyššej teplote (200°C?), potom stiahneme na nižšie (180°C?) a priebežne kontrolujeme (cca 15-30 minút?).<br/>

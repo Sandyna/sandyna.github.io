@@ -5,19 +5,26 @@ time:
 servings: 4
 source: https://www.thekitchn.com/lemon-chicken-with-zaatar-23114544#post-recipe-2387911863lemons, divided
 image: ./image.jpg
+tags:
+  - untested
+   - savory
+  - main-course
+  - meat
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients
 * 1 whole chicken (2 3/4 pounds), cut into legs, thighs, and breasts with the wing-tips left on (or about 2 pounds 2 ounces of chicken legs or breasts with the wing-tips left on), skin on, if you prefer. We tend to start with a whole chicken (so that chicken stock can be made from the carcass), but it’s absolutely fine, of course, to start with chicken breasts, with the wing-tips left on, or legs, if you prefer.
 * 2 onions, sliced in half, then each half cut into 3 wedges (2 3/4 cups)
-* 2 headsgarlic, skin on, sliced in half, crosswise
-* 2 teaspoonssumac
-* 3/4 teaspoonground allspice
-* 4 tablespoonsza'atar, divided
-* 6 tablespoonsolive oil, divided
-* 3/4 cupplus 2 tablespoons chicken stock or waterSalt and black pepper
-* 1/4 cupparsley, finely chopped
-* 1/4 cupsliced almonds, toasted
+* 2 headsg arlic, skin on, sliced in half, crosswise
+* 2 teaspoons sumac
+* 3/4 teaspoon ground allspice
+* 4 tablespoons za'atar, divided
+* 6 tablespoons olive oil, divided
+* 3/4 cup plus 2 tablespoons chicken stock or waterSalt and black pepper
+* 1/4 cup parsley, finely chopped
+* 1/4 cup sliced almonds, toasted
 
 ## Instructions
 Cut 2 of the lemons into 1/4-inch-thick slices and place in a large mixing bowl. Finely grate the zest of the remaining lemon (to get 1 1/2 teaspoon of zest) and set this aside for later. Squeeze the same lemon to get about 1 1/2 tablespoons of juice and add this to the mixing bowl along with the chicken, onions, garlic, sumac, allspice, 2 tablespoons of za’atar, 2 tablespoons of oil, the stock, 1 1/2 teaspoons of salt, and a good grind of black pepper. Mix well to combine, then cover with a large plate and let marinate in the fridge for at least 2 hours (or overnight, if you have time).<br/>

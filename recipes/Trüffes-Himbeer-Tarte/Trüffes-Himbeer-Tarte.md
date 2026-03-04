@@ -5,6 +5,11 @@ time:
 servings: Für runde Tarteform 28 cm (oder Springform)
 source: https://www.stilpalast.ch/savoir-vivre/genuss/tr%C3%BCffes-himbeer-tarte-716#sthash.naW4zVFE.xeKkUWn6.dpbs
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

@@ -5,6 +5,12 @@ time:
 servings: 6
 source: https://www.thekitchenmccabe.com/2014/04/07/lemon-curd-mousse/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients

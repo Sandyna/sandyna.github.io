@@ -3,8 +3,14 @@ title: Orechové košíčky
 layout: recipe
 time: 
 servings: 
-source: Stará mam Zvolen
+source: Stará mama Zvolen
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
+  - medium-effort
 ---
 
 ## Ingredients

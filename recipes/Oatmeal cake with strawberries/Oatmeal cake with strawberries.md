@@ -5,6 +5,11 @@ time:
 servings: 
 source: http://www.sweet-family.sk/nase-recepty/pecenie/spaldovo-ovseny-kolac-plneny-jahodami.html?page_id=1143
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

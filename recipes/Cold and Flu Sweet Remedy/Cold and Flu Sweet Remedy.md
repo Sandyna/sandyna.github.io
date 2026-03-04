@@ -5,6 +5,12 @@ time:
 servings:  
 source: http://www.fabartdiy.com/natural-cold-and-flu-sweet-remedy-recipe
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - vegetarian
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients

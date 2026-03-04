@@ -5,6 +5,11 @@ time:
 servings: 
 source: http://angiebakes.com/2016/11/07/tekvicove-brownie/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients
@@ -13,13 +18,13 @@ image: ./image.jpg
 * 125 g philadelphia syra
 * 135 g tekvicového pyré
 * 1 vajíčko
-* 35 g SweetFamily kryštálového cukru
+* 35 g kryštálového cukru
 * 1 lyžička perníkového korenia
 
 ### Brownie vrstva
 * 330 g horkej čokolády
 * 120 g masla
-* 170 g SweetFamily kryštálového cukru
+* 170 g kryštálového cukru
 * 3 vajíčka
 * 115 g hladkej múky
 * 20 g kakaa

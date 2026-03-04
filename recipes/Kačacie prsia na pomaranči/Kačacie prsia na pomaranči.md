@@ -5,6 +5,14 @@ time:
 servings: 
 source: Chefparade
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - medium-effort
+  - meat
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients

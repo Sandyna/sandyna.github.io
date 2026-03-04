@@ -5,12 +5,18 @@ time:
 servings: 20 ks
 source: http://angiebakes.com/2016/11/13/rafaello-gulicky/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients
 * 200 g kokosu + na obaľovanie
 * 50 ml vody
-* 150 g SweetFamily kryštálového cukru
+* 150 g kryštálového cukru
 * 90 g sušeného mlieka
 * 125 g masla
 * mandle (možno vynechať)

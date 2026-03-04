@@ -5,6 +5,12 @@ time: 25 min
 servings: 2
 source: https://rasamalaysia.com/thai-sweet-chili-chicken/
 image: ./image.jpg
+tags:
+  - untested
+  - savory
+  - main-course
+  - meat
+  - milk-free
 ---
 
 ## Ingredients

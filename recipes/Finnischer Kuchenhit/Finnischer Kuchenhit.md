@@ -5,6 +5,11 @@ time:
 servings: Für Cakeform 30 cm oder runde Kuchenform 28 cm
 source: https://www.stilpalast.ch/savoir-vivre/genuss/finnischer-kuchenhit-6239#sthash.bgRgoyks.dpbs
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

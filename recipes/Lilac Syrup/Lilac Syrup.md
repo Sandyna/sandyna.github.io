@@ -5,6 +5,14 @@ time:
 servings: 4 cups
 source: https://www.thekitchenmccabe.com/2017/05/25/lilac-syrup/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - drink
+  - medium-effort
+  - vegetarian
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients
@@ -21,4 +29,4 @@ Pour the hot syrup carefully into the jar of lilacs until the syrup reaches the 
 Cover the jar with a cloth and let sit on the counter for 4-5 hours, or even overnight for the strongest flavor.<br/>
 When you have finished steeping the syrup in the blossoms, strain the syrup through a fine mesh sieve, pressing on the blossoms to extract all of the syrup. Stir the lemon juice into the syrup. Place syrup in an airtight container and store in the fridge.<br/>
 Will keep for several months.<br/>
-<br/>
+Note: replace this eventually with a generic sirup recipe.<br/>

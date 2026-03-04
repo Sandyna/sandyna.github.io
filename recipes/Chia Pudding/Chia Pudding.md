@@ -5,6 +5,12 @@ time: 2h 10min
 servings: 4
 source: https://www.facebook.com/watch/?v=1542974395751469
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients
@@ -15,4 +21,4 @@ image: ./image.jpg
 * greek yoghurt and toppings on top (optional)
 
 ## Instructions
-Mix chia seeds with milk and let seep for two hours. Mix in the honey and flavouring. Decorate.<br/>
+Mix chia seeds with milk and let steep for two hours. Mix in the honey and flavouring. Decorate.<br/>

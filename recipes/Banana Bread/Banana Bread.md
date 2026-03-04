@@ -5,6 +5,12 @@ time: 1hr 15min
 servings: 1 loaf / 10 slices
 source: https://www.inspiredtaste.net/25418/classic-banana-bread-recipe/
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - medium-effort
+  - vegetarian
 ---
 
 ## Ingredients

@@ -5,6 +5,12 @@ time:
 servings:  
 source: Stará Mama Dunajská streda
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - medium-effort
+  - vegetarian
 ---
 
 ## Ingredients

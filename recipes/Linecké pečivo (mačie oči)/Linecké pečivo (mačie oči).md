@@ -3,8 +3,13 @@ title: Linecké pečivo (mačie oči)
 layout: recipe
 time: time
 servings: servings
-source: source
+source: no clue, various family members, internet
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

@@ -1,22 +1,37 @@
 ---
-title: Name
+title: Template
 layout: recipe
 time: time
 servings: servings
 source: source
 image: ./image.jpg
+tags:
+  - untested
+tags:
+  - untested
+  - tested
+  - savory
+  - sweet
+  - snack
+  - soup
+  - main-course
+  - drink
+  - simple
+  - medium-effort
+  - elaborate
+  - vegetarian
+  - meat
+  - fish
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients
-
+* 3 Ingredients
+* 1/2 Go
+* 2 Here
 
 ## Instructions
-1 ingredients<br/>
-go<br/>
-3 here<br/>
-<br/>
-and all<br/>
-the<br/>
-instructions<br/>
-go<br/>
-here<br/>
+Instructions<br/>
+Go<br/>
+Here<br/>

@@ -5,6 +5,11 @@ time: 3 hours 10 minutes
 servings: 16
 source: https://natashaskitchen.com/cinnamon-rolls-with-salted-maple-glaze/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

@@ -5,6 +5,12 @@ time: 10 min
 servings: 1 nádoba (2-3 osoby)
 source: Šandyna
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - lazy
+  - vegetarian
 ---
 
 ## Ingredients

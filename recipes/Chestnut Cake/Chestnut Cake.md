@@ -5,6 +5,11 @@ time:
 servings: 
 source: http://angiebakes.com/2016/05/11/gastanova-torta/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

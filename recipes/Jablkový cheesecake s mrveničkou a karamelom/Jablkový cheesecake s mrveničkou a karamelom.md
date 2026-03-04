@@ -5,6 +5,11 @@ time:
 servings: 
 source: http://angiebakes.com/2017/02/05/jablkovy-cheesecake-s-mrvenickou-a-karamelom/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients
@@ -12,20 +17,20 @@ image: ./image.jpg
 ### Na základ
 * 200 g hladkej múky
 * 120 g masla
-* 80 g SwetFamily kryštálového cukru
+* 80 g kryštálového cukru
 
 ### Na plnku
 * 250 g krémového syra Philadelphia
 * 250 g jemného nízkotučného tvarohu
 * 2 vajíčka
-* 100 g SweetFamily kryštálového cukru
+* 100 g kryštálového cukru
 * nastrúhaná kôra z 1 citróna
 * 1 lyžička vanilkového extraktu
 * 3 stredné jablká + trocha škorice
 
 ### Na mrveničku
 * 150 g hladkej múky
-* 60 g SweetFamily kryštálového cukru
+* 60 g kryštálového cukru
 * 80 g masla
 * 5 lyžíc jemne mletých ovsených vločiek
 

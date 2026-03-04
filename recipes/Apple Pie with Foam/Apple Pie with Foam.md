@@ -5,6 +5,11 @@ time:
 servings: 
 source: http://angiebakes.com/2016/10/18/jablkovy-kolac-s-penou/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

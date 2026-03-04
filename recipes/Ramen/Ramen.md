@@ -5,6 +5,13 @@ time:
 servings: 
 source: Chefparade
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - meat
+  - milk-free
+  - elaborate
 ---
 
 ## Ingredients

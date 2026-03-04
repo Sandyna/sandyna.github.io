@@ -5,6 +5,11 @@ time:
 servings: 
 source: https://www.zdravepecenie.sk/kolace/spaldove/posypkovy-kolac-s-tvarohom/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

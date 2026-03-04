@@ -5,6 +5,11 @@ time: 25 mins (total 3h 30min)
 servings: 22 cm cake
 source: https://www.marthastewart.com/858246/no-bake-cheesecake
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

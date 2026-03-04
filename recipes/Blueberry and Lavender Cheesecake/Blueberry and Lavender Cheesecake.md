@@ -5,6 +5,13 @@ time: 1hr + set overnight
 servings: 16 rectangular pieces
 source: https://thelemonandjar.wordpress.com/tag/lavender-cheesecake-recipe/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients
@@ -17,7 +24,7 @@ image: ./image.jpg
 
 ### Main component
 * 3 cups soaked cashews (at least 5 hours or overnight)
-* 3/4 cup non-dairy milk
+* 3/4 cup non-dairy milk (!)
 * 1 cup maple syrup (Or 1/2 cup maple syrup and 1/2 cup honey)
 * 1/2 cup + 3 tbsp lemon juice (2-4 lemons)
 * 1/4 cup frozen blueberries

@@ -5,6 +5,11 @@ time: Preparation 10 min Cook 20 min
 servings: 4
 source: https://www.saltandlavender.com/creamy-mushroom-chicken/
 image: ./image.jpg
+tags:
+  - untested
+  - savory
+  - main-course
+  - meat
 ---
 
 ## Ingredients

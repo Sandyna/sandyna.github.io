@@ -5,6 +5,11 @@ time: 35min
 servings: 24
 source: https://www.fifteenspatulas.com/lavender-shortbread-cookies/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

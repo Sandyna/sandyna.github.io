@@ -5,6 +5,11 @@ time:
 servings: Für runde Tarteform 28 cm (oder Springform)
 source: https://www.stilpalast.ch/savoir-vivre/genuss/dreischicht-schokoladentarte-709#sthash.NYYnnCOA.mZtKSOXC.dpbs
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

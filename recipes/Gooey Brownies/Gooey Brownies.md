@@ -5,6 +5,11 @@ time: Preparation 10 minutes, Cooking time 20 minutes
 servings: Makes around 32 squares
 source: https://www.hellomagazine.com/cuisine/2019120981729/spot-on-gooey-brownie-recipe/?viewas=amp
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

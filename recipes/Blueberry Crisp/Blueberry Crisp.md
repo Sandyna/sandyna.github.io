@@ -5,6 +5,12 @@ time: 40min
 servings: 9
 source: https://www.allrecipes.com/recipe/74967/blueberry-crisp-ii/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - milk-free
 ---
 
 ## Ingredients

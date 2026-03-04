@@ -5,6 +5,11 @@ time:
 servings: 1 bábovka
 source: mamka
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

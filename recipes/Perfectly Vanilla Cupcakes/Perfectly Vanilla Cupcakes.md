@@ -5,16 +5,21 @@ time: 30 min
 servings: 15-17
 source: https://www.glorioustreats.com/2011/07/perfect-vanilla-cupcakes-recipe.html
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients
 * 145g cake flour (yes, it should be cake flour - white and finely milled)
 * 3g baking powder
-* 2g teaspoon baking soda
-* 3g teaspoon salt
+* 2g baking soda
+* 3g salt
 * 2 eggs
 * 200g sugar
-* 1.5 teaspoons pure vanilla extract
+* 1 vanilla bean
 * 120 ml (114g) oil (vegetable, canola or extra light olive oil)
 * 80 ml (82g) milk (whole or low fat, but avoid fat free)
 * 80g sour cream (full fat or light, but avoid fat free)

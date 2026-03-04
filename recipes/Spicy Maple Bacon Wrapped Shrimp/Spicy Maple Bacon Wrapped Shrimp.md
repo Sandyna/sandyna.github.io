@@ -5,6 +5,14 @@ time: 50 min
 servings: 5
 source: https://www.inspiredtaste.net/15948/spicy-maple-bacon-wrapped-shrimp-recipe
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - snack
+  - simple
+  - fish
+  - gluten-free
+  - milk-free
 ---
 
 ## Ingredients

@@ -5,6 +5,12 @@ time: 30-45min
 servings: cca 20 pieces
 source: internet, modified by me
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
+  - medium-effort
 ---
 
 ## Ingredients

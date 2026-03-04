@@ -5,6 +5,11 @@ time:
 servings:  
 source: http://angiebakes.com/2017/04/06/cokoladovy-kuskus-kolac
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

@@ -5,6 +5,11 @@ time:
 servings: 
 source: https://www.sweet-family.sk/recepty/cokoladove-sufle
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

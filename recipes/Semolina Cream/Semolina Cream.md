@@ -5,6 +5,11 @@ time:
 servings: 
 source: https://tojenapad.dobrenoviny.sk/krupicovy-krem-do-pecenych-aj-nepecenych-dezertov/?utm_medium=social
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

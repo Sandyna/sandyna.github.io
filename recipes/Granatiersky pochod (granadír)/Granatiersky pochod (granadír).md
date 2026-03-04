@@ -5,6 +5,13 @@ time:
 servings: 
 source: Mamka
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - simple
+  - vegetarian
+  - milk-free
 ---
 
 ## Ingredients

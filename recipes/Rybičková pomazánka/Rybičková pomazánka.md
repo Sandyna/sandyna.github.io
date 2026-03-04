@@ -5,6 +5,13 @@ time: 10 min
 servings: 
 source: Mamka
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - snack
+  - lazy
+  - fish
+  - gluten-free
 ---
 
 ## Ingredients

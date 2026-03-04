@@ -5,6 +5,12 @@ time: 10 min
 servings: 3-5
 source: http://www.tasteofbeirut.com/sahlab/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - drink
+  - vegetarian
 ---
 
 ## Ingredients

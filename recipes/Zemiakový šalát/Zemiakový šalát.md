@@ -5,6 +5,13 @@ time:
 servings: 
 source: Tatino
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - side-dish
+  - gluten-free
+  - vegetarian
+  - medium-effort
 ---
 
 ## Ingredients

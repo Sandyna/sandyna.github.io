@@ -5,6 +5,14 @@ time:
 servings: 
 source: Chefparade
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - meat
+  - gluten-free
+  - milk-free
+  - elaborate
 ---
 
 ## Ingredients
@@ -29,6 +37,7 @@ image: ./image.jpg
 * paradajky z 1 konzervy
 * chili
 * soľ
+* dymová aróma (optional)
 
 ## Instructions
 Prísady na marinádu zmiešame dokopy vo väčšej miske. Rebierka umyjeme, osušíme a pokrájame pozdĺž kostí. Rebierka osušíme a namočíme do marinády a necháme marinovať v chladničke. Počas toho občas prehodíme, polejeme marinádou. Po vytiahnutí z marinády poukladáme do pekáča s olejom a upečieme do červena pri teplote 220 stupňov.<br/>

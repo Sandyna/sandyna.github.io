@@ -5,6 +5,11 @@ time:
 servings: 12
 source: http://angiebakes.com/2015/04/09/nutellove-cupcakes
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

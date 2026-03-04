@@ -5,6 +5,11 @@ time: 2h 30min
 servings: 1 tray
 source: https://www.chefkoch.de/rezepte/2040561330436979/Cinnamon-Rolls-with-Cream-Cheese-Frosting.html
 image: ./image.jpg
+tags:
+  - tested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

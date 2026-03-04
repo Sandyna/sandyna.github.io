@@ -5,6 +5,13 @@ time: 1h
 servings: variable
 source: https://recipes.anovaculinary.com/recipe/sous-vide-salmon-with-lemon-dill-creme-fraiche
 image: ./image.jpg
+tags:
+  - tested
+  - savory
+  - main-course
+  - fish
+  - gluten-free
+  - medium-effort
 ---
 
 ## Ingredients

@@ -5,6 +5,11 @@ time:
 servings: 12+
 source: https://www.thekitchenmccabe.com/2017/05/28/giant-lilac-scented-strawberry-shortcake/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

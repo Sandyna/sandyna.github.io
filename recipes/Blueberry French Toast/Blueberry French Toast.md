@@ -5,6 +5,11 @@ time: 1h 15min
 servings: 10
 source: https://www.allrecipes.com/recipe/15057/overnight-blueberry-french-toast/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

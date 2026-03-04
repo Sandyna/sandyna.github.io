@@ -5,6 +5,12 @@ time:
 servings: 
 source: http://angiebakes.com/2017/07/07/tvarohovo-ovocne-nanuky/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients

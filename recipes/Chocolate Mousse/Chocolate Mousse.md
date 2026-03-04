@@ -5,6 +5,12 @@ time:
 servings: 
 source: https://pcengines.ch/mousse.htm
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
+  - gluten-free
 ---
 
 ## Ingredients

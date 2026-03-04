@@ -5,6 +5,11 @@ time: 30 min
 servings: 6
 source: https://www.carnation.co.uk/Recipes/18/Hot-Choc-Fondant-Puddings
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

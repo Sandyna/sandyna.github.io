@@ -5,6 +5,11 @@ time: 30min
 servings: 24
 source: https://www.allrecipes.com/recipe/23294/blueberry-cream-muffins/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients

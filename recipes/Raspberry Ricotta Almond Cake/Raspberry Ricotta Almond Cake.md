@@ -5,6 +5,11 @@ time:
 servings: 12
 source: https://www.thekitchenmccabe.com/2017/07/30/raspberry-ricotta-almond-cake/
 image: ./image.jpg
+tags:
+  - untested
+  - sweet
+  - dessert
+  - vegetarian
 ---
 
 ## Ingredients
@@ -32,5 +37,4 @@ Bake in the preheated oven for 50-55 minutes, or until golden, puffed, and firm 
 Remove and let cool to room temperature.<br/>
 Dust with powdered sugar and slice.<br/>
 Vanilla Ice cream or a dollop of sweetened mascarpone would be nice on the side!<br/>
-<br/>
 <br/>

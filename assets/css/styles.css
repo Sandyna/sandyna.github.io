@@ -124,3 +124,23 @@ div.content img {
 	margin: 24px auto 24px auto;
 }
 
+.category-filter.selected {
+    background-color: #a5d6a7; /* light green */
+    color: #fff;
+}
+
+.category-filter.selected,
+.category-filter.selected:hover,
+.category-filter.selected:focus,
+.category-filter.selected:active {
+    background-color: #a5d6a7 !important; /* light green */
+    color: #fff !important;
+}
+.category-filter,
+.category-filter:hover,
+.category-filter:focus,
+.category-filter:active {
+    color: #fff !important;       /* text stays white */
+    background-color: #00994d;    /* normal green */
+    border-color: #00994d;        /* keep border same */
+}

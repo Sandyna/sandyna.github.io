@@ -41,45 +41,82 @@
 					{{ content }}
 				</div>
 			</div>
-			
+			{% unless page.layout == "recipe" %}
 				<div class="column is-one-fifth ">
-				<div class="container">			
-					<div class="navi">
-						<h1>Browse by category</h1>
-						<ul>
-						<!--TODO: get this into a separate file-->
-						{% capture tag_list %}
-							{% for page in site.pages %}
-								{% for tag in page.tags %}
-									{{tag}}
-							    {% if forloop.last == false %}::{% endif%}
+					<div class="container">			
+						<div class="navi">
+							<h1>Browse by category</h1>
+							<ul>
+							<!--TODO: get this into a separate file-->
+							{% capture tag_list %}
+								{% for page in site.pages %}
+									{% for tag in page.tags %}
+										{{tag}}
+									{% if forloop.last == false %}::{% endif%}
+									{% endfor %}
+								{% if forloop.last == false %}::{% endif%}
 								{% endfor %}
-						    {% if forloop.last == false %}::{% endif%}
-							{% endfor %}
-						{% endcapture %}
+							{% endcapture %}
 
-						{% assign tags = tag_list | downcase | downcase | url_escape | strip |strip_newlines |strip_html| split: '::' %}
-						{% assign stripped_tags = '' | split: '' %}
-						{%for tag in tags%}
-							{% assign stripped_tag = tag | downcase | downcase | url_escape | strip |strip_newlines |strip_html| %}
-							{% assign stripped_tags = stripped_tags | push: stripped_tag %}
-						{%endfor%}
-						{% assign stripped_tags = stripped_tags | uniq %}
-						{%for tag in stripped_tags%}
-							{%if tag != ''%}
-							{% assign tag_url = "sandyna/cookbook/" | append:tag |append:".html" %}
-							<li><a href={{tag_url}}>{{tag | capitalize}}</a></li>
-							{%endif%}
-						{%endfor%}
+							{% assign tags = tag_list | downcase | downcase | url_escape | strip |strip_newlines |strip_html| split: '::' %}
+							{% assign stripped_tags = '' | split: '' %}
+							{%for tag in tags%}
+								{% assign stripped_tag = tag | downcase | downcase | url_escape | strip |strip_newlines |strip_html| %}
+								{% assign stripped_tags = stripped_tags | push: stripped_tag %}
+							{%endfor%}
+							{% assign stripped_tags = stripped_tags | uniq %}
+							{% for tag in stripped_tags %}
+							  {% if tag != '' %}
+								<li>
+								  <a href="#" class="category-filter button" data-tag="{{ tag | downcase }}">
+									{{ tag | capitalize }}
+								  </a>
+								</li>
+							  {% endif %}
+							{% endfor %}
+						</div>
 					</div>
 				</div>
-			</div>
-			
+			{% endunless %}
 		</section>
 		
 		<div class="footer">
 			<em>Designed by me in 2019. I stole the pictures from the Internet. </em>
 		</div>
 	
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const buttons = document.querySelectorAll(".category-filter");
+		  const recipes = document.querySelectorAll(".recipe-item");
+		  const selectedTags = new Set();
+
+		  function filterRecipes() {
+			recipes.forEach(recipe => {
+			  const tags = recipe.dataset.tags.split(' ');
+			  // AND logic: show only if all selectedTags are in recipe.tags
+			  const show = Array.from(selectedTags).every(tag => tags.includes(tag));
+			  recipe.style.display = show ? "list-item" : "none";
+			});
+		  }
+
+		  buttons.forEach(button => {
+			button.addEventListener("click", function (e) {
+			  e.preventDefault();
+			  const tag = this.dataset.tag.toLowerCase();
+
+			  // toggle selection
+			  if (selectedTags.has(tag)) {
+				selectedTags.delete(tag);
+				this.classList.remove("selected");
+			  } else {
+				selectedTags.add(tag);
+				this.classList.add("selected");
+			  }
+
+			  filterRecipes();
+			});
+		  });
+		});
+		</script>
 	</body>
 </html>

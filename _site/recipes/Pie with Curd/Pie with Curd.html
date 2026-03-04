@@ -3,8 +3,8 @@
 	<head>
 	<meta charset="utf-8">
 		<title>Cook Book</title>
-		<link rel="stylesheet" href="/~sandyna/cookbook/assets/css/styles.css">
-		<link rel="stylesheet" href="/~sandyna/cookbook/assets/css/bulma.min.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<link rel="stylesheet" href="/assets/css/bulma.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	</head>
 
@@ -28,8 +28,9 @@
 					<div class="navi">
 						<h1>Menu</h1>
 						<ul>
-							<li><a href="/~sandyna/cookbook/index.html">Recipe list</a></li>
-							<li><a href="/~sandyna/cookbook/new_recipe.html">Add new recipe</a></li>
+							<li><a href="/index.html">Recipe list</a></li>
+							<li><a href="/new_recipe.html">Add new recipe</a></li>
+							<li><a href="/plant_calendar/plant_calendar.html">Plant Calendar</a></li>
 						</ul>
 					</div>
 				</div>
@@ -81,45 +82,45 @@ Na cesto nanesieme tvarohový krém a uhladíme. Druhú časť cesta taktiež vy
 				</div>
 			</div>
 			
-				<div class="column is-one-fifth ">
-				<div class="container">			
-					<div class="navi">
-						<h1>Browse by category</h1>
-						<ul>
-						<!--TODO: get this into a separate file-->
-						
-
-						
-						
-						
-						
-						
-							
-						
-							
-							
-							<li><a href=sandyna/cookbook/dessert.html>Dessert</a></li>
-							
-						
-							
-							
-							<li><a href=sandyna/cookbook/savoury.html>Savoury</a></li>
-							
-						
-							
-							
-							<li><a href=sandyna/cookbook/meat.html>Meat</a></li>
-							
-						
-					</div>
-				</div>
-			</div>
-			
 		</section>
 		
 		<div class="footer">
-			<em>Designed by Michaela Sandalova 2019. I stole the pictures from the Internet. Sorry about the retard units, didn't have time to fix them yet. </em>
+			<em>Designed by me in 2019. I stole the pictures from the Internet. </em>
 		</div>
 	
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const buttons = document.querySelectorAll(".category-filter");
+		  const recipes = document.querySelectorAll(".recipe-item");
+		  const selectedTags = new Set();
+
+		  function filterRecipes() {
+			recipes.forEach(recipe => {
+			  const tags = recipe.dataset.tags.split(' ');
+			  // AND logic: show only if all selectedTags are in recipe.tags
+			  const show = Array.from(selectedTags).every(tag => tags.includes(tag));
+			  recipe.style.display = show ? "list-item" : "none";
+			});
+		  }
+
+		  buttons.forEach(button => {
+			button.addEventListener("click", function (e) {
+			  e.preventDefault();
+			  const tag = this.dataset.tag.toLowerCase();
+
+			  // toggle selection
+			  if (selectedTags.has(tag)) {
+				selectedTags.delete(tag);
+				this.classList.remove("selected");
+			  } else {
+				selectedTags.add(tag);
+				this.classList.add("selected");
+			  }
+
+			  filterRecipes();
+			});
+		  });
+		});
+		</script>
 	</body>
 </html>

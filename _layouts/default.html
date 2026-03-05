@@ -61,7 +61,7 @@
 							{% assign tags = tag_list | downcase | downcase | url_escape | strip |strip_newlines |strip_html| split: '::' %}
 							{% assign stripped_tags = '' | split: '' %}
 							{%for tag in tags%}
-								{% assign stripped_tag = tag | downcase | downcase | url_escape | strip |strip_newlines |strip_html| %}
+								{% assign stripped_tag = tag | downcase | downcase | url_escape | strip |strip_newlines |strip_html %}
 								{% assign stripped_tags = stripped_tags | push: stripped_tag %}
 							{%endfor%}
 							{% assign stripped_tags = stripped_tags | uniq %}

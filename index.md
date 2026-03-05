@@ -17,7 +17,7 @@ layout: default
 <div class="recipes_list">
 	<ul>
 		{% for page in site.pages %}
-			{% if page.layout == "recipe" %}
+			{% if page.layout == "recipe" and page.title != "Template" %}
 				<li class="recipe-item" data-tags="{{ page.tags | join: ' ' | downcase }}">
 					<a href=".{{ page.url }}">{{ page.title }}</a>
 				</li>

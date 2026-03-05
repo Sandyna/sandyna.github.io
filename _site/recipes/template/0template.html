@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Cook Book</title>
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<link rel="stylesheet" href="/assets/css/bulma.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+	<section class="hero">
+	  <div class="hero-body">
+		<div class="container" style="margin-left: 8.3%">
+		  <h1 class="title" style="margin:50px auto 50px 0px; color:#4D5440;">
+			Cook Book 3003
+		  </h1>
+		</div>
+	  </div>
+	</section>
+
+
+		<section class="columns">
+
+			<div class="column is-one-fifth  is-offset-1 ">
+				<div class="container">			
+					<div class="navi">
+						<h1>Menu</h1>
+						<ul>
+							<li><a href="/index.html">Recipe list</a></li>
+							<li><a href="/new_recipe.html">Add new recipe</a></li>
+							<li><a href="/plant_calendar/plant_calendar.html">Plant Calendar</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-two-fifths">
+				<div class="content">
+					<h1> Template </h1>
+
+<div class="recipe_body">
+	Time: time <br/>
+	Servings: servings <br/>
+	<a href=source> Source </a> <br/>
+	Tags:  untested,	 tested,	 savory,	 sweet,	 snack,	 soup,	 main-course,	 drink,	 lazy,	 simple,	 medium-effort,	 elaborate,	 vegetarian,	 meat,	 fish,	 gluten-free,	 milk-free	 <br/>
+	
+	<h2 id="ingredients">Ingredients</h2>
+<ul>
+  <li>3 Ingredients</li>
+  <li>1/2 Go</li>
+  <li>2 Here</li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+<p>Instructions<br />
+Go<br />
+Here<br /></p>
+
+
+	<img src=./image.jpg></img>
+	
+	
+</div>
+
+
+				</div>
+			</div>
+			
+		</section>
+		
+		<div class="footer">
+			<em>Designed by me in 2019. I stole the pictures from the Internet. </em>
+		</div>
+	
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const buttons = document.querySelectorAll(".category-filter");
+		  const recipes = document.querySelectorAll(".recipe-item");
+		  const selectedTags = new Set();
+
+		  function filterRecipes() {
+			recipes.forEach(recipe => {
+			  const tags = recipe.dataset.tags.split(' ');
+			  // AND logic: show only if all selectedTags are in recipe.tags
+			  const show = Array.from(selectedTags).every(tag => tags.includes(tag));
+			  recipe.style.display = show ? "list-item" : "none";
+			});
+		  }
+
+		  buttons.forEach(button => {
+			button.addEventListener("click", function (e) {
+			  e.preventDefault();
+			  const tag = this.dataset.tag.toLowerCase();
+
+			  // toggle selection
+			  if (selectedTags.has(tag)) {
+				selectedTags.delete(tag);
+				this.classList.remove("selected");
+			  } else {
+				selectedTags.add(tag);
+				this.classList.add("selected");
+			  }
+
+			  filterRecipes();
+			});
+		  });
+		});
+		</script>
+	</body>
+</html>

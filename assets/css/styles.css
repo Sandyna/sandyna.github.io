@@ -1,9 +1,14 @@
-html {
-	background-color: #E9EDBB;
+hmtl {
+	background-color: #E9EDBB; !important;
+}
+
+body {
+	background-color: #E9EDBB; !important;
 	background-image: url("/assets/images/cooking_pattern.svg");
 	background-repeat: repeat;
 	background-position: right 20px;
 }
+
 
 div.footer {
 	background-color: transparent;

@@ -3,6 +3,5 @@ baseurl: /
 exclude:
   - Gemfile
   - Justfile
-  - plant_calendar
   - create_recipes.py
   - recipes_to_do.txt

@@ -7,7 +7,7 @@ source: https://www.thekitchn.com/lemon-chicken-with-zaatar-23114544#post-recipe
 image: ./image.jpg
 tags:
   - untested
-   - savory
+  - savory
   - main-course
   - meat
   - gluten-free

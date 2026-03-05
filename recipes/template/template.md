@@ -7,8 +7,6 @@ source: source
 image: ./image.jpg
 tags:
   - untested
-tags:
-  - untested
   - tested
   - savory
   - sweet

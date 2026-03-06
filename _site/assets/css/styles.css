@@ -9,7 +9,6 @@ body {
 	background-position: right 20px;
 }
 
-
 div.footer {
 	background-color: transparent;
 }
@@ -120,6 +119,19 @@ div.content div.recipe_body h3 {
 	margin-bottom: 8px;
 	margin-top: 8px;
 	font-size: 20px;
+	text-decoration: underline;
+	margin-left: 9px;
+}
+
+div.content div.recipe_body p {
+	margin-left: 12px;
+}
+
+div.content div.recipe_body p br {
+	display: block; /* makes it have a width */
+	content: ""; /* clears default height */
+	margin-top: 15px; /* change this to whatever height you want it */
+	line-height: 150px;
 }
 
 div.content img {

@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Cook Book</title>
+		<link rel="stylesheet" href="/assets/css/bulma.min.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+	<section class="hero">
+	  <div class="hero-body">
+		<div class="container" style="margin-left: 8.3%">
+		  <h1 class="title" style="margin:50px auto 50px 0px; color:#4D5440;">
+			Cook Book 3003
+		  </h1>
+		</div>
+	  </div>
+	</section>
+
+
+		<section class="columns">
+
+			<div class="column is-one-fifth  is-offset-1 ">
+				<div class="container">			
+					<div class="navi">
+						<h1>Menu</h1>
+						<ul>
+							<li><a href="/index.html">Recipe list</a></li>
+							<li><a href="/new_recipe.html">Add new recipe</a></li>
+							<li><a href="/plant_calendar/plant_calendar.html">Plant Calendar</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-two-fifths">
+				<div class="content">
+					<h1> Pavlova Torta </h1>
+
+<div class="recipe_body">
+	Time: 3h 30min <br/>
+	Servings: servings <br/>
+	Source: <a href=Stará mama DS> Stará mama DS </a> <br/>
+	Tags:  tested,	 sweet,	 dessert,	 simple,	 medium-effort,	 vegetarian,	 gluten-free	 <br/>
+	
+	<h2 id="ingredients">Ingredients</h2>
+
+<h3 id="meringue">Meringue</h3>
+<ul>
+  <li>6 bielkov</li>
+  <li>300g práškový cukor alebo pomixovaný kryštálový</li>
+  <li>2 pl citrónovej šťavy</li>
+  <li>2 pl zarovnané, škrob, napr. vanilkový puding</li>
+</ul>
+
+<h3 id="krém">Krém</h3>
+<ul>
+  <li>300ml 33% šľahačkovej smotany</li>
+  <li>40g vanilkového cukru</li>
+  <li>150g mascarpone</li>
+  <li>50ml biely rum (optional)</li>
+  <li>stužovač za studena (replace with double cream)</li>
+  <li>ovocie, napr. lesnú zmes, môže byť aj mrazené</li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+
+<h3 id="meringue-1">Meringue</h3>
+<p>Rúru predhrejeme na 150°C<br />
+Bielka vyšľahať do tvrda, leskla - najprv dopolovice vyšľahať bielka, postupne pridávať cukor. Občas stierkou premiešať, aby na okrajoch a spodku neostal nerozpustený cukor. <br />
+Primiešame (fold in) citrónovú šťavu a škrob. <br />
+Vyformovať sopku/kopec na podložke, aby bola trochu dutá. Môžeme použiť pečúci papier, ktorý prilepíme na plech pár bodkami meringue, alebo silikónovú podložku. Namiesto jednej torty môžeme spraviť aj viacero malých. Formovať sa dá lyžicou alebo použiť cukrársku špičku. <br />
+Pečieme hodinu na 150C, potom stiahneme teplotu na 100°C a pečieme ďalšiu hodinu. Vypneme rúru a necháme v rúre ďalšiu hodinu doschnúť. <br />
+Poznámka: S týmto časom mi vyšli trochu skaramelizované. Môžeme znížiť teplotu, záleží to trochu od rúry, ale v zásade to nevadí pokiaľ nie sú spálené.<br /></p>
+
+<h3 id="krém-a-skladanie">Krém a skladanie</h3>
+<p>Ovocie zalejeme rumom a odložíme bokom. Vymiešame šľahačkovú smotanu s vanilkovým cukrom na tuhú šľahačku, podľa návodu aplikujeme stužovač. Ak nechceme použiť stužovať, môžeme použiť double cream (šľahačka s ~50% obsahom tuku) alebo stužovač úplne vynechať. Primiešame mascarpone. <br />
+Krémom naplníme meringue a ozdobíme ovocím. Buď máme v meringue nejakú dutinu, alebo môžeme tortu vydlabať, dať krém a ovocie dnu, a položiť kúsky meringue na vrch. <br /></p>
+
+
+	<img src=./image.jpg></img>
+	
+	
+</div>
+
+
+				</div>
+			</div>
+			
+		</section>
+		
+		<div class="footer">
+			<em>Designed by me in 2019. I stole the pictures from the Internet. </em>
+		</div>
+	
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const buttons = document.querySelectorAll(".category-filter");
+		  const recipes = document.querySelectorAll(".recipe-item");
+		  const selectedTags = new Set();
+
+		  function filterRecipes() {
+			recipes.forEach(recipe => {
+			  const tags = recipe.dataset.tags.split(' ');
+			  // AND logic: show only if all selectedTags are in recipe.tags
+			  const show = Array.from(selectedTags).every(tag => tags.includes(tag));
+			  recipe.style.display = show ? "list-item" : "none";
+			});
+		  }
+
+		  buttons.forEach(button => {
+			button.addEventListener("click", function (e) {
+			  e.preventDefault();
+			  const tag = this.dataset.tag.toLowerCase();
+
+			  // toggle selection
+			  if (selectedTags.has(tag)) {
+				selectedTags.delete(tag);
+				this.classList.remove("selected");
+			  } else {
+				selectedTags.add(tag);
+				this.classList.add("selected");
+			  }
+
+			  filterRecipes();
+			});
+		  });
+		});
+		</script>
+	</body>
+</html>

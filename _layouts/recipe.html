@@ -8,7 +8,7 @@ layout: default
 <div class="recipe_body">
 	Time: {{ page.time }} <br/>
 	Servings: {{ page.servings }} <br/>
-	<a href={{ page.source }}> Source </a> <br/>
+	Source: <a href={{ page.source }}> {{ page.source }} </a> <br/>
 	Tags: {% for tag in page.tags %} {{ tag}}{% if forloop.last == false %},{% endif%}	{% endfor %} <br/>
 	
 	{{ content }}

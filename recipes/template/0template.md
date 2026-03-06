@@ -13,6 +13,8 @@ tags:
   - snack
   - soup
   - main-course
+  - side-dish
+  - dessert
   - drink
   - lazy
   - simple

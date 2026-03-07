@@ -1,5 +1,5 @@
 ---
-title: Vanilkové rožky II
+title: Vanilkové rožky - pekanové
 layout: recipe
 time: 20min
 servings: 

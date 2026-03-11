@@ -3,7 +3,7 @@ title: Strawberry Angel Food Cake
 layout: recipe
 time: 30 min
 servings: 1 cake
-source: [Internet](https://bonnibakery.com/strawberry-angel-food-cake/)
+source: https://bonnibakery.com/strawberry-angel-food-cake/
 image: ./image.jpg
 tags:
   - untested

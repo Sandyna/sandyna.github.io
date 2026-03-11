@@ -16,7 +16,7 @@ tags:
 ## Ingredients
 * 500g hladkej múky
 * 250g hera, rastlinnný tuk
-* 1/2 prášok do pečiva
+* 1/2 prášok do pečiva (1 č. lyž. stačí)
 * 1 vanilkový cukor
 * 120g práškový cukor
 * 2 vajcia
@@ -27,4 +27,3 @@ tags:
 Vymiesime cesto, ak sa drobí pridáme trochu mlieka. Rozdelíme cesto na dve časti, vyvaľkáme na asi 0.5-1 cm.<br/>
 Položíme jednu časť na plech, pokryjeme plnkou a prikryjeme druhým cestom. Cesto prenášame na valčeku.<br/>
 Pečieme 20 minút na 180 stupňoch.<br/>
-Poznámka: Dosť v ňom cítiť prášok do pečiva.<br/>

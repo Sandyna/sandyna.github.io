@@ -19,7 +19,7 @@ tags:
 * 1 cup panko breadcrumbs
 * 1 cup milk
 * 1 large egg
-* 2/3 cup Soy Vay® Spicy’N Sweet Chili Heat or Soy Vay® Veri Veri Teryiaki®
+* 2/3 cup Sweet Chili sauce or Teryiaki
 * White rice for serving
 * Green scallions, for garnish, if desired
 

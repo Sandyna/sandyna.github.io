@@ -1,4 +1,4 @@
-Vínové pečivo
+/ínové pečivo
 Vanilkové rožky
 Schwardswaldská torta
 Linecké pečivo (mačie oči)
@@ -42,6 +42,9 @@ Various frostings
 	https://bonnibakery.com/russian-buttercream/
 Victoria sponge
 Fondant potatoes
+Žemľovka
+Ryžový nákyp
+Quiche
 
 To try and determine if we want them: 
 Chefparade brownies

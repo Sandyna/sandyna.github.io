@@ -161,7 +161,7 @@
 	"sow_indoor": null,
 	"sow_outdoor": 7,
 	"transplant": null,
-	"sun_needs": "Full sun, afternoon shade",
+	"sun_needs": "",
 	"water_needs": "Medium, allow to dry out",
 	"icon": "coriander.svg",
 	"alternate_text": "COR",
@@ -178,5 +178,17 @@
 	"icon": "chives.svg",
 	"alternate_text": "CHV",
 	"tooltip": "Allium tuberosum. Perrenial. Zones 3-9"
+},
+{
+	"id": "1015_Parsley",
+	"name": "Parsley",
+	"sow_indoor": -48,
+	"sow_outdoor": 1,
+	"transplant": 8,
+	"sun_needs": "Full sun, afternoon shade",
+	"water_needs": "High, keep moist",
+	"icon": "parsley.svg",
+	"alternate_text": "PAR",
+	"tooltip": "Petroselinum crispum. Soak seeds overnight. 8-10cm in 30cm rows, 1cm deep."
 }
 ]

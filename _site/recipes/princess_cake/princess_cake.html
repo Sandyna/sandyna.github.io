@@ -1,0 +1,138 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Cook Book</title>
+		<link rel="stylesheet" href="/assets/css/bulma.min.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+	<section class="hero">
+	  <div class="hero-body">
+		<div class="container" style="margin-left: 8.3%">
+		  <h1 class="title" style="margin:50px auto 50px 0px; color:#4D5440;">
+			Cook Book 3003
+		  </h1>
+		</div>
+	  </div>
+	</section>
+
+
+		<section class="columns">
+
+			<div class="column is-one-fifth  is-offset-1 ">
+				<div class="container">			
+					<div class="navi">
+						<h1>Menu</h1>
+						<ul>
+							<li><a href="/index.html">Recipe list</a></li>
+							<li><a href="/new_recipe.html">Add new recipe</a></li>
+							<li><a href="/plant_calendar/plant_calendar.html">Plant Calendar</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-two-fifths">
+				<div class="content">
+					<h1> Princess cake </h1>
+
+<div class="recipe_body">
+	Time:  <br/>
+	Servings: 1 torta, priemer 28cm <br/>
+	Source: <a href=https://www.howtocookthat.net/public_html/princess-cake-icy-wind-japanese-jiggly-cheesecake-recipe/> https://www.howtocookthat.net/public_html/princess-cake-icy-wind-japanese-jiggly-cheesecake-recipe/ </a> <br/>
+	Tags:  tested,	 sweet,	 dessert,	 vegetarian	 <br/>
+	
+	<h2 id="ingredients">Ingredients</h2>
+
+<h3 id="cake-recipe">Cake Recipe:</h3>
+<ul>
+  <li>8 eggs</li>
+  <li>250g sugar</li>
+  <li>120g plain flour</li>
+  <li>160g cornflour (or corn starch)</li>
+  <li>2 tsp baking powder</li>
+</ul>
+
+<h3 id="custard-recipe">Custard Recipe:</h3>
+<ul>
+  <li>250 ml cream</li>
+  <li>4 egg yolks</li>
+  <li>2 tablespoons cornflour or cornstarch</li>
+  <li>2 tablespoons sugar</li>
+  <li>4 teaspoons vanilla</li>
+  <li>250 ml extra cream</li>
+</ul>
+
+<h3 id="other">Other:</h3>
+<ul>
+  <li>100g raspberry Jam</li>
+  <li>900mL cream, whipped</li>
+  <li>300g marzipan or green fondant flavoured how you like</li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+<p>Cake:<br />
+Preheat the oven to 180°C (356 degrees Fahrenheit). Place the sugar and eggs into bowl and beat on high speed until they are fluffy. Sift in the flours and baking powder and fold together. Split between a lined baking tray, mine is 15″ x 10″ and one 8″ round tin. Bake until golden (approx 15 minutes for the tray and 20 for the round tin). <br />
+Custard:<br />
+Place egg yolks, vanilla, sugar and cornflour into a pan. Whisk until there are no lumps. Add in the cream and and mix well. Place over heat and mix continuously until it thickens, continue to stir over the heat for a couple of minutes. Remove from heat, cover in plastic wrap and leave to cool. Place the custard into a food processor or blender with the extra cream and blitz until smooth.<br />
+Assembly:<br />
+Make a template from baking paper for the size of your bowl. My bowl is 24cm (9.45 inches) in diameter at the top and 13cm (5.12 inches) tall. Use it to cut the tray of cake so that it lines the bowl. 3/4 fill with whipped cream, Reserve about 1/2 a cup of whipped cream for later. Split the round cake into two layers. Cover one layer with jam and flip it over jam side down onto the cream. Top with a layer of custard and then he remaining layer of cake. Cover with plastic wrap and place something flat on top, then add some tins of food for anything with a bit of weight. Refrigerate for at least 1 hour.<br />
+Tip out onto your serving plate. Cover with the half a cup of whipped cream that you et aside earlier. Use some acetate or thin plastic to smooth over the dome.<br />
+Roll out the marzipan or fondant and lay over the cake. Lift and lower the edges to smooth out any folds. Trim around the bottom edge. Add a couple of flowers to the top, you can make these from fondant or use fresh. Sprinkle with a little icing sugar.<br /></p>
+
+
+	<img src=./image.jpg></img>
+	
+	
+</div>
+
+
+				</div>
+			</div>
+			
+		</section>
+		
+		<div class="footer">
+			<em>Designed by me in 2019. I stole the pictures from the Internet. </em>
+		</div>
+	
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const buttons = document.querySelectorAll(".category-filter");
+		  const recipes = document.querySelectorAll(".recipe-item");
+		  const selectedTags = new Set();
+
+		  function filterRecipes() {
+			recipes.forEach(recipe => {
+			  const tags = recipe.dataset.tags.split(' ');
+			  // AND logic: show only if all selectedTags are in recipe.tags
+			  const show = Array.from(selectedTags).every(tag => tags.includes(tag));
+			  recipe.style.display = show ? "list-item" : "none";
+			});
+		  }
+
+		  buttons.forEach(button => {
+			button.addEventListener("click", function (e) {
+			  e.preventDefault();
+			  const tag = this.dataset.tag.toLowerCase();
+
+			  // toggle selection
+			  if (selectedTags.has(tag)) {
+				selectedTags.delete(tag);
+				this.classList.remove("selected");
+			  } else {
+				selectedTags.add(tag);
+				this.classList.add("selected");
+			  }
+
+			  filterRecipes();
+			});
+		  });
+		});
+		</script>
+	</body>
+</html>

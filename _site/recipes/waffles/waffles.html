@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Cook Book</title>
+		<link rel="stylesheet" href="/assets/css/bulma.min.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+	<section class="hero">
+	  <div class="hero-body">
+		<div class="container" style="margin-left: 8.3%">
+		  <h1 class="title" style="margin:50px auto 50px 0px; color:#4D5440;">
+			Cook Book 3003
+		  </h1>
+		</div>
+	  </div>
+	</section>
+
+
+		<section class="columns">
+
+			<div class="column is-one-fifth  is-offset-1 ">
+				<div class="container">			
+					<div class="navi">
+						<h1>Menu</h1>
+						<ul>
+							<li><a href="/index.html">Recipe list</a></li>
+							<li><a href="/new_recipe.html">Add new recipe</a></li>
+							<li><a href="/plant_calendar/plant_calendar.html">Plant Calendar</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-two-fifths">
+				<div class="content">
+					<h1> Waffles </h1>
+
+<div class="recipe_body">
+	Time: 15 min <br/>
+	Servings: waffles <br/>
+	Source: <a href=https://www.bbc.co.uk/food/recipes/waffles_82356> https://www.bbc.co.uk/food/recipes/waffles_82356 </a> <br/>
+	Tags:  tested,	 sweet,	 dessert,	 main-course,	 simple,	 vegetarian	 <br/>
+	
+	<h2 id="ingredients">Ingredients</h2>
+<ul>
+  <li>450ml full-fat milk</li>
+  <li>3 large free-range eggs, separated</li>
+  <li>125ml vegetable oil, plus extra for oiling if required</li>
+  <li>1 tsp vanilla extract</li>
+  <li>225g plain flour</li>
+  <li>5 g (2 tsp) baking powder</li>
+  <li>38g (3 tbsp) caster sugar</li>
+  <li>¼ tsp fine sea salt</li>
+  <li>maple syrup, berries, or other stuff to serve</li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+<p>Heat the waffle iron according to instructions (some need to be lightly oiled before you start).<br />
+Put the egg whites into a clean bowl and whisk to stiff peaks. Mix the other wet ingredients in a jug. Sift the dry ingredients into a large bowl. Pour the jug of wet ingredients into the bowl of dry ones and whisk together, making sure there are no lumps.<br />
+Slowly fold the egg whites into the batter.<br />
+Cook in waffle iron according to instructions. Serve immediately. <br /></p>
+
+
+	<img src=./image.jpg></img>
+	
+	
+</div>
+
+
+				</div>
+			</div>
+			
+		</section>
+		
+		<div class="footer">
+			<em>Designed by me in 2019. I stole the pictures from the Internet. </em>
+		</div>
+	
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const buttons = document.querySelectorAll(".category-filter");
+		  const recipes = document.querySelectorAll(".recipe-item");
+		  const selectedTags = new Set();
+
+		  function filterRecipes() {
+			recipes.forEach(recipe => {
+			  const tags = recipe.dataset.tags.split(' ');
+			  // AND logic: show only if all selectedTags are in recipe.tags
+			  const show = Array.from(selectedTags).every(tag => tags.includes(tag));
+			  recipe.style.display = show ? "list-item" : "none";
+			});
+		  }
+
+		  buttons.forEach(button => {
+			button.addEventListener("click", function (e) {
+			  e.preventDefault();
+			  const tag = this.dataset.tag.toLowerCase();
+
+			  // toggle selection
+			  if (selectedTags.has(tag)) {
+				selectedTags.delete(tag);
+				this.classList.remove("selected");
+			  } else {
+				selectedTags.add(tag);
+				this.classList.add("selected");
+			  }
+
+			  filterRecipes();
+			});
+		  });
+		});
+		</script>
+	</body>
+</html>

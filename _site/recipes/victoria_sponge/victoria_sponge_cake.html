@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Cook Book</title>
+		<link rel="stylesheet" href="/assets/css/bulma.min.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+	<section class="hero">
+	  <div class="hero-body">
+		<div class="container" style="margin-left: 8.3%">
+		  <h1 class="title" style="margin:50px auto 50px 0px; color:#4D5440;">
+			Cook Book 3003
+		  </h1>
+		</div>
+	  </div>
+	</section>
+
+
+		<section class="columns">
+
+			<div class="column is-one-fifth  is-offset-1 ">
+				<div class="container">			
+					<div class="navi">
+						<h1>Menu</h1>
+						<ul>
+							<li><a href="/index.html">Recipe list</a></li>
+							<li><a href="/new_recipe.html">Add new recipe</a></li>
+							<li><a href="/plant_calendar/plant_calendar.html">Plant Calendar</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-two-fifths">
+				<div class="content">
+					<h1> Victoria sponge cake </h1>
+
+<div class="recipe_body">
+	Time: 1 h <br/>
+	Servings: 1 cake <br/>
+	Source: <a href=Internet> Internet </a> <br/>
+	Tags:  tested,	 sweet,	 dessert,	 simple,	 medium-effort,	 vegetarian	 <br/>
+	
+	<p>This is actually not a sponge cake, as it doesn’t start from eggs and sugar.</p>
+
+<h2 id="ingredients">Ingredients</h2>
+<ul>
+  <li>200g butter</li>
+  <li>200g caster sugar</li>
+  <li>4 eggs</li>
+  <li>vanilla</li>
+  <li>200g flour</li>
+  <li>2-3 tsp baking powder</li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+<p>Preheat oven to 175°C. Grease a cake tin (or two).<br />
+Cube butter, let it warmp up a bit. If you don’t have caster sugar, blend granulated sugar. Cream butter and sugar until pale and fluffy.<br />
+Whisk eggs with vanilla, mix in. <br />
+Mix flour with baking powder, sift into the wet ingredients and mix in/fold in. <br />
+This results in about 800g of batter. <br />
+Bake for about 20 min, and start checking regularly after that. Baking time will vary based on the oven and pan. It’s done when it’s golden, almost brown, the edges are peeling away from the form, nd a knife inserted comes out clean.<br />
+Let cool for 10min, run a knife or a rubber spatula around the edge and remove from the form to let cool completely.<br /></p>
+
+
+	<img src=./image.jpg></img>
+	
+	
+</div>
+
+
+				</div>
+			</div>
+			
+		</section>
+		
+		<div class="footer">
+			<em>Designed by me in 2019. I stole the pictures from the Internet. </em>
+		</div>
+	
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const buttons = document.querySelectorAll(".category-filter");
+		  const recipes = document.querySelectorAll(".recipe-item");
+		  const selectedTags = new Set();
+
+		  function filterRecipes() {
+			recipes.forEach(recipe => {
+			  const tags = recipe.dataset.tags.split(' ');
+			  // AND logic: show only if all selectedTags are in recipe.tags
+			  const show = Array.from(selectedTags).every(tag => tags.includes(tag));
+			  recipe.style.display = show ? "list-item" : "none";
+			});
+		  }
+
+		  buttons.forEach(button => {
+			button.addEventListener("click", function (e) {
+			  e.preventDefault();
+			  const tag = this.dataset.tag.toLowerCase();
+
+			  // toggle selection
+			  if (selectedTags.has(tag)) {
+				selectedTags.delete(tag);
+				this.classList.remove("selected");
+			  } else {
+				selectedTags.add(tag);
+				this.classList.add("selected");
+			  }
+
+			  filterRecipes();
+			});
+		  });
+		});
+		</script>
+	</body>
+</html>

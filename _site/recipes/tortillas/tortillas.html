@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Cook Book</title>
+		<link rel="stylesheet" href="/assets/css/bulma.min.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+	<section class="hero">
+	  <div class="hero-body">
+		<div class="container" style="margin-left: 8.3%">
+		  <h1 class="title" style="margin:50px auto 50px 0px; color:#4D5440;">
+			Cook Book 3003
+		  </h1>
+		</div>
+	  </div>
+	</section>
+
+
+		<section class="columns">
+
+			<div class="column is-one-fifth  is-offset-1 ">
+				<div class="container">			
+					<div class="navi">
+						<h1>Menu</h1>
+						<ul>
+							<li><a href="/index.html">Recipe list</a></li>
+							<li><a href="/new_recipe.html">Add new recipe</a></li>
+							<li><a href="/plant_calendar/plant_calendar.html">Plant Calendar</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-two-fifths">
+				<div class="content">
+					<h1> Tortillas </h1>
+
+<div class="recipe_body">
+	Time: 10-20min <br/>
+	Servings: 1-many <br/>
+	Source: <a href=Šandyna> Šandyna </a> <br/>
+	Tags:  tested,	 savory,	 snack,	 main-course,	 lazy,	 simple,	 vegetarian,	 meat,	 gluten-free,	 milk-free	 <br/>
+	
+	<p>Depending on what you buy, you can accomodate various dietary restrictions. There are gluten-free tortillas, diary-free mayo, meat substitutes… Recipe is listed in its original version, but feel free to replace anything. <br />
+It’s also an excellent way of finishing random things lying around in the fridge. A bit of cheese, unfinished can of beans, three leftover mushrooms, they can all go in. If you buy a head of lettuce and a bag of tomatoes, this meal can be eaten for a few days, until you run out. <br /></p>
+
+<h2 id="ingredients">Ingredients</h2>
+<ul>
+  <li>1 pack tortillas (!)</li>
+  <li>4-5 chicken nuggies (!)</li>
+  <li>salad</li>
+  <li>tomatoes</li>
+  <li>mayo (!)</li>
+</ul>
+
+<h2 id="optional-ingredients">Optional Ingredients</h2>
+<ul>
+  <li>Avocado</li>
+  <li>Any vegetable you like, fresh or canned</li>
+  <li>Roasted mushrooms</li>
+  <li>Sour cream, yoghurt (!)</li>
+  <li>Oregano, dill or garlic powder</li>
+  <li>Cheese, grated or sliced (!)</li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+<p>Bake chicken nuggies according to instructions. <br />
+Prepare veggies while the nuggies are baking. Wash, cut, do whatever you do. <br />
+Microwave tortilla for 30s if you can be bothered. Spread mayo in a stripe in the middle. Apply any herbs or seasoning on it. <br />
+Put nuggies on the mayo. Put veggies on the nuggies. Wrap. Eat. <br /></p>
+
+
+	<img src=./image.jpg></img>
+	
+	
+</div>
+
+
+				</div>
+			</div>
+			
+		</section>
+		
+		<div class="footer">
+			<em>Designed by me in 2019. I stole the pictures from the Internet. </em>
+		</div>
+	
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const buttons = document.querySelectorAll(".category-filter");
+		  const recipes = document.querySelectorAll(".recipe-item");
+		  const selectedTags = new Set();
+
+		  function filterRecipes() {
+			recipes.forEach(recipe => {
+			  const tags = recipe.dataset.tags.split(' ');
+			  // AND logic: show only if all selectedTags are in recipe.tags
+			  const show = Array.from(selectedTags).every(tag => tags.includes(tag));
+			  recipe.style.display = show ? "list-item" : "none";
+			});
+		  }
+
+		  buttons.forEach(button => {
+			button.addEventListener("click", function (e) {
+			  e.preventDefault();
+			  const tag = this.dataset.tag.toLowerCase();
+
+			  // toggle selection
+			  if (selectedTags.has(tag)) {
+				selectedTags.delete(tag);
+				this.classList.remove("selected");
+			  } else {
+				selectedTags.add(tag);
+				this.classList.add("selected");
+			  }
+
+			  filterRecipes();
+			});
+		  });
+		});
+		</script>
+	</body>
+</html>

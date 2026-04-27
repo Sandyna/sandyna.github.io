@@ -1,7 +1,7 @@
 ---
-title: Zemiakový prívarok
+title: Fondant Potatoes
 layout: recipe
-time: 30min
+time: ?
 servings: 
 source: Internet
 image: ./image.jpg
@@ -16,6 +16,7 @@ tags:
 
 ## Ingredients
 * Potatoes
+* Broth
 * tbd
 
 ## Instructions

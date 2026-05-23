@@ -27,6 +27,7 @@ tags:
 * Bowls
 * thermometer that can measure at least 120°C
 * pan
+* brush
 
 ## Ingredients
 * Ingredients

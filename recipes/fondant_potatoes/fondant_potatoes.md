@@ -1,7 +1,7 @@
 ---
 title: Fondant Potatoes
 layout: recipe
-time: ?
+time: 
 servings: 
 source: Internet
 image: ./image.jpg

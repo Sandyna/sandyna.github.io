@@ -16,13 +16,13 @@ tags:
 ---
 
 ## Ingredients
-* 120g sugar
-* 30g almond flour
-* 15g armelline - apricot kernels
+* 80g sugar
+* 60g almond flour
+* 30g armelline - apricot kernels
 * 1 egg white (cca 30g)
 * 1 tsp honey
 * 0.5g or even less ammonium bicarbonate or a bit more of baking powder
-* almond flavour
+* almond flavour???
 
 ## Instructions
 Oven 150°C to 180°C, to be determined. <br/>

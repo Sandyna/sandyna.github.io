@@ -1,9 +1,9 @@
 ---
-title: Elderflower Strawberry Macarons
+title: Template
 layout: recipe
-time: fucklong, like 3h or a day if you age your whites
-servings: 2-3 trays
-source: https://nickskitchen.com/french-macarons-recipe/, Sandy
+time: time
+servings: servings
+source: https://nickskitchen.com/french-macarons-recipe/
 image: ./image.jpg
 tags:
   - tested
@@ -12,51 +12,28 @@ tags:
   - elaborate
   - vegetarian
   - gluten-free
+  - milk-free
 ---
 
+## Equipment
+* Precise kitchen scale
+* Stand mixer/kitchen robot with a whisk attachment
+* Fine mesh sieve
+* Silicone spatula
+* #12 round piping tip (cca 8mm)
+* Piping bags
+* 2 silicone baking mats, with the macaron circles
+* 2 baking trays
+* Bowls
 
-This is a recipe to celebrate the season of strawberries and elderflower. It's elaborate, highly technical, and a work in proggress. <br/>
-
-# Elderflower-strawberry reduction
-
-## Ingredients
-* 220g strawberries
-* 2-3 fresh elderflowers
-* 10ml lime juice
-* 30ml water
-* 1-2 tablespoons sugar
-
-## Instructions
-Clean and dry off the elderflower and remove as much of the green parts as possible. You want to end with 6g of blooms. <br/>
-Clean and cut strawberries into small pieces. Place into a pan with water, lime juice and 3g of the elderflowers. Bring to a simmer, medium heat, bring to a simmer stirring occasionally. Add sugar to taste. Simmer and stir until the fruit breaks down and gets mushy and jam like. Easily 15min+ <br/>
-When you're happy with the consistency, remove it from heat and let it cool down a bit. Stir in the remaining blooms. Let it sit until it cools down more. <br/> 
-Push the mixture through a sieve with a spatula or a wooden spoon; You need to pass as much of it as possible, excluding the blooms and most of the seeds. Pick a sieve size that will not make you hate existing. <br/>
-Stir the result, pour in a piping bag and stick it into fridge until you're ready to use it. <br/>
-
-# Dark chocolate ganache
-
-## Ingredients
-* 100g heavy cream
-* 100g dark chocolate
-* butter?
-
-## Instructions
-Chop the chocolate in a blender to get finer pieces. Put in a medium heat-proof bowl and stick it into microwave for just a bit (5s, mix, another 5s). It doesn't have to melt, just get a bit warmer. <br/>
-Heat the heavy cream almost to boil. Pour over the chocolate and mix until combined. Cut a bit of cling film and place it directly on the chocolate to prevent a skin from forming. Let it cool down and then stick in the fridge for a few hours. For example until you make the macaron shells. <br/>
-After it cools down, use a mixer with a whisk attachment to introduce air - whip it until it's smooth, airy and lightens in colour. <br/>
-
-## Notes
-2.5:1 chocolate to cream was too thick. Try 1:1 or 1.5:1 <br/>
-The chocolate is too overpowering. Try adding butter? Mascaropone? Switch to an entirely different filling? Steep elderflowers in cream?<br/>
-
-# Macaron shells
 
 ## Ingredients
 * 105g egg whites, aged
 * 144g almond flour
 * 125g powdered sugar
 * 105g granulated sugar
-* lime zest (to be tested)
+* flavouring
+* coloring
 * White vinegar, isopropyl alcohol (IPA) or other high-content tasteless food-safe alcohol
 
 ## Instructions
@@ -65,7 +42,7 @@ Mix almond flour and powdered sugar, sift twice. <br/>
 Wipe down a mixing bowl and the whisk attachment, sart whipping the egg whites on medium speed until they are foamy, about 1m. <br/>
 Wipe your spatula. Gradually add the granulated sugar, then switch to medium-high speed. Beat until the meringue is glossy and stiff. I like to scrape the sides with the spatula to make sure no undissolved sugar stays on the sides. 
 The whipping can take anywhere from 3-7min depending on your mixer. <br/>
-Medium speed, incorporate lime zest. They say switch to high speed for 30s, but I found the meringue satisfactory before that. Maybe it's just to get it to fly off the whisk? <br/>
+Medium speed, incorporate your chosen flavouring and coloring. They say switch to high speed for 30s, but I found the meringue satisfactory before that. Maybe it's just to get it to fly off the whisk? <br/>
 Wipe down a silicone baking mat, set it on a baking tray. <br/>
 Sift the dry ingredients into the meringue. Mix them in, then switch to folding. This is the tricky part, you need to fold until the macronage flows off the spatula in ribbons (like thick lava) instead of falling off in chunks. The ribbons should also sit on top of it for ~10s instead of melting in. 
 Go watch a few videos to understand the desired consistency. It's better to undermix. <br/>
@@ -77,12 +54,7 @@ Bake for 23 minutes, rotating halfway through. Let them cool on the mats. <br/>
 
 ## Notes
 Ideally you own at least one silicon sheet with pre-drawn macaron circles. If not, print two papers with the circles and put that under a sheet of baking paper to guide your piping. Don't forget to remove the papers before baking. Or eyeball it. You might need another person to safely transfer it to a tray. <br/>
-Tried adding elderflowers into the granulated sugar, letting sit overnight and using in the meringue, but there was no noticable taste. Lime zest should work instead, to be tried. <br/>
 Anytime I say "wipe" I mean with IPA or the vinegar. Generally, vinegar works great for plastic and glass surfaces, but the metal ones seem to get a bit dissolved in it, so I switched to IPA for that. I'd try without the IPA, my dishwasher works just fine and a little bit of fat is actually okay and won't ruin the macronage. <br/>
 It is highly recommended you use a kitchen robot for the meringue. <br/>
 This amount will make 2-3 baking trays, which is stupid, because who owns that many baking trays? I need to adjust it to 1-2. <br/>
-
-
-# Assembly
-Match the macaron shells so you have pairs of similar size. Put the ganache into a piping bag with a smaller tip and pipe a ring of the ganache on the macaron. Put the strawberry reduction in the ring and top with another shell. <br/>
-Let them rest in your fridge until the shells can absorb the moisture from the filling. Or be a goblin and eat them right away. <br/>
+For filling, one can use a flavored buttercream, chocolate ganache, jam, or some other slightly stiffer filling. <br/>

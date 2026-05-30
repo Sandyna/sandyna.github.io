@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Cook Book</title>
+		<link rel="stylesheet" href="/assets/css/bulma.min.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+	<section class="hero">
+	  <div class="hero-body">
+		<div class="container" style="margin-left: 8.3%">
+		  <h1 class="title" style="margin:50px auto 50px 0px; color:#4D5440;">
+			Cook Book 3003
+		  </h1>
+		</div>
+	  </div>
+	</section>
+
+
+		<section class="columns">
+
+			<div class="column is-one-fifth  is-offset-1 ">
+				<div class="container">			
+					<div class="navi">
+						<h1>Menu</h1>
+						<ul>
+							<li><a href="/index.html">Recipe list</a></li>
+							<li><a href="/new_recipe.html">Add new recipe</a></li>
+							<li><a href="/plant_calendar/plant_calendar.html">Plant Calendar</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-two-fifths">
+				<div class="content">
+					<h1> Crème Brûlée </h1>
+
+<div class="recipe_body">
+	Time: 1 h <br/>
+	Servings: 2 <br/>
+	Source: <a href=ChefParade> ChefParade </a> <br/>
+	Tags:  tested,	 sweet,	 snack,	 dessert,	 simple,	 vegetarian,	 gluten-free	 <br/>
+	
+	<h2 id="ingredients">Ingredients</h2>
+<ul>
+  <li>2 egg yolks</li>
+  <li>200 ml heavy cream (&gt;33%)</li>
+  <li>1-2 tablespoons sugar, to taste</li>
+  <li>20-30g brown sugar (cover)</li>
+  <li>Aromatics (lavender, vanilla, …)</li>
+  <li>Ramekins or other oven and flame safe bowls</li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+<p>Whisk egg yolks with normal sugar, can be mildly foamy. Heat oven to 150 degrees Celsius.<br />
+Boil cream with aromatics. Whisk sugar and egg yolk mixture while slowly pouring the hot cream through a sieve (you can skip the sieve if there’s nothing to sieve out) to temper the eggs. Pour mixture into ramekins.<br />
+Pour hot water into a deep baking tray, just enough to cover the bottom and some, but not too much so that it would overflow into the ramekins (physics applies, when you add ramekins, the water level goes up) and add the hot/warm ramekins with the mixture. Carefully put into the oven and leave there for at least 30 minutes. After that, start checking the crème brûlée texture regularly (every 10 minutes). It should be only minimally jiggly. When ready, put out of the oven and leave to cool completely. Use a blast chiller if you are a professional (but if so, why are you reading this recipe?!?).<br />
+Before serving, cover the surface of each crème brûlée with an even layer of brown sugar and slowly melt and caramelize with a flame torch. With your free hand, rotate the ramekins by touching the bottom part of your ramekins; the top gets hot. Keep your hand out of the flame. Avoid burning the caramel, don’t point your flame at a single spot for too long and jiggle the flame at least a bit. The sugar should eventually get liquid, at which point you can spread it around by tilting the ramekin.<br /></p>
+
+<h2 id="notes">Notes</h2>
+<p>The more egg white you in the mixture, the worse the final texture.<br />
+You can scale this recipe up. People tend to prefer ramekins that are not too filled.<br /></p>
+
+<p>This one is slightly overcooked, but nice: 
+<img src="image_ii.jpg" alt="Creme brulee bit overcooked" />
+This one is fucked: 
+<img src="creme_brulee_fucked.jpg" alt="Creme brulee very bad" />
+This one is okay:</p>
+
+
+	<img src=./image.jpg></img>
+	
+	
+</div>
+
+
+				</div>
+			</div>
+			
+		</section>
+		
+		<div class="footer">
+			<em>Designed by me in 2019. I stole the pictures from the Internet. </em>
+		</div>
+	
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const buttons = document.querySelectorAll(".category-filter");
+		  const recipes = document.querySelectorAll(".recipe-item");
+		  const selectedTags = new Set();
+
+		  function filterRecipes() {
+			recipes.forEach(recipe => {
+			  const tags = recipe.dataset.tags.split(' ');
+			  // AND logic: show only if all selectedTags are in recipe.tags
+			  const show = Array.from(selectedTags).every(tag => tags.includes(tag));
+			  recipe.style.display = show ? "list-item" : "none";
+			});
+		  }
+
+		  buttons.forEach(button => {
+			button.addEventListener("click", function (e) {
+			  e.preventDefault();
+			  const tag = this.dataset.tag.toLowerCase();
+
+			  // toggle selection
+			  if (selectedTags.has(tag)) {
+				selectedTags.delete(tag);
+				this.classList.remove("selected");
+			  } else {
+				selectedTags.add(tag);
+				this.classList.add("selected");
+			  }
+
+			  filterRecipes();
+			});
+		  });
+		});
+		</script>
+	</body>
+</html>

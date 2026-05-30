@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Cook Book</title>
+		<link rel="stylesheet" href="/assets/css/bulma.min.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+	<section class="hero">
+	  <div class="hero-body">
+		<div class="container" style="margin-left: 8.3%">
+		  <h1 class="title" style="margin:50px auto 50px 0px; color:#4D5440;">
+			Cook Book 3003
+		  </h1>
+		</div>
+	  </div>
+	</section>
+
+
+		<section class="columns">
+
+			<div class="column is-one-fifth  is-offset-1 ">
+				<div class="container">			
+					<div class="navi">
+						<h1>Menu</h1>
+						<ul>
+							<li><a href="/index.html">Recipe list</a></li>
+							<li><a href="/new_recipe.html">Add new recipe</a></li>
+							<li><a href="/plant_calendar/plant_calendar.html">Plant Calendar</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-two-fifths">
+				<div class="content">
+					<h1> Lamb Chops </h1>
+
+<div class="recipe_body">
+	Time: time <br/>
+	Servings: servings <br/>
+	Source: <a href=Chefparade, https://gimmedelicious.com/pan-seared-lamb-chops/> Chefparade, https://gimmedelicious.com/pan-seared-lamb-chops/ </a> <br/>
+	Tags:  tested,	 savory,	 main-course,	 medium-effort,	 meat,	 gluten-free	 <br/>
+	
+	<h2 id="ingredients">Ingredients</h2>
+<ul>
+  <li>Lamb chops</li>
+  <li>Oil</li>
+  <li>Salt</li>
+  <li>Black pepper, ground</li>
+  <li>Rosemary branches, fresh</li>
+  <li>Thyme branches, fresh</li>
+  <li>Garlic, whole, unpeeled</li>
+  <li>Butter</li>
+  <li>Meat thermometer (optional)</li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+<p>Meat should not be cold from the fridge; let it rest outside for at least 30min. Pat dry. Season them with salt and pepper on both sides. <br />
+If you’re finishing them in the oven, heat the oven to 200°C 
+Heat a big pan until it’s very hot, even starting to smoke a bit. Add a bit of oil, just to cover the bottom of the pan after being spread. Let it heat up briefly, then place the chops on the pan, spaced evenly, bones sticking out of the pan. You should always lay things down first on the side closer to yourself, then place the further end of the thing down, so that you don’t splash oil in your direction. <br />
+Let them develop a sear, don’t yank them, let them unstick naturally. Cook for 3-4 minutes, then flip and repeat on the other side. <br />
+At this point, there’s two options: <br /></p>
+<h3 id="finish-in-the-pan">Finish in the pan</h3>
+<p>Reduce the heat to medium-low. Crush the garlic in the peel with a flat side of the knife. Add butter, garlic, thyme and rosemary to the pan. <br />
+Spoon the melted mixture over the lamb and continue cooking, about 5 minutes, until the internal temperature of the meat reaches about 50-55°C for medium-rare. <br />
+Remove the lamb from the pan and let rest for 5-10min. <br /></p>
+<h3 id="finish-in-the-oven">Finish in the oven</h3>
+<p>Turn off the heat, move the lambs on a baking tray. Crush garlic with a flat side of the knife. Add butter, garlic, thyme and rosemary into the still hot pan, swirl them around and let them cook a bit. Then pour the mixture over the chops in the tray. <br />
+Bake the chops in the oven for 4-6minutes in the oven. <br /> <br /></p>
+<h3 id="finish-in-the-pan-in-the-oven">Finish in the pan in the oven</h3>
+<p>If you have a cast iron skillet or other oven-safe pan, you can move the whole thing into the oven after putting in the butter and herbs. <br /></p>
+
+<p>Serve with <a href="/recipes/polenta_cakes/polenta_cakes.html">polenta cakes</a> for example. <br /></p>
+
+<h2 id="lamb-internal-temperatures">Lamb internal temperatures</h2>
+<p><a href="https://gordonramsayrecipes.uk/meat-temperature-guide/">Source</a></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Doneness</th>
+      <th>Pull from heat</th>
+      <th>After resting</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Rare</td>
+      <td>48°C</td>
+      <td>54°C</td>
+    </tr>
+    <tr>
+      <td>Medium-Rare</td>
+      <td>54°C</td>
+      <td>60°C</td>
+    </tr>
+    <tr>
+      <td>Medium</td>
+      <td>60°C</td>
+      <td>66°C</td>
+    </tr>
+    <tr>
+      <td>Well Done</td>
+      <td>68°C</td>
+      <td>74°C</td>
+    </tr>
+  </tbody>
+</table>
+
+
+	<img src=./image.jpg></img>
+	
+	
+</div>
+
+
+				</div>
+			</div>
+			
+		</section>
+		
+		<div class="footer">
+			<em>Designed by me in 2019. I stole the pictures from the Internet. </em>
+		</div>
+	
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const buttons = document.querySelectorAll(".category-filter");
+		  const recipes = document.querySelectorAll(".recipe-item");
+		  const selectedTags = new Set();
+
+		  function filterRecipes() {
+			recipes.forEach(recipe => {
+			  const tags = recipe.dataset.tags.split(' ');
+			  // AND logic: show only if all selectedTags are in recipe.tags
+			  const show = Array.from(selectedTags).every(tag => tags.includes(tag));
+			  recipe.style.display = show ? "list-item" : "none";
+			});
+		  }
+
+		  buttons.forEach(button => {
+			button.addEventListener("click", function (e) {
+			  e.preventDefault();
+			  const tag = this.dataset.tag.toLowerCase();
+
+			  // toggle selection
+			  if (selectedTags.has(tag)) {
+				selectedTags.delete(tag);
+				this.classList.remove("selected");
+			  } else {
+				selectedTags.add(tag);
+				this.classList.add("selected");
+			  }
+
+			  filterRecipes();
+			});
+		  });
+		});
+		</script>
+	</body>
+</html>

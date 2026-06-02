@@ -37,7 +37,7 @@ Sifting removes clumps and incorporates air. <br/>
 | [Genoise](https://bonnibakery.com/genoise-sponge/)    | Very light, springy  | High        |
 | [Angel Food](https://bonnibakery.com/angel-food-cake/) | Airy, cloud-like     | Medium      |
 | [Joconde](https://bonnibakery.com/opera-cake/#recipe)    | Light and flexible   | Medium      |
-| Chiffon    | Moist, tender        | Easy-medium |
+| [Chiffon](/recipes/chiffon_cake/chiffon_cake.html)    | Moist, tender        | Easy-medium |
 | [Hot Milk](/recipes/hot_milk_sponge_cake/hot_milk_sponge_cake.html)   | Velvety, moist, puddingy     | Easy        |
 
 
@@ -48,3 +48,5 @@ Sifting removes clumps and incorporates air. <br/>
 | Joconde    | Whites whipped with part of sugar. Whole eggs in the batter. | No baking powder. | Almond flour added with eggs. Butter. |
 | Chiffon    | Whip the whites and yolks separately. | Baking powder | Just properly mix wet with dry, no creaming needed |
 | Hot Milk   | Whole eggs.                           | Baking powder | Warm milk + melted butter |
+
+Chiffon is somewhere between a sponge cake and a butter cake. <br/>

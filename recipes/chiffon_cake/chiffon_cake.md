@@ -11,12 +11,15 @@ tags:
   - dessert
   - medium-effort
   - elaborate
+  - milk-free
   - vegetarian
 ---
 
 Chiffon cake is somewhere between a sponge cake and a butter cake. It's a rather moist cake. It needs to cling to the sides of the cake tin as it bakes, so no greasing the pan, and preferably no non-stick pans. <br/>
 
 # Basic version
+
+Can be milk-free if made with water. <br/>
 
 ## Ingredients
 * 210g cake flour
@@ -58,10 +61,15 @@ This one is a rather more technical, Asian-style chiffon. <br/>
 
 ## Instructions
 Oven rack to lowest third, preheat oven to 175°C. <br/>
+### Bain-marie
 In a heat-safe bowl set over an inch of gently simmering water, combine the cream cheese, 100g sugar, and milk. Heat until melted and smooth, whisking frequently. Remove from the heat. If there are any lumps, strain into a clean bowl. Let cool for a couple minutes.<br/>
+### Batter
 Whisk in the oil, salt, and vanilla, and egg yolks until smooth. Sift in the flour in two batches, whisking until smooth after each addition. <br/>
+###  Meringue
 Beat the egg whites and cream of tartar on medium-low until foamy. Increase the speed to medium. When the whites reach soft peak stage, slowly add the remaining 125g sugar a spoonful at a time. Once all the sugar has been added, continue whipping on medium speed until the meringue is glossy and holds medium-firm peaks. Scrape the meringue into a wide mixing bowl to facilitate folding. <br/>
+### Sacrifice & fold-in
 Add a large scoop of meringue to the yolk batter and fold it in using a balloon whisk. Scrape the yolk batter over the remaining meringue. Use a whisk to fold the batters together carefully but firmly. When a few streaks of white remain, switch to a flexible spatula and continue folding until the batter is smooth and uniform in color, taking care not to overmix. Be sure to scoop all the way down to the bottom of the bowl to make sure no denser batter is hanging out on the bottom.<br/>
+### Bake
 Pour the batter into an ungreased aluminum 10-inch (25-cm) tube pan. (Don’t use a non-stick pan as this style of cake needs to cling to the sides to rise.) Tap the pan firmly on the counter a couple times, then run a skewer or chopstick through the batter to pop any large air bubbles. <br/>
 Bake for 50 to 60 minutes or until the cake is well browned and a skewer inserted near the center comes out clean. Do not open the oven for at least 45 minutes or the delicate cake may fall. <br/>
 Invert the pan to cool completely (if your pan doesn’t have feet, you can insert a heavy bottle through the center). Once cool, slide an offset spatula around the edges to loosen, remove the insert, then slide the spatula around the bottom. Flip the cake onto a serving platter. <br/>

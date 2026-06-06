@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+	<head>
+	<meta charset="utf-8">
+		<title>Cook Book</title>
+		<link rel="stylesheet" href="/assets/css/bulma.min.css">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	</head>
+
+	<body>
+
+	<section class="hero">
+	  <div class="hero-body">
+		<div class="container" style="margin-left: 8.3%">
+		  <h1 class="title" style="margin:50px auto 50px 0px; color:#4D5440;">
+			Cook Book 3003
+		  </h1>
+		</div>
+	  </div>
+	</section>
+
+
+		<section class="columns">
+
+			<div class="column is-one-fifth  is-offset-1 ">
+				<div class="container">			
+					<div class="navi">
+						<h1>Menu</h1>
+						<ul>
+							<li><a href="/index.html">Recipe list</a></li>
+							<li><a href="/new_recipe.html">Add new recipe</a></li>
+							<li><a href="/plant_calendar/plant_calendar.html">Plant Calendar</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="column is-two-fifths">
+				<div class="content">
+					<h1> Bolo Gelado de Brigadeiro </h1>
+
+<div class="recipe_body">
+	Time: overnight <br/>
+	Servings: 1 cake, 16.5cm <br/>
+	Source: <a href=https://ashbaber.com/bolo-gelado-de-brigadeiro/> https://ashbaber.com/bolo-gelado-de-brigadeiro/ </a> <br/>
+	Tags:  untested,	 sweet,	 dessert,	 simple,	 medium-effort,	 vegetarian	 <br/>
+	
+	<h2 id="ingredients">Ingredients</h2>
+
+<h3 id="brigadeiro">Brigadeiro</h3>
+<ul>
+  <li>800 g sweetened condensed milk (2x 397g cans)</li>
+  <li>50 g unsalted butter</li>
+  <li>20 g cocoa powder</li>
+  <li>200 g dark chocolate</li>
+  <li>400 ml double cream (isn’t double cream an overkill? There’s already butter. Try heavy. )</li>
+  <li>4g tsp salt?</li>
+</ul>
+
+<h3 id="brigadeiro---two-tone-variation">Brigadeiro - two tone variation</h3>
+<ul>
+  <li>533 g sweetened condensed milk</li>
+  <li>33 g butter</li>
+  <li>13 g cocoa powder</li>
+  <li>133 g dark chocolate</li>
+  <li>266 g heavy cream</li>
+  <li><u>~~~~~~~~~~~~~~~~</u></li>
+  <li>266 g sweetened condensed milk</li>
+  <li>16 g butter</li>
+  <li>100 g white chocolate</li>
+  <li>133 ml heavy cream</li>
+</ul>
+
+<h3 id="cake">Cake</h3>
+<ul>
+  <li>70 g cocoa powder</li>
+  <li>1 teaspoon instant coffee (just make an espresso. Or 4)</li>
+  <li>1 vanilla bean</li>
+  <li>120 ml hot water</li>
+  <li>180 g unsalted butter, melted</li>
+  <li>150 ml vegetable oil</li>
+  <li>180 g granulated sugar</li>
+  <li>180 g soft light brown sugar</li>
+  <li>6 large eggs</li>
+  <li>200 ml buttermilk or 200g sour cream</li>
+  <li>300 g plain flour</li>
+  <li>3 g baking soda</li>
+  <li>4g tsp salt</li>
+</ul>
+
+<h3 id="milk-soak">Milk soak</h3>
+<ul>
+  <li>400 ml whole milk</li>
+  <li>1 tablespoon cocoa powder</li>
+  <li>
+    <p>1 tablespoon granulated sugar</p>
+  </li>
+  <li>Chocolate sprinkles</li>
+</ul>
+
+<h2 id="instructions">Instructions</h2>
+<p>Make white and dark Brigadeiro separately, with half the ingredients each. Mix the Brigadeiro ingredients in a pan and stir on medium heat until it thickens to a custard-like texture (or heat up the liquids (832g for dark 415g for white) and pour over chocolate). Pour into a bowl and put foil wrap directly on top of the mix to prevent skin from forming. Leave to cool in the fridge. <br />
+Heat up milk soak ingredients until the cocoa dissolves. Leave to cool. <br />
+Preheat oven to 180°C, grease and line your cake form(s). <br />
+If you can be arsed, brown the butter. <br />
+Bloom cocoa powder in espresso/hot water. Stir in oil, melted butter and vanilla. Let cool for 5-10min. If you don’t use the remains of the vanilla bean, throw that in too, to steep. Take them out before use. <br />
+Foam eggs with sugars. Slowly mix in the liquids and sour cream. <br />
+Sift in flour and fold in, careful not to knock the air out. <br />
+Pour into cake forms and bake until a toothpick comes out clean. Let it cool completely. <br />
+Cut the cake in two horizontally (or if you have two cake pans, you have two cakes). Get a clean cake tin, fe. the one you baked the cake in. Put one cake layer into the tin, soak with half of the milk soak, cover with half to 2/3rds of the dark brigadeiro. Cover that with the white chocolate brigadeiro. Use a piping bag? <br />
+Add the second cake layer and soak again. Spread the remainder of the dark brigadeiro on top. Add sprinkles on top. Leave in the fridge overnight (10h) and serve. <br />
+Notes: I re-checked baking soda amount against the ingredients list, should be 3g instead of 6g, extra 0.5g if buttermilk is used. It’s stupid to mix it with white vinegar and put it into the cake, so I removed that too. <br /></p>
+
+
+	<img src=./image.jpg></img>
+	
+	
+</div>
+
+
+				</div>
+			</div>
+			
+		</section>
+		
+		<div class="footer">
+			<em>Designed by me in 2019. I stole the pictures from the Internet. </em>
+		</div>
+	
+		<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  const buttons = document.querySelectorAll(".category-filter");
+		  const recipes = document.querySelectorAll(".recipe-item");
+		  const selectedTags = new Set();
+
+		  function filterRecipes() {
+			recipes.forEach(recipe => {
+			  const tags = recipe.dataset.tags.split(' ');
+			  // AND logic: show only if all selectedTags are in recipe.tags
+			  const show = Array.from(selectedTags).every(tag => tags.includes(tag));
+			  recipe.style.display = show ? "list-item" : "none";
+			});
+		  }
+
+		  buttons.forEach(button => {
+			button.addEventListener("click", function (e) {
+			  e.preventDefault();
+			  const tag = this.dataset.tag.toLowerCase();
+
+			  // toggle selection
+			  if (selectedTags.has(tag)) {
+				selectedTags.delete(tag);
+				this.classList.remove("selected");
+			  } else {
+				selectedTags.add(tag);
+				this.classList.add("selected");
+			  }
+
+			  filterRecipes();
+			});
+		  });
+		});
+		</script>
+	</body>
+</html>
